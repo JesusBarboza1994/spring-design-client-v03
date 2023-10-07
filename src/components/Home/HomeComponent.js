@@ -1,18 +1,18 @@
 import { useState } from "react";
-//import styled from "@emotion/styled";
+import styled from "@emotion/styled";
 import { colors } from "../../styles/colors";
 import { typography } from "../../styles/typography";
 import { fonts } from "../../styles/typography";
-import {ContainerStyle, Style} from "./style";
+import {ContainerStyle, ButtonStyle} from "./style";
 
 
-function HomeComponent (){
+function HomeComponent ({backgroundImage,text}){
  
 
  return (
-    <div style={Style.ContainerStyle}>
-        <Style></Style>
-    </div>
+    <ContainerStyle style={{ backgroundImage: `url(${backgroundImage})`}}>
+        <ButtonStyle>{text}</ButtonStyle>
+    </ContainerStyle>
  );
 }
 export default HomeComponent;

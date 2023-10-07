@@ -4,8 +4,8 @@ import * as Inter from "@fontsource/inter";
 import * as WorkSans from "@fontsource/work-sans";
 
 export const fonts = {
-  primary: Inter,
-  secondary: WorkSans,
+  primary: "Inter",
+  secondary: "Inter",
 };
 
 export const typography = {
@@ -41,7 +41,7 @@ export const typography = {
     line-height: 2rem;
     `,
     md: `
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     line-height: 2.25rem;
     `,
     lg: `
@@ -68,6 +68,6 @@ for (const size in typography.text) {
 for (const size in typography.head) {
   typography.head[size] += `
   font-family: ${fonts.secondary};
-  font-weight: 600;
+  font-weight: 700;
   `;
 }
