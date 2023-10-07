@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
-import "@fontsource/inter";
-import "@fontsource/work-sans";
-import { colors } from "../styles/colors";
-import { typography } from "../styles/typography";
+import { colors } from "../../styles/colors";
+import { fonts, typography } from "../../styles/typography";
 
 export function Header(){
 
@@ -17,16 +15,16 @@ export function Header(){
     const Logo = styled.h1`
         color: ${colors.white};
         font-size: ${typography.head.xl};
-        font-family: ${typography.secondary};
+        font-family: ${fonts.secondary};
         font-style: normal;
         letter-spacing: 2px;
         margin: 0px;
     `
 
-    const Nombre = styled.h2`
+    const Name = styled.h2`
         color: ${colors.white};
         font-size: ${typography.head.md};
-        font-family: ${typography.secondary};
+        font-family: ${fonts.secondary};
         letter-spacing: 2px;
         margin: 0px;
     `
@@ -36,7 +34,7 @@ export function Header(){
         <Redcontainer>
             <div style={{marginTop: 50, marginLeft:50}}>
              <Logo>MRC</Logo>
-             <Nombre>Mallas, resortes y cables</Nombre>
+             <Name>Mallas, resortes y cables</Name>
             </div>
 
         </Redcontainer>

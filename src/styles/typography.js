@@ -1,10 +1,11 @@
 import { colors } from "./colors";
+import * as abeezee from "@fontsource/abeezee";
+import * as Inter from "@fontsource/inter";
+import * as WorkSans from "@fontsource/work-sans";
 
 export const fonts = {
-  primary: `"Source Code Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
-  secondary: `"Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
+  primary: Inter,
+  secondary: WorkSans,
 };
 
 export const typography = {

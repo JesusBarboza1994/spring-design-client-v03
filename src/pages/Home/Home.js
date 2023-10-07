@@ -1,8 +1,8 @@
 import style from "@emotion/styled";
-import Home_component from "../../components/Home_component";
+import HomeComponent from "../../components/Home/HomeComponent";
 import "@fontsource/inter";
 import "@fontsource/work-sans";
-import { Header } from "../../components/header-component";
+import { Header } from "../../components/Home/HeaderComponent";
 import Component_prueba from "../../components/Component_prueba";
 
 
@@ -21,12 +21,12 @@ export default function Home(){
                        justifyContent: "center",
                        }}>
      
-            <Home_component backgroundImage= "url(/Images/diseño.jpg)" text="Diseño"/> 
-            <Home_component backgroundImage= "url(/Images/comparativo.jpg)" text="Comparativo"/>
-            <Home_component backgroundImage= "url(/Images/consultar_stock.jpg)" text="Consultar stock"/>
-            <Home_component backgroundImage= "url(/Images/cotizacion.jpg)" text="Cotizacion"/>
-            <Home_component backgroundImage= "url(/Images/diseño_rapido.jpg)" text="Diseño rapido"/>
-            <Component_prueba backgroundImage= "url(/Images/diseño.jpg)" text="Prueba"/>
+            <HomeComponent backgroundImage= "url(/Images/diseño.webp)" text="DISEÑO"/> 
+            <HomeComponent backgroundImage= "url(/Images/comparativo.webp)" text="COMPARATIVO"/>
+            <HomeComponent backgroundImage= "url(/Images/consultarStock.webp)" text="CONSULTAR STOCK"/>
+            <HomeComponent backgroundImage= "url(/Images/cotizacion.webp)" text="COTIZACION"/>
+            <HomeComponent backgroundImage= "url(/Images/diseñoRapido.webp)" text="DISEÑO RAPIDO"/>
+            <Component_prueba backgroundImage= "url(/Images/diseño.webp)" text="Prueba"/>
           </div>
           
         </div> 

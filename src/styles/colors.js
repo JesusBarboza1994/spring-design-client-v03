@@ -31,7 +31,7 @@ export const colors = {
   back: "#fc1221c5",
   grey: "grey",
   red: "#BA181B",
-  rosado: "#F34949",
+  pink: "#F34949",
 };
 
 export const ColorStyle = (dark) =>{
