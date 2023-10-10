@@ -3,27 +3,84 @@ import { colors } from "../../styles/colors";
 import { typography } from "../../styles/typography";
 import { fonts } from "../../styles/typography";
 
-export const ContainerStyle = styled.div`
-    width: 250px; 
-    height: 280px;
-    background-size: cover; 
-    border-radius: 25px;
-    position: relative;
-    box-shadow: 3px 3px 2px 0px rgba(128, 128, 128, 0.30);
-    cursor: pointer;
-  `     
-export const ButtonStyle = styled.button`
-  width: 250px;
-  height: 80px;
+export const ScreenStyle = styled.div`
+ width: 1440px;
+ height: 1024px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+`
+export const Redcontainer = styled.div`
+  width: 100%;
+  height: 190px;
+  background-color: #BA181B;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+`
+
+export const Logo = styled.h1`
+  color: ${colors.white};
+  ${typography.head.xl};
+  font-weight: 700;
+  font-family: ${fonts.secondary};
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin: 0px;
+`
+
+export const CompanyName = styled.h2`
+  color: ${colors.white};
+  ${typography.head.md};
+  font-family: ${fonts.secondary};
+  letter-spacing: 1px;
+  margin: 0px;
+`
+    
+
+
+export const ElementContainer = styled.div`
+ width: 1000px;
+ display: flex;
+ flex-wrap: wrap;
+ column-gap: 120px;
+ row-gap: 80px; 
+ padding-top: 300px;
+ justify-content: center;
+
+`
+
+export const ElementStyle = styled.button`
+  width: 250px; 
+  height: 250px;
   border-radius: 25px;
+  position: relative;
+  box-shadow: 0px 2px 1px 0px rgba(217, 217, 217, 0.30);
+  :hover{box-shadow: 2px 4px 1.5px 0px rgba(255, 255, 255, 0.40);}
+  :hover {-webkit-transform:scale(1.03);transform:scale(1.03);}
+  overflow:hidden;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: contain;
+  transition:all.2s linear;
+`     
+export const DivStyle = styled.div`
+  width: 250px;
+  height: 70px;
   position: absolute;
   bottom: 0px;
+  left: 0px;
   background: ${colors.pink};
   color: ${colors.white};
   font-family: ${fonts.primary};
   :hover {font-weight: bold; background:${colors.red}};
   letter-spacing: 1px;
   text-align: center;
+  padding-top: 18px; 
   ${typography.text.xl};
   cursor: pointer;
+  transition:all .3s ease-in;
 ` 
