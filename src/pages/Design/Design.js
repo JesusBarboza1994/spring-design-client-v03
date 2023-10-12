@@ -2,23 +2,23 @@ import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import "@fontsource/inter";
-import { SimulationData } from "../../components/SimulationData"
-import { CalcParam } from "../../components/CalculatedParameters";
-import { WeightTolerance } from "../../components/WeightTolerance";
-import { Textarea } from "../../components/Textarea";
+import { SimulationData } from "../../components/Design/SimulationData"
+import { CalcParam } from "../../components/Design/CalculatedParameters";
+import { WeightTolerance } from "../../components/Design/WeightTolerance";
+import { Textarea } from "../../components/Design/Textarea";
 import { Switch, breadcrumbsClasses } from "@mui/material";
-import ProcessTable from "../../components/processTable";
-import TablaControlDeCargas from "../../components/tablaControlDeCargas";
-import TablaCarrera from "../../components/tablaCarrera";
-import LongTable from "../../components/longTable";
-import ProbarFuerza from "../../components/probarFuerza";
-import GraficoControlCargas from "../../components/graficoControlCargas";
+import ProcessTable from "../../components/Design/processTable";
+import TablaControlDeCargas from "../../components/Design/tablaControlDeCargas";
+import TablaCarrera from "../../components/Design/tablaCarrera";
+import LongTable from "../../components/Design/longTable";
+import ProbarFuerza from "../../components/Design/probarFuerza";
+import GraficoControlCargas from "../../components/Design/graficoControlCargas";
 
 import { useAuth } from '../../context/auth-context';
 import { calculateLinearRegression, generatePointForChart } from "../../utils/chart-utils";
 import { isNullLiteral } from "@babel/types";
 import { colors } from "../../styles/colors";
-import ControlDeCargasSimuladas from "../../components/ControlDeCargasSimuladas";
+import ControlDeCargasSimuladas from "../../components/Design/ControlDeCargasSimuladas";
 import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas } from "./styles";
 
 

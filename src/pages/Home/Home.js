@@ -20,7 +20,7 @@ export default function Home(){
         <HomeComponent backgroundImage= "/Images/cotizacion.png" text="COTIZACION"/>
         <HomeComponent backgroundImage= "/Images/diseñoRapido.png" text="DISEÑO RAPIDO"/>
       </ElementContainer>
-      <LoginComponent/>
+      
     </ScreenStyle> 
   );
 }

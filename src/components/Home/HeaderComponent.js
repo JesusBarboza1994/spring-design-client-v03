@@ -1,17 +1,22 @@
 import styled from "@emotion/styled";
 import { colors } from "../../styles/colors";
 import { fonts, typography } from "../../styles/typography";
-import { Redcontainer, Logo, CompanyName } from "../../components/Home/style";
+import { LoginComponent } from "./LoginComponent";
+import { Wrapper, Logo, CompanyName, LogoContainer } from "../../components/Home/style";
 
 export function Header(){
   
     return(
-        <Redcontainer>
-            <div style={{marginTop: 50, marginLeft:50}}>
+        <Wrapper>
+            <LogoContainer>
              <Logo>MRC</Logo>
              <CompanyName>Mallas, resortes y cables</CompanyName>
+            </LogoContainer>
+
+            <div>
+             <LoginComponent/>
             </div>
             
-        </Redcontainer>
+        </Wrapper>
     )
 }

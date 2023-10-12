@@ -11,13 +11,19 @@ export const ScreenStyle = styled.div`
  align-items: center;
 
 `
-export const Redcontainer = styled.div`
+export const Wrapper = styled.div`
   width: 100%;
   height: 190px;
   background-color: #BA181B;
   position: absolute;
   top: 0px;
   left: 0px;
+  display: flex;
+`
+export const LogoContainer = styled.div`
+ width: 1000px;
+ margin-top: 50px;
+ margin-left: 50px;
 `
 
 export const Logo = styled.h1`
