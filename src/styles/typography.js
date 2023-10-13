@@ -62,6 +62,7 @@ export const typography = {
 for (const size in typography.text) {
   typography.text[size] += `
   font-family: ${fonts.primary};
+  font-weight: 300;
   `;
 }
 

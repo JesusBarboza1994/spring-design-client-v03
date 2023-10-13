@@ -3,8 +3,8 @@ import { colors } from "../../styles/colors";
 import { typography } from "../../styles/typography";
 import { fonts } from "../../styles/typography";
 
-export const Wrapper = styled.div`
-   background-image: url("/fondo.png");
+export const Wrap = styled.div`
+   background: url(/fondo.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -36,10 +36,9 @@ export const RegisterContainer = styled.div`
 `
 export const Label = styled.label`
    color: ${colors.white};
-   ${typography.text.xl};
-   font-weight: 400;
-   font-family: ${fonts.primary};
-   font-style: normal;
+   ${typography.text.lg};
+   ${fonts.primary};
+   
    
 `
 
@@ -64,8 +63,9 @@ export const Button=styled.button`
     width: 260px;
     height: 60px;
     flex-shrink: 0;
+    margin-top: 35px;
     border-radius: 10px;
-    background-color: #161A1D;
+    background-color: ${colors.blackfondo};
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
     color: ${colors.white};
     padding: 16px 20px;

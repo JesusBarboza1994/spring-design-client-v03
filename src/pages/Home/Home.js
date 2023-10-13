@@ -1,4 +1,3 @@
-
 import HomeComponent from "../../components/Home/HomeComponent";
 import "@fontsource/inter";
 import "@fontsource/work-sans";
