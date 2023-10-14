@@ -4,10 +4,7 @@ import { useAuth } from "../../context/auth-context";
 export function DescripcionResorte(){  //codifica el resorte acorde a los datos presentados en la hoja de diseño
 
   const {dimensions, simulation_data,tablaToler,coef, descrip, setDescrip,grado} = useAuth();
-         
- 
-  
-  
+        
   //Se convierte el numero de vueltas (v.totales: "n") a fracción en texto.
   var residuo = dimensions.N*8 % 8;
   var entero = (dimensions.N*8-residuo)/8; 
@@ -30,7 +27,7 @@ export function DescripcionResorte(){  //codifica el resorte acorde a los datos 
     n = entero;
   }
   
-      
+     
   //Se convierte el numero de vueltas amp/red del extremo 1 ("n1") a fracción en texto.
   var residuo1 = dimensions.Vtas1*8 % 8;
   var entero1 = (dimensions.Vtas1*8-residuo1)/8; 
@@ -92,8 +89,7 @@ export function DescripcionResorte(){  //codifica el resorte acorde a los datos 
   //var mensaje2;  //especifica cant. de MP al momento del diseño
   var mensaje3="";  //indica si el resorte requerirá plano o no
   var mensaje4="" ////especifica dentro de los demás mensajes si es o no progresivo
- 
-  
+   
    
   if(dimensions.Dext2 != ""){
     mensaje = "Res Susp. " + simulation_data.material + " " + dimensions.d  + " x " + dimensions.Dext + " - " + dimensions.Dext2 + " x " + dimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")"+ " x " + n + "\n";

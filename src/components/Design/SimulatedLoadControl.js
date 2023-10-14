@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../context/auth-context';
 import { colors } from "../../styles/colors";
-import {Table2, Table3, Td, Input, Th3, H2, Button1 } from "./style";
+import {Table2, Td, Input, Th3, H2, Button1 } from "./style";
 
 
 export default function SimulatedLoadControl(props) {

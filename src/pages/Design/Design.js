@@ -4,11 +4,11 @@ import "@fontsource/inter";
 import { SimulationData } from "../../components/Design/SimulationData"
 import { CalcParam } from "../../components/Design/CalculatedParameters";
 import { WeightTolerance } from "../../components/Design/WeightTolerance";
-import { Textarea } from "../../components/Design/Textarea";
+import { TextArea } from "../../components/Design/TextArea";
 import { Switch, breadcrumbsClasses } from "@mui/material";
 import ProcessTable from "../../components/Design/ProcessTable";
-import TablaControlDeCargas from "../../components/Design/tablaControlDeCargas";
-import TablaCarrera from "../../components/Design/tablaCarrera";
+import LoadControlTable from "../../components/Design/LoadControlTable";
+import SpringTravelTable from "../../components/Design/SpringTravelTable";
 import LongTable from "../../components/Design/LongTable";
 import TestStrength from "../../components/Design/TestStrength";
 import ControlLoadGraphic from "../../components/Design/ControlLoadGraphic";
@@ -240,7 +240,7 @@ export default function Design() {
        
       <WeightTolerance/>
       
-      <Textarea/>
+      <TextArea/>
       <H1>Simulacion</H1>
       <Canvas/>
     </div>
@@ -254,7 +254,7 @@ export default function Design() {
         </div>
         
         <div style={{display:"flex", gap: 100,}}>
-          <TablaControlDeCargas L0={dimensions.L0}/>
+          <LoadControlTable L0={dimensions.L0}/>
           <SimulatedLoadControl/>
         </div>
 

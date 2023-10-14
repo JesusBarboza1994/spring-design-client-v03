@@ -1,40 +1,11 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../context/auth-context';
 import { colors } from "../../styles/colors";
+import { Td1, Th3 } from "./style";
 
-const Td = styled.td`
-  text-align: center;
-  width: 40px;
-  border: 1px solid ${colors.grey};
 
-`
-const Input = styled.input`
-  width:50px;
-  height:18px;
-  color:${colors.black};
-  background-color: ${colors.purple};
-  margin:8px;
-  font-family:"ABeeZee";
-  font-size: 13px;
-  border-style:inset;
-     
-`
-const Th3 = styled.th`
-  height: 80px;
-  font-size: 14px;
-  border: 1px solid ${colors.grey};
-  
-`
-const Button1 = styled.button`
-  width:125px;
-  height:40px;
-  margin:10px 14px;
-  border-radius:8px;
-`
-
-export default function TablaCarrera() {
+export default function SpringTravelTable() {
 
     const {dimensions, processTableStage1, setProcessTableStage1, processTableStage2, setProcessTableStage2, kControlCargas, bControlCargas, l4} = useAuth();
     
@@ -75,12 +46,12 @@ export default function TablaCarrera() {
                 <tbody>
                     {carreras.map((punto, indice) => (
                         <tr key={punto.id} style={{color:colors.white}}>
-                            <Td>
+                            <Td1>
                                 {"S"+(punto.id)}
-                            </Td>
-                            <Td>
+                            </Td1>
+                            <Td1>
                                 {punto.Carrera}
-                            </Td>
+                            </Td1>
                         </tr>
                     ))}
                 </tbody>

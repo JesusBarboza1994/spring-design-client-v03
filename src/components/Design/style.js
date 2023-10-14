@@ -5,64 +5,64 @@ import { fonts } from "../../styles/typography";
 
 /*componente Calculated Parameters*/ 
 export const DivSimul = styled.div`
-    display:flex;
-    grid-template-columns: auto, auto, auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap:none;
-    margin-bottom:20px;
-    margin-top: 10px;
-    margin-left: 50px;
-    width: 500px;
-    height: 146px;
-    background-color: ${colors.gray};
-    border-radius:8px;        
+  display:flex;
+  grid-template-columns: auto, auto, auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap:none;
+  margin-bottom:20px;
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 500px;
+  height: 146px;
+  background-color: ${colors.gray};
+  border-radius:8px;        
 `
 export const Paragraph = styled.p`
-    block-size:1px;
-    margin-left:34px;
-    margin-bottom: 18px;
-    margin-top: 8px;
-    font-family:"ABeeZee";
-    font-size:12px;
-    color: ${colors.white};  
-    width: 148px;
+  block-size:1px;
+  margin-left:34px;
+  margin-bottom: 18px;
+  margin-top: 8px;
+  font-family:"ABeeZee";
+  font-size:12px;
+  color: ${colors.white};  
+  width: 148px;
 `
 export const DivCalculo = styled.div`
-    width:40px;
-    height:18px;
-    color:${colors.white};
-    background-color: ${colors.black};
-    margin:9px;
-    font-family:"ABeeZee";
-    font-size: 12px;
-    line-height: 18px;
-    border-radius: 4px;
-    border: 2px grey;
-    border-style:outset;
+  width:40px;
+  height:18px;
+  color:${colors.white};
+  background-color: ${colors.black};
+  margin:9px;
+  font-family:"ABeeZee";
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 4px;
+  border: 2px grey;
+  border-style:outset;
     
 `
 export const Div = styled.div`
-    display:flex;
-    aling-items: center;
-    width:125px;
-    height:40px;
-    margin:3px 16px 8px 16px;
-    background: ${colors.black};
-    border:2px solid ${colors.grey};
-    border-radius:8px;
+  display:flex;
+  aling-items: center;
+  width:125px;
+  height:40px;
+  margin:3px 16px 8px 16px;
+  background: ${colors.black};
+  border:2px solid ${colors.grey};
+  border-radius:8px;
     
 `
 export const Label = styled.label`
-    height: 20px;
-    width: 65px;
-    display:block;
-    background-color:${colors.black};
-    margin-top:8px;
-    margin-left: 10px;
-    font-family:"ABeeZee";
-    font-size: 13px;
-    color: ${colors.grey};
+  height: 20px;
+  width: 65px;
+  display:block;
+  background-color:${colors.black};
+  margin-top:8px;
+  margin-left: 10px;
+  font-family:"ABeeZee";
+  font-size: 13px;
+  color: ${colors.grey};
             
 `
 
@@ -75,16 +75,6 @@ export const Table2 = styled.table`
   border: 2px solid grey;
   border-collapse: collapse;
   color: grey;
-
-`
-export const Table3 = styled.table`
-  width: 220px;  
-  margin:20px 0px;
-  background: black;
-  font-family: "ABeeZee";
-  border: 2px solid ${colors.grey};
-  border-collapse: collapse;
-  color: ${colors.grey};
 
 `
 export const Td = styled.td`
@@ -413,4 +403,99 @@ export const Select = styled.select`
 
 `
  
+/*componente Spring Travel Table*/
+export const Td1 = styled.td`
+  text-align: center;
+  width: 40px;
+  border: 1px solid ${colors.grey};
 
+`
+/*export const Input = styled.input`
+  width:50px;
+  height:18px;
+  color:${colors.black};
+  background-color: ${colors.purple};
+  margin:8px;
+  font-family:"ABeeZee";
+  font-size: 13px;
+  border-style:inset;
+     
+` 
+export const Th3 = styled.th`
+  height: 80px;
+  font-size: 14px;
+  border: 1px solid ${colors.grey};
+  
+`
+export const Button1 = styled.button`
+  width:125px;
+  height:40px;
+  margin:10px 14px;
+  border-radius:8px;
+`*/
+
+/*componente Load Control Table*/ 
+export const Table3 = styled.table`
+  width: 220px;  
+  margin:20px 0px;
+  background: black;
+  font-family: "ABeeZee";
+  border: 2px solid ${colors.grey};
+  border-collapse: collapse;
+  color: ${colors.grey};
+
+`
+/*componente Text Area*/ 
+export const Paragraph3 = styled.p`
+  block-size:1px;
+  margin-left: 84px;
+  margin-bottom: 20px;
+  font-family:"ABeeZee";
+  font-size:12px;
+  color: ${colors.white};  
+  width: 450px;
+`
+export const Textarea = styled.textarea`
+ width: 500px;
+ height: 40px;
+ margin-left: 50px;
+ margin-top: 0px;
+ border: 2px solid ${colors.grey};
+ border-radius: 8px;
+ border-top:1px solid ${colors.grey};
+ background-color: ${colors.black};
+ color: ${colors.grey};
+ font-family: ABeeZee;
+ font-size: 12px;
+ padding-left: 30px;
+
+`
+export const DescripDiv = styled.div`
+  width: 500px; 
+  height: 100px; 
+  margin-left:50px;
+  margin-bottom: 0px; 
+  border:2px solid ${colors.grey};
+  border-radius:8px; 
+  border-bottom: 1px solid ${colors.grey};
+  border-color: ${colors.grey};
+  background-color: ${colors.black};
+  color: ${colors.grey};
+  font-family:ABeeZee;
+  font-size: 14px;
+  padding: 10px;
+`
+/*componente Weight Tolerance*/
+
+export const InputLDA = styled.input`
+  width:40px;
+  height:18px;
+  color:white;
+  background-color: black;
+  margin:9px;
+  font-family:"ABeeZee";
+  font-size: 12px;
+  border-radius: 4px;
+  border: 2px grey;
+  border-style:outset;
+`

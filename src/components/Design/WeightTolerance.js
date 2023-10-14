@@ -1,92 +1,13 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from "../../context/auth-context";
 import { Switch, breadcrumbsClasses } from "@mui/material";
 import { isNullableTypeAnnotation } from "@babel/types";
-import { colors } from "../../styles/colors";
+import { DivSimul, DivCalculo, Div, Paragraph, InputLDA, Label, Select } from "./style";
+
 
 export function WeightTolerance(){
- const DivSimul = styled.div`
-    display:flex;
-    grid-template-columns: auto, auto, auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    //column-gap:8px;
-    row-gap:none;
-    margin-bottom:20px;
-    margin-top: 10px;
-    margin-left: 50px;
-    width: 500px;
-    height: 160px;
-    background-color: ${colors.gray};
-    border-radius:8px;        
-  `
- const Paragraph = styled.p`
-    block-size:1px;
-    //margin-left: 30px;
-    margin-bottom: 20px;
-    font-family:"ABeeZee";
-    font-size:12px;
-    color: ${colors.white};  
-    width: 148px;
-  `
- const Div = styled.div`
-    display:flex;
-    aling-items: center;
-    width:125px;
-    height:40px;
-    margin:3px 16px 8px 16px;
-    background: ${colors.black};
-    border:2px solid gray;
-    border-radius:8px;
-        
-  `
- const Select = styled.select`
-    background-color: ${colors.black};
-    color: ${colors.white};
-    font-family:"ABeeZee";
-    font-size: 13px;
-    border: 0px;
-
-  `
- const Label = styled.label`
-    height: 20px;
-    width: 65px;
-    display:block;
-    background-color:${colors.black};
-    margin-top:8px;
-    margin-left: 10px;
-    font-family:"ABeeZee";
-    font-size: 13px;
-    color: ${colors.grey};
-                    
-  `
-  const DivCalculo = styled.div`
-    width:40px;
-    height:18px;
-    color:${colors.white};
-    background-color: ${colors.black};
-    margin:9px;
-    font-family:"ABeeZee";
-    font-size: 12px;
-    line-height: 18px;
-    border-radius: 4px;
-    border: 2px grey;
-    border-style:outset;
-  `
-  const InputLDA = styled.input`
-  width:40px;
-  height:18px;
-  color:white;
-  background-color: black;
-  margin:9px;
-  font-family:"ABeeZee";
-  font-size: 12px;
-  border-radius: 4px;
-  border: 2px grey;
-  border-style:outset;
-`
+ 
 
   const {filas, setFilas, dimensions, setDimensions, calculated_data, setCalculated_data, tablaToler, setTablaToler, coef, setCoef, grado, setGrado} = useAuth();
 
