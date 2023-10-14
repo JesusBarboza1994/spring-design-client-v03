@@ -1,137 +1,7 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../context/auth-context';
-import { colors } from "../../styles/colors";
-
-const Table2 = styled.table`
-  width:500px; 
-  background-color: black;
-  font-family: "ABeeZee";
-  border: 2px solid ${colors.grey};
-  border-collapse: collapse;
-  border: 2px solid grey;
-  color: ${colors.white};
-
-`
-
-const Td = styled.td`
-  height: 36px;  
-  text-align: center;
-  border: 1px solid ${colors.grey};
-  font-size: 13px;
-`
-const Table1 = styled.table`
-  width: 520px;
-  height:380px;
-  font-family: "ABeeZee";
-  border: 2px solid grey;
-  border-collapse: collapse;
-  color: white;
-      
-`
-const Input = styled.input`
-  width:50px;
-  height:18px;
-  color:${colors.white};
-  background-color: ${colors.black};
-  margin:5px;
-  font-family:"ABeeZee";
-  font-size: 13px;
-  border-style:inset;
-  border-radius: 4px;  
-`
-const Input3 = styled.input`
-  width:50px;
-  background-color:${colors.black};
-  color: ${colors.white};
-  margin:5px;
-  text-align: center;
-  border:none;
-`
-const Th3 = styled.th`
-  height: 70px;
-  font-size: 14px;
-  border: 1px solid grey;
-  font-family:"ABeeZee";
-  letter-spacing: 1px;
-  padding-left: 5px;
-  padding-right:5px;
-  
-`
-const Th4 = styled.th`
-  width: 20px;
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 1px;
-  padding:10px;
-  border: 1px solid grey;
-  color: ${colors.white};
-`
-const Input2 = styled.input`
-  width:80px;
-  background-color:${colors.black};
-  color: ${colors.gray};
-  margin:5px;
-  text-align: center;
-  border:none;
-`
-const Label2 = styled.label`
-  color: ${colors.white};
-  margin: 5px;
-  height:15px;
-  display: block;
-  width: 40px;
-  background-color:${colors.black};
-  line-height: 15px;
-`
-const Tbody = styled.tbody`
-  color: ${colors.white};
-  display: flex;
-  flex-direction: column-reverse;
-`
-const Button = styled.button`
-  width:125px;
-  height:40px;
-  margin:3px 12px;
-  border-radius:8px;
-  background-color: ${colors.back};
-  color: ${colors.white};
-  
-`
-const Button1 = styled.button`
-  width:125px;
-  height:40px;
-  margin:20px 0px 0px 20px;
-  background-color: #363636;
-  border-radius:6px;
-  font-family:"ABeeZee";
-  letter-spacing: 1px;
-  line-height: 14px; 
-  font-size: 12px;
-  color: white;
-`
-const Button2 = styled.button`
-  width:80px;
-  height:70px;
-  font-size:14px;
-  border: none;
-  background-color: #5B5B5B;
-  font-family: "ABeeZee";
-  font-weight: bold;
-  color:white
-`
-
-const Button3 = styled.button`
-  width:20px;
-  height:70px;
-  font-size:14px;
-  border: none;
-  background-color: #5B5B5B;
-  font-family: "ABeeZee";
-  font-weight: bold;
-  color:white
-`
+import { Table4, Td_processtable, Table1, Input5, Input3, Input, Th3_processtable, Th4, Input2, Label2, Tbody, Button, Button4, Button2, Button3 } from "./style";
 
 /*export function calcularprocessTableStage1(){
         
@@ -576,104 +446,104 @@ export default function ProcessTable(props) {
 
         <div>
             {/* <Button onClick={CalculateOrReset3Points}>Calcular</Button> */}
-            <Table2>
+            <Table4>
                 <thead>
                     <tr style={{backgroundColor: "#5B5B5B", color:"white",}}>
-                        <Th3>Punto</Th3>
-                        <Th3>Luz (mm)</Th3>
-                        <Th3>Long (mm)</Th3>
-                        <Th3>N.Vtas</Th3>
-                        <Th3>
+                        <Th3_processtable>Punto</Th3_processtable>
+                        <Th3_processtable>Luz (mm)</Th3_processtable>
+                        <Th3_processtable>Long (mm)</Th3_processtable>
+                        <Th3_processtable>N.Vtas</Th3_processtable>
+                        <Th3_processtable>
                             {
                                 pasoVisible ? <Button2 onClick={visibleColumnPaso}>Paso (mm)</Button2> : <Button3 onClick={visibleColumnPaso}>+</Button3>
                             }
-                        </Th3>
-                        <Th3>
+                        </Th3_processtable>
+                        <Th3_processtable>
                             {
                                 kEqVisible ? <Button2 onClick={visibleColumnKeq}>Keq. (N/mm)</Button2> : <Button3 onClick={visibleColumnKeq}>+</Button3>
                             }
-                        </Th3>
-                        <Th3>  
+                        </Th3_processtable>
+                        <Th3_processtable>  
                             {
                                 xcVisible ? <Button2 onClick={visibleColumnXc}>Xc (mm)</Button2> : <Button3 onClick={visibleColumnXc}>+</Button3>
                             }
-                        </Th3>
-                        <Th3>
+                        </Th3_processtable>
+                        <Th3_processtable>
                             {
                                 fcVisible ? <Button2 onClick={visibleColumnFc}>Fc (kg)</Button2> : <Button3 onClick={visibleColumnFc}>+</Button3>
                             }
-                        </Th3>
-                        <Th3>
+                        </Th3_processtable>
+                        <Th3_processtable>
                             {
                                 kVisible ? <Button2 onClick={visibleColumnK}>K (N/mm)</Button2> : <Button3 onClick={visibleColumnK}>+</Button3>
                             }
-                        </Th3>
-                        <Th3>
+                        </Th3_processtable>
+                        <Th3_processtable>
                             {
                                 bVisible ? <Button2 onClick={visibleColumnB}>b</Button2> : <Button3 onClick={visibleColumnB}>+</Button3>
                             }
-                        </Th3>
+                        </Th3_processtable>
                     </tr>
                 </thead>
                 <tbody>
                     {processTableStage1Inv.map((punto, indice) => (
                         <tr key={punto.id} style={{color:"grey"}}>
-                            <Td style={{width: 40}}>
+                            <Td_processtable style={{width: 40}}>
                                 {punto.id}
-                            </Td>
-                            <Td style={{width: 65}}>
+                            </Td_processtable>
+                            <Td_processtable style={{width: 65}}>
                                 {
                                     punto.id > 2 ? ((!isNaN(punto.Luz) && Number.isFinite(punto.Luz) && (punto.Luz !== 0)) === true ? (punto.Luz).toFixed(2) : "") : <Input value={punto.Luz} type="number" id={punto.id+",Luz"} onChange={(e) => handleInputProcessTableStage1(e)} disabled={indice === (0)}/>
                                 }
-                            </Td>
-                            <Td style={{width: 65}}>
+                            </Td_processtable>
+                            <Td_processtable style={{width: 65}}>
                                 {
                                     punto.id < 3 ? ((!isNaN(punto.Long) && Number.isFinite(punto.Long) && (punto.Long !== 0)) === true ? (punto.Long).toFixed(2) : "") : <Input value={punto.Long} type="number" id={punto.id+",Long"} onChange={(e) => handleInputProcessTableStage1(e)} disabled={indice === (0)}/>
                                 }
-                            </Td>
-                            <Td style={{width: 65}}>
+                            </Td_processtable>
+                            <Td_processtable style={{width: 65}}>
                                 <Input value={punto.Vtas} type="number" id={punto.id+",Vtas"} onChange={(e) => handleInputProcessTableStage1(e)} disabled={indice === (0)}/>
-                            </Td>
-                            <Td style={{width: 50}}>
+                            </Td_processtable>
+                            <Td_processtable style={{width: 50}}>
                                 {
                                     pasoVisible ? ((!isNaN(processTableStage2Inv[indice].Paso) && Number.isFinite(processTableStage2Inv[indice].Paso) && (processTableStage2Inv[indice].Paso !== 0)) === true ? (processTableStage2Inv[indice].Paso).toFixed(2) : "") : null
                                 }
-                            </Td>
-                            <Td style={{width: 50}}>
+                            </Td_processtable>
+                            <Td_processtable style={{width: 50}}>
                                 {
                                     kEqVisible ? ((!isNaN(processTableStage2Inv[indice].Keq) && Number.isFinite(processTableStage2Inv[indice].Keq) && (processTableStage2Inv[indice].Keq !== 0)) === true ? (processTableStage2Inv[indice].Keq).toFixed(2) : "") : null
                                 }
-                            </Td>
-                            <Td style={{width: 50}}>
+                            </Td_processtable>
+                            <Td_processtable style={{width: 50}}>
                                 {
                                     xcVisible ? ((!isNaN(processTableStage2Inv[indice].Xc) && Number.isFinite(processTableStage2Inv[indice].Xc) ) === true ? (processTableStage2Inv[indice].Xc).toFixed(2) : "") : null
                                 }
-                            </Td>
-                            <Td>
+                            </Td_processtable>
+                            <Td_processtable>
                                 {
                                     fcVisible ? ((!isNaN(processTableStage2Inv[indice].Fc) && Number.isFinite(processTableStage2Inv[indice].Fc) ) === true ? (processTableStage2Inv[indice].Fc).toFixed(2) : "") : null
                                 }
-                            </Td>
-                            <Td>
+                            </Td_processtable>
+                            <Td_processtable>
                                 {
                                     kVisible ? ((!isNaN(processTableStage2Inv[indice].K) && Number.isFinite(processTableStage2Inv[indice].K) && (processTableStage2Inv[indice].K !== 0)) === true ? (processTableStage2Inv[indice].K).toFixed(2) : "") : null
                                 }
-                            </Td>
-                            <Td>
+                            </Td_processtable>
+                            <Td_processtable>
                                 {
                                     bVisible ? ((!isNaN(processTableStage2Inv[indice].b) && Number.isFinite(processTableStage2Inv[indice].b)) === true ? (processTableStage2Inv[indice].b.toFixed(2)) : "") : null
                                 }
-                            </Td>
+                            </Td_processtable>
                         </tr>
                     ))}
                 </tbody>
                                          
                       
-            </Table2>
+            </Table4>
             <div style={{width: 500, display: "flex", justifyContent: "center",}}  >
-              <Button1 onClick={deleteRow} disabled={processTableStage1.length === 3}>Eliminar última fila</Button1>
-              <Button1 onClick={addRow}>Agregar fila</Button1> 
-              <Button1 onClick={orderRow}>Ordenar filas</Button1>  
+              <Button4 onClick={deleteRow} disabled={processTableStage1.length === 3}>Eliminar última fila</Button4>
+              <Button4 onClick={addRow}>Agregar fila</Button4> 
+              <Button4 onClick={orderRow}>Ordenar filas</Button4>  
             </div>
         </div>
     )

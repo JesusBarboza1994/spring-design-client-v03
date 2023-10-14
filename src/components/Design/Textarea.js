@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import "@fontsource/abeezee/400-italic.css";
-import { DescripcionResorte } from "./Descripcion";
+import { DescripcionResorte } from "./Description";
 import { colors } from "../../styles/colors";
 
 export function Textarea(){

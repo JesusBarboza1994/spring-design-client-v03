@@ -1,76 +1,11 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../context/auth-context';
 import { colors } from "../../styles/colors";
+import {Table2, Table3, Td, Input, Th3, H2, Button1 } from "./style";
 
-const Table2 = styled.table`
-  width: 220px;  
-  margin:10px 0px;
-  background: black;
-  font-family: "ABeeZee";
-  border: 2px solid grey;
-  border-collapse: collapse;
-  color: grey;
 
-`
-const Table3 = styled.table`
-  width: 220px;  
-  margin:20px 0px;
-  background: black;
-  font-family: "ABeeZee";
-  border: 2px solid ${colors.grey};
-  border-collapse: collapse;
-  color: ${colors.grey};
-
-`
-
-const Td = styled.td`
-  height: 37.05px;
-  text-align: center;
-  width: 40px;
-  border: 1px solid ${colors.grey};
-  font-size: 13px;
-    
-`
-const Input = styled.input`
-  width:42px;
-  height:18px;
-  color:${colors.white};
-  background-color: ${colors.black};
-  margin:8px;
-  font-family:"ABeeZee";
-  font-size: 12px;
-  border-style:inset;
-  border-radius: 4px;   
-`
-const Th3 = styled.th`
-  height: 70px;
-  font-size: 14px;
-  border: 1px solid ${colors.grey};
-  font-family:"ABeeZee";
-  letter-spacing: 1px;
-  padding-left: 5px;
-  padding-right:5px;
-  
-`
-const H2 = styled.h2`
-  color: white;
-  font-size: 22px;
-`
-const Button1 = styled.button`
-  width:100px;
-  height:40px;
-  margin:8px 0px 0px 8px;
-  background-color: #363636; 
-  border-radius: 6px;
-  font-family:"ABeeZee";
-  letter-spacing: 1px;
-  font-size: 12px;
-  color: white;
-`
-
-export default function ControlDeCargasSimuladas(props) {
+export default function SimulatedLoadControl(props) {
 
     const {controlCargasSimuladas, setControlCargasSimuladas} = useAuth();
 
@@ -91,9 +26,7 @@ export default function ControlDeCargasSimuladas(props) {
         { id: 5, Def: "" },
         { id: 6, Def: "" }
     ])
-
-    
-
+ 
     return(
 
         <div>

@@ -1,72 +1,8 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../context/auth-context';
+import { Td_longtable, Input, Th, Input1,Th2, Length_table } from "./style";
 
-const Td = styled.td`
-  height: 36px;
-  text-align: center;
-  border: 1px solid grey;
-  font-size: 13px;
-`
-const Input = styled.input`
-  width:42px;
-  height:18px;
-  color: white;
-  background-color: black;
-  margin:8px;
-  font-family:"ABeeZee";
-  font-size: 12px;
-  border-style:inset;
-  border-radius: 4px;  
-`
-const Th3 = styled.th`
-  height: 80px;
-  font-size: 14px;
-  border: 1px solid grey;
-  
-`
-const Th = styled.th`
-    width: 180px;
-    height: 70px;
-    //writing-mode: vertical-lr;
-    //text-orientation: upright;
-    font-size: 14px;
-    border: 1px solid grey;
-    letter-spacing: 1px;
-  
-`
-const Input1 = styled.input`
-  width:46px;
-  height:18px;
-  color: white;
-  background-color: black;
-  margin:5px;
-  font-family:"ABeeZee";
-  font-size: 13px;
-  border-style:inset;
-  border-radius: 4px;  
-`
-const Th2 = styled.th`
-width: 200px;
-height: 20px;
-text-align: left;
-font-size: 14px;
-letter-spacing: 1px;
-padding: 10px;
-border: 1px solid grey;
-color: grey;
-`
-const Length_table = styled.table`
-background-color: black; 
-width:550px;
-//height:270px;
-font-family: "ABeeZee";
-border-collapse: collapse;
-color: grey;
-border: 2px solid grey;
-      
-`
 
 export default function LongTable() {
 
@@ -191,37 +127,37 @@ export default function LongTable() {
                 <tbody>
                     {nombreFilas.map((fila, indice) => (
                         <tr style={{color:"white"}}>
-                            <Td>
+                            <Td_longtable>
                                 {fila}
-                            </Td>
-                            <Td>
+                            </Td_longtable>
+                            <Td_longtable>
                             {
                                 indice > 3 ? ((!isNaN(inputLongTable[indice]) && Number.isFinite(inputLongTable[indice]) && (inputLongTable[indice] !== 0)) === true ? (inputLongTable[indice]).toFixed(2) : "") : <Input1 type="number" value={inputLongTable[indice]} id={indice} onChange={(e) => handleTab(e)}/>
                             }
-                            </Td>
-                            <Td>
+                            </Td_longtable>
+                            <Td_longtable>
                                 {
                                     (!isNaN(carreraTotal[indice]) && Number.isFinite(carreraTotal[indice])) === true ? (carreraTotal[indice]).toFixed(2) : ""
                                 }
-                            </Td>
-                            <Td>
+                            </Td_longtable>
+                            <Td_longtable>
                                 --
-                            </Td>
-                            <Td>
+                            </Td_longtable>
+                            <Td_longtable>
                                 {
                                     (!isNaN(fuerza[indice]) && Number.isFinite(fuerza[indice])) === true ? (fuerza[indice]).toFixed(2) : ""
                                 }
-                            </Td>
-                            <Td>
+                            </Td_longtable>
+                            <Td_longtable>
                                 { 
                                     (!isNaN(esfuerzo[indice]) && Number.isFinite(esfuerzo[indice])) === true ? (esfuerzo[indice]).toFixed(2) : ""
                                 }
-                            </Td>
-                            <Td>
+                            </Td_longtable>
+                            <Td_longtable>
                                 {
                                     (!isNaN(carreraParcial[indice]) && Number.isFinite(carreraParcial[indice])) === true ? (carreraParcial[indice]).toFixed(0) : ""
                                 }%
-                            </Td>
+                            </Td_longtable>
                         </tr>
                     ))}
                 </tbody>

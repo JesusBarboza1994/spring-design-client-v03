@@ -2,6 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Scatter } from 'react-chartjs-2';
 import { LinearScale, PointElement, LineElement, Chart } from "chart.js";
+import { GraphicContainer } from './style';
 
 
 // Se deben registrar todos lo elementos que se van a utilizar
@@ -9,7 +10,7 @@ Chart.register(LinearScale);
 Chart.register(PointElement);
 Chart.register(LineElement);
 
-export default function GraficoControlCargas ({puntos, slope, intercept, rSquared}) {
+export default function ControlLoadGraphic ({puntos, slope, intercept, rSquared}) {
 
   let datos = JSON.parse(JSON.stringify(puntos))
   // Datos de ejemplo con coordenadas
@@ -67,14 +68,14 @@ export default function GraficoControlCargas ({puntos, slope, intercept, rSquare
   };
 
   return(
-    <div style={{height:"380px", width:"600px", backgroundColor:'white', borderRadius: 8 }}>
+    <GraphicContainer>
         <h3 style={{textAlign:'center', fontFamily: "Inter"}}>Gráfico Control de Cargas</h3>
         <h4 style={{textAlign:'center'}}>
             {
                 (!isNaN(slope) && Number.isFinite(slope) && !isNaN(intercept) && Number.isFinite(intercept) && !isNaN(rSquared) && Number.isFinite(rSquared)) === true ? ( "k = "+(Number(slope)).toFixed(2)+", b = "+(Number(intercept)).toFixed(2)+", R2 = "+ (Number(rSquared)).toFixed(3) ) : ("k = , b = , R2 = ")
             }
         </h4>
-        <Scatter data={data} options={options} />
-    </div>
-  ) 
+        <Scatter data={data} options={options}/>
+    </GraphicContainer>
+  );
 }

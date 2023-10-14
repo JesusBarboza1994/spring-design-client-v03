@@ -1,99 +1,18 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from "../../context/auth-context";
+import { DivSimul, Paragraph2, Div2, Select, Input, Button, Label } from "./style";
 import { colors } from "../../styles/colors";
-//import { CalculateOrReset3Points } from "./processTable"
+
 
 export function SimulationData(){
-  
-  const DivSimul = styled.div`
-    display:flex;
-    grid-template-columns: auto, auto, auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    //column-gap:8px;
-    row-gap:none;
-    margin-bottom:20px;
-    margin-top: 10px;
-    margin-left: 50px;
-    width: 500px;
-    height: 140px; 
-    background-color:${colors.gray}; 
-    border-radius:8px;      
-  `
- const Paragraph = styled.p`
-    block-size:1px;
-    margin-top: 5px;
-    margin-left:30px;
-    margin-bottom: 10px;
-    font-family:"ABeeZee";
-    font-size:12px;
-    width: 133px;
-    color: ${colors.white};  
-  `
- const Div = styled.div`
-    display:flex;
-    aling-items: center;
-    width:125px;
-    height:40px;
-    margin:8px 16px 6px 16px;
-    background: ${colors.black};
-    border:2px solid ${colors.grey}; 
-    border-radius:8px;
-    
-  `
- const Select = styled.select`
-    background-color: ${colors.black};
-    color: ${colors.white};
-    font-family:"ABeeZee";
-    font-size: 13px;
-    border: 0px;
-
-  `
-  const Label = styled.label`
-    height: 20px;
-    width: 60px;
-    display:block;
-    background-color:${colors.black};
-    margin-top:8px;
-    margin-left: 10px;
-    font-family:"ABeeZee";
-    font-size: 13px;
-    color: grey;
-              
-  `
-  const Input = styled.input`
-    width:40px;
-    height:18px;
-    color:${colors.white};
-    background-color: ${colors.black};
-    margin:9px;
-    font-family:"ABeeZee";
-    font-size: 12px;
-    border-radius: 4px;
-    border-style:inset;
-      
-  `
-const Button = styled.button`
-    width:125px;
-    height:40px;
-    margin:3px 12px;
-    border-radius:8px;
-    background-color: ${colors.back};
-    font-family:"ABeeZee";
-    font-size: 13px;
-    letter-spacing: 1px;
-    color: ${colors.white};
-  `
-
-  //NUEVO---------------------------------------------------------------------------------------------------------------------------------------------------------
+     
   const {simulation_data, setSimulation_data, setStateButtonCalculateProcessTable} = useAuth();
 
   const iniciarFuncion = () => {
     setStateButtonCalculateProcessTable(true);
   };
-  //NUEVO----------------------------------------------------------------------------------------------------------------------------------------------------------
+  
   const [mater,setMater] = useState("");
 
   function handleSimulacion(e){
@@ -120,12 +39,12 @@ const Button = styled.button`
   return(
     <DivSimul>
         <div style={{display: "flex",}}>
-          <Paragraph>Datos de simulacion</Paragraph>
-          <Paragraph></Paragraph>
-          <Paragraph style={{textAlign: "center",}}>nodos</Paragraph>
+          <Paragraph2>Datos de simulacion</Paragraph2>
+          <Paragraph2></Paragraph2>
+          <Paragraph2 style={{textAlign: "center",}}>nodos</Paragraph2>
         </div>
       
-        <Div style={{width:138}}>
+        <Div2 style={{width:138}}>
           
           <Select style={{borderRadius:8,}} id={"Mater"} value={mater} onChange={(e) => handleListaMP(e)}>
             <option>Seleccionar MP</option>
@@ -150,17 +69,17 @@ const Button = styled.button`
             <option value="INOX SANDVIK">INOX SANDVIK</option>
                           
           </Select>
-        </Div>
+        </Div2>
         
-        <Div style={{marginLeft: 0}}>
+        <Div2 style={{marginLeft: 0}}>
           <Label style={{color: colors.white}}>deform</Label>
           <Input  value={simulation_data.deform} id={"deform"} onChange={(e) => handleSimulacion(e)}/>
-        </Div>
+        </Div2>
         
-        <Div>
+        <Div2>
           <Label style={{color: colors.white}}>grado</Label>
           <Input  value={simulation_data.grado} id={"grado"} onChange={(e) => handleSimulacion(e)}/>
-        </Div>
+        </Div2>
         <div style={{display: "flex",columnGap:164,width:"100%", marginLeft: 20}}>
           <Button>Simular</Button>
           <Button onClick={iniciarFuncion}>Calcular</Button>

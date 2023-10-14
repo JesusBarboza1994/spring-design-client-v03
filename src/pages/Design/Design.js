@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import "@fontsource/inter";
@@ -7,20 +6,18 @@ import { CalcParam } from "../../components/Design/CalculatedParameters";
 import { WeightTolerance } from "../../components/Design/WeightTolerance";
 import { Textarea } from "../../components/Design/Textarea";
 import { Switch, breadcrumbsClasses } from "@mui/material";
-import ProcessTable from "../../components/Design/processTable";
+import ProcessTable from "../../components/Design/ProcessTable";
 import TablaControlDeCargas from "../../components/Design/tablaControlDeCargas";
 import TablaCarrera from "../../components/Design/tablaCarrera";
-import LongTable from "../../components/Design/longTable";
-import ProbarFuerza from "../../components/Design/probarFuerza";
-import GraficoControlCargas from "../../components/Design/graficoControlCargas";
+import LongTable from "../../components/Design/LongTable";
+import TestStrength from "../../components/Design/TestStrength";
+import ControlLoadGraphic from "../../components/Design/ControlLoadGraphic";
+import SimulatedLoadControl from "../../components/Design/SimulatedLoadControl";
 
 import { useAuth } from '../../context/auth-context';
 import { calculateLinearRegression, generatePointForChart } from "../../utils/chart-utils";
 import { isNullLiteral } from "@babel/types";
-import { colors } from "../../styles/colors";
-import ControlDeCargasSimuladas from "../../components/Design/ControlDeCargasSimuladas";
 import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas } from "./styles";
-
 
 
 
@@ -258,12 +255,12 @@ export default function Design() {
         
         <div style={{display:"flex", gap: 100,}}>
           <TablaControlDeCargas L0={dimensions.L0}/>
-          <ControlDeCargasSimuladas/>
+          <SimulatedLoadControl/>
         </div>
 
         <div style={{display:"flex", gap: 70,}}>
-          <ProbarFuerza/>
-          <ProbarFuerza/>
+          <TestStrength/>
+          <TestStrength/>
         </div>
         
       </div>
@@ -275,17 +272,8 @@ export default function Design() {
         <ProcessTable medidasRes={dimensions} extremo1={dimensions.Ext1} extremo2={dimensions.Ext2}/>
         
         <H2 style={{marginTop:40, marginBottom: 8 }}>Caracteristica del Resorte</H2>
-        {/* <canvas style={{
-           width: 500,
-           height: 400, 
-           background: "white",
-           borderRadius: 8,
-          //  marginTop: 30,
-            }}>
-              
-        </canvas> */}
-
-        <GraficoControlCargas puntos={puntosCCGrafica} slope={lineaCC.k} intercept={lineaCC.b} rSquared={lineaCC.r2}/>
+        
+        <ControlLoadGraphic puntos={puntosCCGrafica} slope={lineaCC.k} intercept={lineaCC.b} rSquared={lineaCC.r2}/>
 
       </div>
 
