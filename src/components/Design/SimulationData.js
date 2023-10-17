@@ -8,7 +8,7 @@ import apiFetch from "../../services/api-fetch";
 
 export function SimulationData(){
      
-  const {dimensions, simulation_data, setSimulation_data, setStateButtonCalculateProcessTable} = useAuth();
+  const {dimensions, simulation_data, setSimulation_data, setStateButtonCalculateProcessTable, setSpringPoints3D, setSpringPointsSimulation} = useAuth();
 
   const iniciarFuncion = () => {
     setStateButtonCalculateProcessTable(true);
@@ -65,9 +65,56 @@ export function SimulationData(){
       });
 
       console.log('Resorte creado exitosamente:', response);
+      setSpringPoints3D(response)
       
     } catch (error) {
       console.error('Error al crear el resorte:', error.message);
+      
+    }
+  }
+
+  async function simulateSpring() {
+
+    let endpoint = 'simulate-spring/';
+    let requestBody = {
+      "wire":Number(dimensions.d),
+      "diam_ext1":Number(dimensions.Dext),
+      "diam_ext2":Number(dimensions.Dext2),
+      "diam_int1":Number(dimensions.Dint1),
+      "diam_int2":Number(dimensions.Dint2),
+      "length":Number(dimensions.L0),
+      "coils":Number(dimensions.N),
+      "coil_direction":"Derecha",
+      "end1":dimensions.Ext1,
+      "luz1":Number(dimensions.Luz1),
+      "coils_red_1":Number(dimensions.Vtas1),
+      "coils_amp_1":0,
+      "detail1_end1":"-",
+      "detail2_end1":"-",
+      "detail3_end1":"-",
+      "eccentricity1":0,
+      "end2":dimensions.Ext2,
+      "luz2":Number(dimensions.Luz1),
+      "coils_red_2":Number(dimensions.Vtas1),
+      "coils_amp_2":0,
+      "detail1_end2":"-",
+      "detail2_end2":"-",
+      "detail3_end2":"-",
+      "eccentricity2":0,
+      "grade":Number(simulation_data.grado)
+    };
+
+    try {
+      const response = await apiFetch(endpoint, {
+        method: 'POST', 
+        body: requestBody, 
+      });
+
+      console.log('Resorte simulado exitosamente:', response);
+      setSpringPointsSimulation(response)
+      
+    } catch (error) {
+      console.error('Error al simular el resorte:', error.message);
       
     }
   }
@@ -131,7 +178,8 @@ export function SimulationData(){
         <Input  value={simulation_data.grado} id={"grado"} onChange={(e) => handleSimulacion(e)}/>
       </Div2>
       <div style={{display: "flex",columnGap:164,width:"100%", marginLeft: 20}}>
-        <Button onClick={createSpring}>Simular</Button>
+        <Button onClick={createSpring}>Modelar</Button>
+        <Button onClick={simulateSpring}>Simular</Button>
         <Button onClick={iniciarFuncion}>Calcular</Button>
 
       </div>
