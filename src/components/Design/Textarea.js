@@ -1,6 +1,6 @@
 import "@fontsource/abeezee/400-italic.css";
 import { DescripcionResorte } from "./Description";
-import { DescripDiv, Paragraph3, Textarea } from "./style";
+import { DescripDiv, Paragraph3, Textarea } from "./styles";
 
 export function TextArea(){
    

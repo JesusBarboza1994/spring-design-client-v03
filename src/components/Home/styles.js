@@ -24,6 +24,9 @@ export const LogoContainer = styled.div`
  width: 1000px;
  margin-top: 50px;
  margin-left: 50px;
+ display:grid;
+ gap: none;
+
 `
 
 export const Logo = styled.h1`
@@ -38,6 +41,7 @@ export const Logo = styled.h1`
 `
 
 export const CompanyName = styled.h2`
+  
   color: ${colors.white};
   ${typography.head.md};
   font-family: ${fonts.secondary};

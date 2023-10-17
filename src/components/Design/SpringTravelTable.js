@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../context/auth-context';
 import { colors } from "../../styles/colors";
-import { Td1, Th3 } from "./style";
+import { Td1, Th3 } from "./styles";
 
 
 export default function SpringTravelTable() {

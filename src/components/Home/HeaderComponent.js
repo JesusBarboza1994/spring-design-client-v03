@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { colors } from "../../styles/colors";
 import { fonts, typography } from "../../styles/typography";
 import { LoginComponent } from "./LoginComponent";
-import { Wrapper, Logo, CompanyName, LogoContainer } from "../../components/Home/style";
+import { Wrapper, Logo, CompanyName, LogoContainer } from "./styles";
 
 export function Header(){
   

@@ -1,5 +1,3 @@
-// import styled from "@emotion/styled";
-// import { useEffect, useState } from "react";
 import { CalcParam } from "./CalculatedParameters";
 
 

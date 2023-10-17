@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../context/auth-context';
-import { Table4, Td_processtable, Table1, Input5, Input3, Input, Th3_processtable, Th4, Input2, Label2, Tbody, Button, Button4, Button2, Button3 } from "./style";
+import { Table4, Td_processtable, Table1, Input5, Input3, Input, Th3_processtable, Th4, Input2, Label2, Tbody, Button, Button4, Button2, Button3 } from "./styles";
 
 /*export function calcularprocessTableStage1(){
         

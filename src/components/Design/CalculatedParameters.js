@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from "../../context/auth-context";
 import { isNullLiteral } from "@babel/types";
-import {DivSimul, Paragraph, DivCalculo, Div, Label} from "./style";
+import {DivSimul, Paragraph, DivCalculo, Div, Label} from "./styles";
 
 export function CalcParam({diam,diamext1,diamint1,diamint2,vred1,vred2,numvts,longitud,luz1,luz2}){
  
@@ -22,11 +22,6 @@ export function CalcParam({diam,diamext1,diamint1,diamint2,vred1,vred2,numvts,lo
 
   }, [diam, diamext1, diamint1, diamint2, vred1, vred2, numvts])
 
-
-  // useEffect(() => {
-  //  setCalculated_data({...calculated_data, Vt_red_VT : ((vred1+vred2)/numvts).toFixed(2) }) 
-
-  // }, [vred1, vred2, numvts])
 
   const {filas, setFilas, calculated_data, setCalculated_data} = useAuth();
 

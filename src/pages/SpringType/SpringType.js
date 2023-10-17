@@ -1,6 +1,6 @@
 import HomeComponent from "../../components/Home/HomeComponent";
-import { ScreenStyle} from "../../components/Home/style";
-import { ElementContainer} from "../../components/SpringType/style";
+import { ScreenStyle} from "../../components/Home/styles";
+import { ElementContainer} from "../../components/SpringType/styles";
 import { HeaderElement } from "../../components/SpringType/HeaderElement";
 
 

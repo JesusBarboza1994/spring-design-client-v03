@@ -2,7 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Scatter } from 'react-chartjs-2';
 import { LinearScale, PointElement, LineElement, Chart } from "chart.js";
-import { GraphicContainer } from './style';
+import { GraphicContainer } from './styles';
 
 
 // Se deben registrar todos lo elementos que se van a utilizar

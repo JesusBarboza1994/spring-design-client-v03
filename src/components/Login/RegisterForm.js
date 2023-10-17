@@ -1,5 +1,5 @@
 import { StyledInput, Button, LogoContainer_LoginPage, RegisterContainer, Label} from "./styles";
-import { Logo, CompanyName } from "../Home/style";
+import { Logo, CompanyName } from "../Home/styles";
 
 
 function RegisterForm(){

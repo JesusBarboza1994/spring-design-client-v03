@@ -3,7 +3,7 @@ import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from "../../context/auth-context";
 import { Switch, breadcrumbsClasses } from "@mui/material";
 import { isNullableTypeAnnotation } from "@babel/types";
-import { DivSimul, DivCalculo, Div, Paragraph, InputLDA, Label, Select } from "./style";
+import { DivSimul, DivCalculo, Div, Paragraph, InputLDA, Label, Select } from "./styles";
 
 
 export function WeightTolerance(){
@@ -17,18 +17,6 @@ export function WeightTolerance(){
       Peso:"",
       Dmedio:"",    
   });
-
-  //const [grado,setGrado] = useState(1); 
-  /*const [tablaToler,setTablaToler] = useState({
-    valor: "",
-  });
-
-  const [coef, setCoef] = useState({
-      af : 0,
-      kf : 0,
-      Q_Long : 0,
-      toler_L0: 0,
-  }); */
 
   const [boolSwitch,setBoolSwitch] = useState(false)
   function handleChange(){
@@ -84,8 +72,7 @@ export function WeightTolerance(){
     const linea = tolerDiam.findIndex((_rango, indice, arreglo)=>{
         return Number(dmedio)>=arreglo[indice][0] && Number(dmedio)<=arreglo[indice+1][0]
       });
-    //console.log(linea);
-  
+      
     let C = ((dimensions.Dext-dimensions.d)/dimensions.d).toFixed(2)
     let tolerBuscada=0;
     switch(grado){
@@ -122,7 +109,7 @@ export function WeightTolerance(){
     default:
       console.log("No entro a ninguno")
     }
-    //console.log(tolerBuscada);
+    
    
     return tolerBuscada
   }
@@ -197,9 +184,7 @@ export function WeightTolerance(){
         <DivCalculo id={"toler_L0"}>{!isNaN(coef.toler_L0) === true ? (coef.toler_L0) : ""}</DivCalculo>
       </Div>
    </DivSimul>
-  )
-  
-
+  );     
 }
 
 

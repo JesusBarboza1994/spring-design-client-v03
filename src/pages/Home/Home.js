@@ -2,7 +2,7 @@ import HomeComponent from "../../components/Home/HomeComponent";
 import "@fontsource/inter";
 import "@fontsource/work-sans";
 import { Header } from "../../components/Home/HeaderComponent";
-import { ScreenStyle, ElementContainer } from "../../components/Home/style";
+import { ScreenStyle, ElementContainer } from "../../components/Home/styles";
 import { LoginComponent } from "../../components/Home/LoginComponent";
 
 

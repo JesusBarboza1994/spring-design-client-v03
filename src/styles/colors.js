@@ -32,6 +32,7 @@ export const colors = {
   grey: "gray",
   red: "#BA181B",
   pink: "#F34949",
+  greylight: "#D9D9D9"
 };
 
 export const ColorStyle = (dark) =>{

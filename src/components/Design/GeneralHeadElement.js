@@ -1,23 +1,24 @@
-import { MediumCell } from "./InputdataStyle";
-import { Paragraph } from "./style";
+import { CellName, DivElement, GrisContainer, MediumCell } from "./InputDataStyle";
+
+
 
 export function GeneralHeadElement (){
 return(
-    <Wrapper>
-     <div>
-         <Paragraph>Fecha</Paragraph>
+    <GrisContainer>
+     <DivElement>
+         <CellName>Fecha</CellName>
          <MediumCell/>
-     </div>
-     <div>
-         <Paragraph>Correlativo de diseño</Paragraph>
+     </DivElement>
+     <DivElement>
+         <CellName>Correlativo de diseño</CellName>
          <MediumCell/>
-     </div>
-     <div>
-         <Paragraph>Tipo de resorte</Paragraph>
-         <MediumCell/>
-     </div>
+     </DivElement>
+     <DivElement>
+         <CellName>Tipo de resorte:</CellName>
+         <CellName>SUSPENSION</CellName>
+     </DivElement>
         
-    </Wrapper>
+    </GrisContainer>
     
 )
 }

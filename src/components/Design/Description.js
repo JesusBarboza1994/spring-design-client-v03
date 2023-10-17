@@ -115,7 +115,5 @@ export function DescripcionResorte(){  //codifica el resorte acorde a los datos 
           
  }, [grado])
 
-
-  //return mensaje
         
 }
