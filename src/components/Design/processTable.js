@@ -3,42 +3,6 @@ import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../context/auth-context';
 import { Table4, Td_processtable, Table1, Input5, Input3, Input, Th3_processtable, Th4, Input2, Label2, Tbody, Button, Button4, Button2, Button3 } from "./styles";
 
-/*export function calcularprocessTableStage1(){
-        
-    const {dimensions, setDimensions, processTableStage1, setProcessTableStage1, processTableStage2, setProcessTableStage2} = useAuth();
-
-    let long1 = (Number(dimensions.Luz2)+Number(dimensions.d))*0.875
-    let long2 = (Number(dimensions.Luz1)+Number(dimensions.d))*0.875
-    let luz1 = long1/0.875 - Number(dimensions.d)
-    let luz2 = long2/0.875 - Number(dimensions.d)
-    let vtas1 = 0.875
-    let vtas2 = 0.875
-    
-    let longLineaMedia = Number(dimensions.L0)
-    if (((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TCSE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TCSE"))) {
-        longLineaMedia = Number(dimensions.L0) - Number(dimensions.d)
-    } else if (((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TCE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TCE"))) {
-        longLineaMedia = Number(dimensions.L0) 
-    } else {
-        longLineaMedia = Number(dimensions.L0) - Number(dimensions.d)/2
-    }
-
-    let vtas3 = Number(dimensions.N)-2*0.875
-    let long3 = longLineaMedia-long1-long2-Number(dimensions.d)
-    let luz3 = (long3/vtas3)-Number(dimensions.d)
-
-    let luces = [luz1, luz2, luz3]
-    let longitudes = [long1, long2, long3]
-    let vueltas = [vtas1, vtas2, vtas3]
-
-    setProcessTableStage1(processTableStage1.map((punto, indice) => {
-      if (punto.id < 4) {
-        return { ...punto, Luz: luces[indice], Long: longitudes[indice], Vtas: vueltas[indice] };
-      }
-      return punto;
-    }));
-}*/
-
 export default function ProcessTable(props) {
 
     const {dimensions, setDimensions, processTableStage1, setProcessTableStage1, processTableStage2, setProcessTableStage2, stateButtonCalculateProcessTable, setStateButtonCalculateProcessTable} = useAuth();
@@ -95,11 +59,6 @@ export default function ProcessTable(props) {
     }
 
     //NUEVO---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-    function CalculateOrReset3Points(){
-        calcularprocessTableStage1()
-    }
 
     const addRow = () => {
         setProcessTableStage1([...processTableStage1, { id: processTableStage1.length + 1, Luz: "", Long: "", Vtas: "" }])

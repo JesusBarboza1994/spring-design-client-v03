@@ -4,22 +4,22 @@ import "@fontsource/inter";
 import { SimulationData } from "../../components/Design/SimulationData"
 import { CalcParam } from "../../components/Design/CalculatedParameters";
 import { WeightTolerance } from "../../components/Design/WeightTolerance";
-import { TextArea } from "../../components/Design/TextArea";
+import { TextArea } from "../../components/Design/Textarea";
 import { Switch, breadcrumbsClasses } from "@mui/material";
-import ProcessTable from "../../components/Design/ProcessTable";
+import ProcessTable from "../../components/Design/processTable";
 import LoadControlTable from "../../components/Design/LoadControlTable";
 import SpringTravelTable from "../../components/Design/SpringTravelTable";
-import LongTable from "../../components/Design/LongTable";
+import LongTable from "../../components/Design/longTable";
 import TestStrength from "../../components/Design/TestStrength";
 import ControlLoadGraphic from "../../components/Design/ControlLoadGraphic";
 import SimulatedLoadControl from "../../components/Design/SimulatedLoadControl";
+import Spring3DLine from "../../components/Design/Spring3DLine";
+import SpringStressSimulation from "../../components/Design/SpringStressSimulation";
 
 import { useAuth } from '../../context/auth-context';
 import { calculateLinearRegression, generatePointForChart } from "../../utils/chart-utils";
 import { isNullLiteral } from "@babel/types";
 import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas } from "./styles";
-
-
 
 export default function Design() {
 
@@ -36,7 +36,7 @@ export default function Design() {
     L:"",        
   })
 
-  const {filas, dimensions, setDimensions, calculated_data, setCalculated_data, controlCargas, setKControlCargas, setBControlCargas} = useAuth();
+  const {filas, dimensions, setDimensions, calculated_data, setCalculated_data, controlCargas, setKControlCargas, setBControlCargas, springPoints3D, springPointsSimulation} = useAuth();
 
   const [puntosCCGrafica, setPuntosCCGrafica] = useState([
     { x: 0, y: 0},
@@ -274,6 +274,16 @@ export default function Design() {
         <H2 style={{marginTop:40, marginBottom: 8 }}>Caracteristica del Resorte</H2>
         
         <ControlLoadGraphic puntos={puntosCCGrafica} slope={lineaCC.k} intercept={lineaCC.b} rSquared={lineaCC.r2}/>
+
+        <div style={{backgroundColor:"black"}} >
+            
+          <Spring3DLine points={springPoints3D} wire={dimensions.d}></Spring3DLine>
+          
+        </div>
+
+        <div>
+          <SpringStressSimulation dataSimulation={springPointsSimulation}></SpringStressSimulation>
+        </div>
 
       </div>
 
