@@ -1,28 +1,25 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import "@fontsource/inter";
-import { SimulationData } from "../../components/SimulationData"
-import { CalcParam } from "../../components/CalculatedParameters";
-import { WeightTolerance } from "../../components/WeightTolerance";
-import { Textarea } from "../../components/Textarea";
+import { SimulationData } from "../../components/Design/SimulationData"
+import { CalcParam } from "../../components/Design/CalculatedParameters";
+import { WeightTolerance } from "../../components/Design/WeightTolerance";
+import { TextArea } from "../../components/Design/Textarea";
 import { Switch, breadcrumbsClasses } from "@mui/material";
-import ProcessTable from "../../components/processTable";
-import TablaControlDeCargas from "../../components/tablaControlDeCargas";
-import TablaCarrera from "../../components/tablaCarrera";
-import LongTable from "../../components/longTable";
-import ProbarFuerza from "../../components/probarFuerza";
-import GraficoControlCargas from "../../components/graficoControlCargas";
+import ProcessTable from "../../components/Design/processTable";
+import LoadControlTable from "../../components/Design/LoadControlTable";
+import SpringTravelTable from "../../components/Design/SpringTravelTable";
+import LongTable from "../../components/Design/longTable";
+import TestStrength from "../../components/Design/TestStrength";
+import ControlLoadGraphic from "../../components/Design/ControlLoadGraphic";
+import SimulatedLoadControl from "../../components/Design/SimulatedLoadControl";
+import Spring3DLine from "../../components/Design/Spring3DLine";
+import SpringStressSimulation from "../../components/Design/SpringStressSimulation";
 
 import { useAuth } from '../../context/auth-context';
 import { calculateLinearRegression, generatePointForChart } from "../../utils/chart-utils";
 import { isNullLiteral } from "@babel/types";
-import { colors } from "../../styles/colors";
-import ControlDeCargasSimuladas from "../../components/ControlDeCargasSimuladas";
 import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas } from "./styles";
-
-
-
 
 export default function Design() {
 
@@ -39,7 +36,7 @@ export default function Design() {
     L:"",        
   })
 
-  const {filas, dimensions, setDimensions, calculated_data, setCalculated_data, controlCargas, setKControlCargas, setBControlCargas} = useAuth();
+  const {filas, dimensions, setDimensions, calculated_data, setCalculated_data, controlCargas, setKControlCargas, setBControlCargas, springPoints3D, springPointsSimulation} = useAuth();
 
   const [puntosCCGrafica, setPuntosCCGrafica] = useState([
     { x: 0, y: 0},
@@ -243,7 +240,7 @@ export default function Design() {
        
       <WeightTolerance/>
       
-      <Textarea/>
+      <TextArea/>
       <H1>Simulacion</H1>
       <Canvas/>
     </div>
@@ -257,13 +254,13 @@ export default function Design() {
         </div>
         
         <div style={{display:"flex", gap: 100,}}>
-          <TablaControlDeCargas L0={dimensions.L0}/>
-          <ControlDeCargasSimuladas/>
+          <LoadControlTable L0={dimensions.L0}/>
+          <SimulatedLoadControl/>
         </div>
 
         <div style={{display:"flex", gap: 70,}}>
-          <ProbarFuerza/>
-          <ProbarFuerza/>
+          <TestStrength/>
+          <TestStrength/>
         </div>
         
       </div>
@@ -275,17 +272,18 @@ export default function Design() {
         <ProcessTable medidasRes={dimensions} extremo1={dimensions.Ext1} extremo2={dimensions.Ext2}/>
         
         <H2 style={{marginTop:40, marginBottom: 8 }}>Caracteristica del Resorte</H2>
-        {/* <canvas style={{
-           width: 500,
-           height: 400, 
-           background: "white",
-           borderRadius: 8,
-          //  marginTop: 30,
-            }}>
-              
-        </canvas> */}
+        
+        <ControlLoadGraphic puntos={puntosCCGrafica} slope={lineaCC.k} intercept={lineaCC.b} rSquared={lineaCC.r2}/>
 
-        <GraficoControlCargas puntos={puntosCCGrafica} slope={lineaCC.k} intercept={lineaCC.b} rSquared={lineaCC.r2}/>
+        <div style={{backgroundColor:"black"}} >
+            
+          <Spring3DLine points={springPoints3D} wire={dimensions.d}></Spring3DLine>
+          
+        </div>
+
+        <div>
+          <SpringStressSimulation dataSimulation={springPointsSimulation}></SpringStressSimulation>
+        </div>
 
       </div>
 

@@ -1,10 +1,11 @@
 import { colors } from "./colors";
+import * as abeezee from "@fontsource/abeezee";
+import * as Inter from "@fontsource/inter";
+import * as WorkSans from "@fontsource/work-sans";
 
 export const fonts = {
-  primary: `"Source Code Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
-  secondary: `"Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
+  primary: "Inter",
+  secondary: "Inter",
 };
 
 export const typography = {
@@ -40,7 +41,7 @@ export const typography = {
     line-height: 2rem;
     `,
     md: `
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     line-height: 2.25rem;
     `,
     lg: `
@@ -61,12 +62,13 @@ export const typography = {
 for (const size in typography.text) {
   typography.text[size] += `
   font-family: ${fonts.primary};
+  font-weight: 300;
   `;
 }
 
 for (const size in typography.head) {
   typography.head[size] += `
   font-family: ${fonts.secondary};
-  font-weight: 600;
+  font-weight: 700;
   `;
 }

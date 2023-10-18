@@ -23,14 +23,16 @@ export const colors = {
     800: "#292524",
     900: "#1C1917",
   },
-  blackfondo: "#171717",
+  blackfondo: "#161A1D",
   black: "black",
   white: "#FFFFFF",
   gray: "#363636",
   purple: "#adc5fff1",
   back: "#fc1221c5",
-  grey: "grey",
-  red: "#EE7272",
+  grey: "gray",
+  red: "#BA181B",
+  pink: "#F34949",
+  greylight: "#D9D9D9"
 };
 
 export const ColorStyle = (dark) =>{

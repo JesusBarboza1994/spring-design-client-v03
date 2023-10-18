@@ -98,6 +98,10 @@ function AuthProvider({children}){
 
   const [stateButtonCalculateProcessTable, setStateButtonCalculateProcessTable] = useState(false);
 
+  const [springPoints3D, setSpringPoints3D] = useState([])
+
+  const [springPointsSimulation, setSpringPointsSimulation] = useState({})
+
   return(
     <AuthContext.Provider value={{
       filas,
@@ -127,7 +131,11 @@ function AuthProvider({children}){
       bControlCargas,
       setBControlCargas,
       stateButtonCalculateProcessTable,
-      setStateButtonCalculateProcessTable
+      setStateButtonCalculateProcessTable,
+      springPoints3D,
+      setSpringPoints3D,
+      springPointsSimulation,
+      setSpringPointsSimulation
     }}>
       {children}
     </AuthContext.Provider>

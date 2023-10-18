@@ -59,7 +59,7 @@ export const reset = css`
   /* Inherit fonts for inputs and buttons */
   input,
   button,
-  textarea,
+  TextArea,
   select {
     font: inherit;
   }
