@@ -177,7 +177,7 @@ export function SimulationData(){
         <Label style={{color: colors.white}}>grado</Label>
         <Input  value={simulation_data.grado} id={"grado"} onChange={(e) => handleSimulacion(e)}/>
       </Div2>
-      <div style={{display: "flex",columnGap:164,width:"100%", marginLeft: 20}}>
+      <div style={{display: "flex",columnGap:6,width:"100%", marginLeft: 20}}>
         <Button onClick={createSpring}>Modelar</Button>
         <Button onClick={simulateSpring}>Simular</Button>
         <Button onClick={iniciarFuncion}>Calcular</Button>
