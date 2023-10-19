@@ -9,11 +9,11 @@ export function HeaderElement(){
         <Wrapper>
             <LogoContainer>
              {/*<Logo>MRC</Logo>*/}
-             <img src="/Images/MRC1.png" align="left" hspace="0px" width="20%" />
+             <img src="/Images/MRC1.png" align="left" hspace="0px" width="15%" />
              <CompanyName>Mallas, resortes y cables</CompanyName>
             </LogoContainer>
 
-            <div>
+            <div style={{width: "auto"}}>
              <SpecifyingElement/>
             </div>
             

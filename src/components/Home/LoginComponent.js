@@ -1,13 +1,15 @@
 import { fonts } from "../../styles/typography";
+import { H3, SpecifyingElementContainer } from "../../components/Design/InputDataStyle";
 
 
 export function LoginComponent(){
   
  return(
-    <div style={{ marginTop: 110, marginRight:50, textAlign: "right",}}>
-        <img src="/Images/loginsymbol.png" align="right" hspace="10px" width="4%"/>
-        <h3 style={{color: "white", letterSpacing: 1, }}>Login</h3>
-    </div>
+    <SpecifyingElementContainer>
+        
+        <H3>LOGIN</H3>
+        <img src="/Images/loginsymbol.png" align="right" hspace="5px" width="5%" />
+    </SpecifyingElementContainer>
 
    );
 }

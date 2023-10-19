@@ -9,11 +9,12 @@ export function Header(){
     return(
         <Wrapper>
             <LogoContainer>
-             <Logo>MRC</Logo>
+             {/*<Logo>MRC</Logo>*/}
+             <img src="/Images/MRC1.png" align="left" hspace="0px" width="15%" />
              <CompanyName>Mallas, resortes y cables</CompanyName>
             </LogoContainer>
 
-            <div>
+            <div style={{width:"auto", }}>
              <LoginComponent/>
             </div>
             

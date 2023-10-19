@@ -14,7 +14,8 @@ function RegisterForm(){
     return(
      <>
       <LogoContainer_LoginPage>
-         <Logo>MRC</Logo>
+         {/*<Logo>MRC</Logo>*/}
+         <img src="/Images/MRC1.png" align="left" hspace="0px" width="40%" />
          <CompanyName>Mallas, resortes y cables</CompanyName>
       </LogoContainer_LoginPage>
 
