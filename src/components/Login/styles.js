@@ -4,7 +4,7 @@ import { typography } from "../../styles/typography";
 import { fonts } from "../../styles/typography";
 
 export const Wrap = styled.div`
-   background: url(/fondo.jpg);
+   background: url("/Images/fondo.png");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -25,7 +25,8 @@ export const LoginContainer=styled.form`
 
 `
 export const LogoContainer_LoginPage = styled.div`
-       
+    display: flex;
+    flex-wrap: wrap;   
     margin: 225px 0 75px 77px;
 
 `

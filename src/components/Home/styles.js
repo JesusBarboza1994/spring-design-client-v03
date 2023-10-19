@@ -4,8 +4,7 @@ import { typography } from "../../styles/typography";
 import { fonts } from "../../styles/typography";
 
 export const ScreenStyle = styled.div`
- width: 1440px;
- height: 1024px;
+ width: 100%;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -22,6 +21,7 @@ export const Wrapper = styled.div`
 `
 export const LogoContainer = styled.div`
  width: 1000px;
+ height: 95px;
  margin-top: 50px;
  margin-left: 50px;
  display:grid;
@@ -41,7 +41,7 @@ export const Logo = styled.h1`
 `
 
 export const CompanyName = styled.h2`
-  
+  align-self: flex-start;
   color: ${colors.white};
   ${typography.head.md};
   font-family: ${fonts.secondary};
@@ -52,12 +52,13 @@ export const CompanyName = styled.h2`
 
 
 export const ElementContainer = styled.div`
+ 
  width: 1000px;
  display: flex;
  flex-wrap: wrap;
  column-gap: 120px;
  row-gap: 80px; 
- padding-top: 300px;
+ padding-top: 330px;
  justify-content: center;
 
 `

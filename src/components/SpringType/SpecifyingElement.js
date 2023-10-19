@@ -1,14 +1,14 @@
-import { fonts } from "../../styles/typography";
+import { H3, SpecifyingElementContainer } from "../../components/Design/InputDataStyle";
 
 
 export function SpecifyingElement(){
   
  return(
-    <div style={{ marginTop: 110, marginRight:50,  display: "flex", justifyContent:"right", gap: 10,  }}>
+    <SpecifyingElementContainer>
         
-        <h3 style={{color: "white", letterSpacing: 1, alignSelf: "center",}}>DISEÑO</h3>
-        <img src="/Images/Spring1.png" align="right" hspace="5px" width="15%" display="block" />
-    </div>
+        <H3>DISEÑO</H3>
+        <img src="/Images/Spring1.png" align="right" hspace="5px" width="15%" />
+    </SpecifyingElementContainer>
 
    );
 }

@@ -8,10 +8,16 @@ export default function DesignInputData(){
  
     return(
         <ScreenStyle>
+             
              <Wrapper>
                <HeaderElement/>
-               <GeneralHeadElement/>
-               <ClientData/>
+
+               <div style={{display:"flex", flexDirection: "column",  rowGap: 30}}>
+                 <GeneralHeadElement/>
+                 <ClientData/>
+
+               </div>
+               
             </Wrapper>
 
             
