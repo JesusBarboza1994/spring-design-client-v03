@@ -23,7 +23,7 @@ export const Paragraph = styled.p`
   margin-bottom: 18px;
   margin-top: 8px;
   font-family: ${fonts.primary};
-  ${typography.text.xs}
+  ${typography.text.xs};
   color: ${colors.white};  
   width: 148px;
 `
@@ -34,7 +34,7 @@ export const DivCalculo = styled.div`
   background-color: ${colors.black};
   margin: 9px;
   font-family: ${fonts.primary};
-  ${typography.text.xs}
+  ${typography.text.xs};
   line-height: 18px;
   border-radius: 4px;
   border: 2px grey;

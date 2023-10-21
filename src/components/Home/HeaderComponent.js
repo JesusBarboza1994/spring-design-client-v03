@@ -10,7 +10,7 @@ export function Header(){
         <Wrapper>
             <LogoContainer>
              {/*<Logo>MRC</Logo>*/}
-             <img src="/Images/MRC1.png" align="left" hspace="0px" width="15%" />
+             <img src="/Images/MRC1.png" align="left" hspace="0px" width="150px" />
              <CompanyName>Mallas, resortes y cables</CompanyName>
             </LogoContainer>
 
