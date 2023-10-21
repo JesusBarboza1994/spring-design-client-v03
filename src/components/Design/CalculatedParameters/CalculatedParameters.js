@@ -1,11 +1,9 @@
-import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
-import { useAuth } from "../../context/auth-context";
-import { isNullLiteral } from "@babel/types";
+import { useAuth } from "../../../context/auth-context";
 import {DivSimul, Paragraph, DivCalculo, Div, Label} from "./styles";
 
-export function CalcParam({diam,diamext1,diamint1,diamint2,vred1,vred2,numvts,longitud,luz1,luz2}){
+export function CalculatedParameters({diam,diamext1,diamint1,diamint2,vred1,vred2,numvts,longitud,luz1,luz2}){
  
   useEffect(() => {
 

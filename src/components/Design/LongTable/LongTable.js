@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
-import { useAuth } from '../../context/auth-context';
-import { Td_longtable, Input, Th, Input1,Th2, Length_table } from "./styles";
+import { useAuth } from '../../../context/auth-context';
+import { Td_longtable, Th, Input1, Length_table } from "./styles";
 
 
 export default function LongTable() {

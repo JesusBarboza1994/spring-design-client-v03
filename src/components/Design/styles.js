@@ -438,8 +438,8 @@ export const Button1 = styled.button`
 export const Table3 = styled.table`
   width: 220px;  
   margin:20px 0px;
-  background: black;
-  font-family: "ABeeZee";
+  background: ${colors.black};
+  font-family: ${fonts.primary};
   border: 2px solid ${colors.grey};
   border-collapse: collapse;
   color: ${colors.grey};

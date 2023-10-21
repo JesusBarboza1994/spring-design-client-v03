@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useAuth } from "../../context/auth-context";
+import { useAuth } from "../../../context/auth-context";
 
-export function DescripcionResorte(){  //codifica el resorte acorde a los datos presentados en la hoja de diseño
+export function Description(){  //codifica el resorte acorde a los datos presentados en la hoja de diseño
 
   const {dimensions, simulation_data,tablaToler,coef, descrip, setDescrip,grado} = useAuth();
         

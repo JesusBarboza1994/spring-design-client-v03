@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
-import { useAuth } from '../../context/auth-context';
-import { colors } from "../../styles/colors";
+import { useAuth } from '../../../context/auth-context';
+import { colors } from "../../../styles/colors";
 import { Table2, Td1, Th3, Input, Button1 } from "./styles";
 
 

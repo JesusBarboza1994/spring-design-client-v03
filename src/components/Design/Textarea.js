@@ -1,10 +1,10 @@
 import "@fontsource/abeezee/400-italic.css";
-import { DescripcionResorte } from "./Description";
+import { Description } from "./Description";
 import { DescripDiv, Paragraph3, Textarea } from "./styles";
 
 export function TextArea(){
    
-    let descripcion = DescripcionResorte()
+    let descripcion = Description()
 
  return(
     <div>  
