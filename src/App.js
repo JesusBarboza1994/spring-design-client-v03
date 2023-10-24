@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Design from "./pages/Design/Design";
 import SpringType from "./pages/SpringType/SpringType";
 import DesignInputData from "./pages/DesignInputData/DesignInputData";
+import { Page } from "./components/Design/DataTypeDesign/DataTypeDesign";
 
 function App() {
     return(
@@ -12,6 +13,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/spring_type" element={<SpringType/>}/>
           <Route path="/design_inputdata" element={<DesignInputData/>}/>
+          <Route path="/prueba" element={<Page/>}/>
           <Route path="/design" element={<Design/>}/>
         </Routes> 
       )

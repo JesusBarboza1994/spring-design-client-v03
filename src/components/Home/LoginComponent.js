@@ -8,7 +8,7 @@ export function LoginComponent(){
     <SpecifyingElementContainer>
         
         <H3>LOGIN</H3>
-        <img src="/Images/loginsymbol.png" align="right" hspace="5px" width="5%" />
+        <img src="/Images/loginsymbol.png" align="right" hspace="5px" width="30px" />
     </SpecifyingElementContainer>
 
    );

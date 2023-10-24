@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import "@fontsource/inter";
-import { SimulationData } from "../../components/Design/SimulationData"
-import { CalcParam } from "../../components/Design/CalculatedParameters";
-import { WeightTolerance } from "../../components/Design/WeightTolerance";
-import { TextArea } from "../../components/Design/Textarea";
+import SimulationData from "../../components/Design/SimulationData";
+import CalculatedParameters from "../../components/Design/CalculatedParameters";
+import { WeightTolerance } from "../../components/Design/WeightTolerance/WeightTolerance";
+import { TextArea } from "../../components/Design/Textarea/Textarea";
 import { Switch, breadcrumbsClasses } from "@mui/material";
-import ProcessTable from "../../components/Design/processTable";
+import ProcessTable from "../../components/Design/ProcessTable/ProcessTable";
 import LoadControlTable from "../../components/Design/LoadControlTable";
-import SpringTravelTable from "../../components/Design/SpringTravelTable";
-import LongTable from "../../components/Design/longTable";
-import TestStrength from "../../components/Design/TestStrength";
+import SpringTravelTable from "../../components/Design/SpringTravelTable/SpringTravelTable";
+import LongTable from "../../components/Design/LongTable";
+import TestStrength from "../../components/Design/TestStrength/TestStrength";
 import ControlLoadGraphic from "../../components/Design/ControlLoadGraphic";
 import SimulatedLoadControl from "../../components/Design/SimulatedLoadControl";
-import Spring3DLine from "../../components/Design/Spring3DLine";
+import Spring3DLine from "../../components/Design/Spring3DLine/Spring3DLine";
 import SpringStressSimulation from "../../components/Design/SpringStressSimulation";
 
 import { useAuth } from '../../context/auth-context';
@@ -227,7 +227,7 @@ export default function Design() {
 
       <SimulationData/>
 
-      <CalcParam diam={dimensions.d} 
+      <CalculatedParameters diam={dimensions.d} 
             diamext1={dimensions.Dext}
             diamint1={dimensions.Dint1}
             diamint2={dimensions.Dint2}
