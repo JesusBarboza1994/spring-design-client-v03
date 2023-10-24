@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
-import { useAuth } from "../../context/auth-context";
+import { useAuth } from "../../../context/auth-context";
 import { Switch, breadcrumbsClasses } from "@mui/material";
 import { isNullableTypeAnnotation } from "@babel/types";
 import { DivSimul, DivCalculo, Div, Paragraph, InputLDA, Label, Select } from "./styles";

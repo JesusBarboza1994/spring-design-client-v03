@@ -1,5 +1,5 @@
 import "@fontsource/abeezee/400-italic.css";
-import { Description } from "./Description";
+import { Description } from "../Description";
 import { DescripDiv, Paragraph3, Textarea } from "./styles";
 
 export function TextArea(){

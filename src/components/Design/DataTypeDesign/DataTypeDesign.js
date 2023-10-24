@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Input from "../../Input"
 import { Container, Content, TitleContainer, Wrapper } from "./styles"
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md"
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { colors } from "../../../styles/colors"
 export function DataTypeDesign({text, Data}){
 	const [ showData, setShowData ] = useState(true)

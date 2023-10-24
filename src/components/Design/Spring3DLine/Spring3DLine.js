@@ -1,10 +1,10 @@
 import "@fontsource/abeezee/400-italic.css";
 
-import * as THREE from '../../../node_modules/three/build/three.module.js';
+import * as THREE from '../../../../node_modules/three/build/three.module.js';
 import { Canvas } from "@react-three/fiber";
-import { Euler } from '../../../node_modules/three/build/three.module.js';
+import { Euler } from '../../../../node_modules/three/build/three.module.js';
 import { Stats, OrbitControls } from '@react-three/drei'
-import texture from '../../textures/NormalMap2.png'
+import texture from '../../../textures/NormalMap2.png'
 
 export default function Spring3DLine({points, wire}) {
 
@@ -38,8 +38,6 @@ export default function Spring3DLine({points, wire}) {
     var euler = new Euler(beta,alfa,1.5708+theta, 'XZY');
     cilindro.rotation.copy(euler);
 
-    // ----------------
-
     //Cilindro final
     let distanciaEntrePuntos2 = Math.pow(Math.pow(points[points.length-1][0]-points[points.length-2][0],2)+Math.pow(points[points.length-1][1]-points[points.length-2][1],2),0.5);
     var auxAlfa2 = (points[points.length-1][2]-points[points.length-2][2])/(points[points.length-1][0]-points[points.length-2][0]);
@@ -57,8 +55,6 @@ export default function Spring3DLine({points, wire}) {
     var cilindro2 = new THREE.Mesh(geometry2, material);
     var euler2 = new Euler(beta2,alfa2,1.5708+theta2, 'XZY');
     cilindro2.rotation.copy(euler2);
-
-    // ----------------
 
     var pointsLine = [];
 
@@ -99,7 +95,6 @@ export default function Spring3DLine({points, wire}) {
   }
 
   
-
   return (
     <div id="canvas-container" style={{height: 800, width: 700}}>
       <Canvas dpr={[1, 2]} camera={{ fov: 50, near: 0.1, far:5000, position: [0, 600, -50]}}>

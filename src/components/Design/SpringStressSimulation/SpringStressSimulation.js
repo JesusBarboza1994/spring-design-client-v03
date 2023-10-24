@@ -1,10 +1,10 @@
 import "@fontsource/abeezee/400-italic.css";
 
-import * as THREE from '../../../node_modules/three/build/three.module.js';
+import * as THREE from '../../../../node_modules/three/build/three.module.js';
 import { Canvas } from "@react-three/fiber";
-import { Euler } from '../../../node_modules/three/build/three.module.js';
+import { Euler } from '../../../../node_modules/three/build/three.module.js';
 import { Stats, OrbitControls } from '@react-three/drei'
-import texture from '../../textures/NormalMap2.png'
+import texture from '../../../textures/NormalMap2.png'
 
 function getColorScale(value, minValue, maxValue) {
   // Se define la escala de colores

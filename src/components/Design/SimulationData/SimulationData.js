@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
-import { useAuth } from "../../context/auth-context";
+import { useAuth } from "../../../context/auth-context";
 import { DivSimul, Paragraph2, Div2, Select, Input, Button, Label } from "./styles";
-import { colors } from "../../styles/colors";
+import { colors } from "../../../styles/colors";
 
-import apiFetch from "../../services/api-fetch";
+import apiFetch from "../../../services/api-fetch";
 
 export function SimulationData(){
      
