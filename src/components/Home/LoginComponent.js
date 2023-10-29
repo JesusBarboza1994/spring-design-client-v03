@@ -1,5 +1,5 @@
 import { fonts } from "../../styles/typography";
-import { H3, SpecifyingElementContainer } from "../../components/Design/InputDataStyle";
+import { H3, SpecifyingElementContainer } from "../../components/Design/ClientData/InputDataStyle";
 
 
 export function LoginComponent(){

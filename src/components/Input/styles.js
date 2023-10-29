@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 	max-width: 500px;
 	label{
 		margin: 0;
-		color: ${colors.black};
+		color: ${colors.font.text};
 		margin-bottom: 0.5rem;
 	}
 	input{

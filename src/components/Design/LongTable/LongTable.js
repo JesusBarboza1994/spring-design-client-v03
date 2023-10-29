@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../../context/auth-context';
 import { Td_longtable, Th, Input1, Length_table } from "./styles";
+import { colors } from "../../../styles/colors";
 
 
 export default function LongTable() {
@@ -114,7 +115,7 @@ export default function LongTable() {
             
             <Length_table>
                 <thead>
-                    <tr style={{backgroundColor: "#5B5B5B", color:"white",}}>
+                    <tr style={{backgroundColor: colors.secondary.dark, color: colors.font.title,}}>
                         <Th> </Th>
                         <Th style={{width: 90}}>Long (mm)</Th>
                         <Th style={{width: 90}}>Deform (mm)</Th>
@@ -126,7 +127,7 @@ export default function LongTable() {
                 </thead>
                 <tbody>
                     {nombreFilas.map((fila, indice) => (
-                        <tr style={{color:"white"}}>
+                        <tr style={{color: colors.font.title}}>
                             <Td_longtable>
                                 {fila}
                             </Td_longtable>

@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 import { colors } from "../../styles/colors"
+import { typography } from "../../styles/typography"
+import { fonts } from "../../styles/typography"
 
 export const Form = styled.form`
   display:flex;
@@ -7,7 +9,7 @@ export const Form = styled.form`
   justify-content: center;
   row-gap: 6px;
   width: 500px;
-  color:white;
+  color: ${colors.font.title};
 `
 export const Div = styled.div`
   display:flex;
@@ -15,19 +17,19 @@ export const Div = styled.div`
   width:125px;
   height:40px;
   margin:3px 16px 14px 16px;
-  background: black;
-  border:2px solid gray;
+  background: ${colors.tablebackground}
+  border:2px solid ${colors.secondary.dark};
   border-radius:8px;
   
 `
 export const Input = styled.input`
   width:40px;
   height:18px;
-  color:white;
-  background-color: black;
+  color: ${colors.font.title};
+  background-color: ${colors.tablebackground}
   margin: 9px;
-  font-family:"ABeeZee";
-  font-size: 12px;
+  font-family: ${fonts.primary};
+ ${typography.text.xs};
   border-style:inset;
   border-radius: 4px;
   text-align: left;
@@ -36,23 +38,23 @@ export const Input = styled.input`
 export const DivCalculo = styled.div`
   width:40px;
   height:18px;
-  color: white;
-  background-color: black;
+  color: ${colors.font.title};
+  background-color: ${colors.tablebackground}
   margin:8px;
-  font-family:"ABeeZee";
-  font-size: 13px;
+  font-family: ${fonts.primary};
+ ${typography.text.xs};
   border-style:outset;
 `
 export const Label = styled.label`
   height: 20px;
   width: 60px;
   display:block;
-  background-color:black;
+  background-color:${colors.tablebackground}
   margin-top:8px;
   margin-left: 10px;
-  font-family:"ABeeZee";
-  font-size: 13px;
-  color: ${colors.grey};
+  font-family: ${fonts.primary};
+ ${typography.text.xs};
+  color: ${colors.secondary.light};
             
 `
 export const DivSimulForm = styled.div`
@@ -66,7 +68,7 @@ export const DivSimulForm = styled.div`
   margin-left: 50px;
   width: 500px;
   height: 255px;
-  background-color: #363636;  
+  background-color: ${colors.secondary.dark};  
   border-radius:8px;     
 
 `
@@ -82,7 +84,7 @@ export const DivSimul = styled.div`
   margin-left: 30px;
   width: 500px;
   height: 140px;
-  background-color: #363636;  
+  background-color: ${colors.secondary.dark};  
   border-radius:8px;        
 `
 
@@ -90,9 +92,8 @@ export const Paragraph = styled.p`
   block-size:1px;
   margin-left:30px;
   margin-bottom: 10px;
-  font-family:"ABeeZee";
-  font-size:12px;
-  color: white;  
+  font-family: ${fonts.primary};
+ ${typography.text.xs};  color: ${colors.font.title};  
   width: 148px;
 `
 export const Button = styled.button`
@@ -100,18 +101,18 @@ export const Button = styled.button`
   height:40px;
   margin:3px 12px;
   border-radius:8px;
-  background-color: #fc1221c5;
-  color: white;
+  background-color: ${colors.button.tertiary};
+  color: ${colors.font.title};
   
 `
 export const Length_table = styled.table`
-  background-color: black; 
+  background-color: ${colors.tablebackground} 
   width:500px;
   //height:270px;
-  font-family: "ABeeZee";
-  border-collapse: collapse;
-  color: grey;
-  border: 2px solid grey;
+  font-family: ${fonts.primary};
+ ${typography.text.xs}; collapse;
+  color: ${colors.secondary.light};
+  border: 2px solid ${colors.secondary.light};
   //border-radius: 8px;
           
 `
@@ -119,11 +120,11 @@ export const Length_table = styled.table`
 export const Input8 = styled.input`
   width:42px;
   height:18px;
-  color:white;
-  background-color: black;
+  color:${colors.font.title};
+  background-color: ${colors.tablebackground}
   margin:8px;
-  font-family:"ABeeZee";
-  font-size: 12px;
+  font-family: ${fonts.primary};
+ ${typography.text.xs};
   border-style:inset;
   border-radius: 4px;
      
@@ -134,7 +135,7 @@ export const Th = styled.th`
   //writing-mode: vertical-lr;
   //text-orientation: upright;
   font-size: 14px;
-  border: 1px solid grey;
+  border: 1px solid ${colors.secondary.light};
   letter-spacing: 1px;
   //border-radius: 8px;
   
@@ -146,36 +147,27 @@ export const Th2 = styled.th`
   font-size: 14px;
   letter-spacing: 1px;
   padding: 10px;
-  border: 1px solid grey;
-  color: grey;
+  border: 1px solid ${colors.secondary.light};
+  color: ${colors.secondary.light};
 `
 export const Td = styled.td`
   text-align: center;
   //width: 55px;
-  border: 1px solid grey;
+  border: 1px solid ${colors.secondary.light};
   
 `
-// export const Table2 = styled.table`
-//   width:210px;
-//   height:210px;
-//   font-family: "ABeeZee";
-//   border: 2px solid grey;
-//   border-collapse: collapse;
-//   color: grey;
-
-// `
 export const Select = styled.select`
-  background-color: black;
-  color: white;
-  font-family:"ABeeZee";
-  font-size: 13px;
+  background-color: ${colors.tablebackground}
+  color: ${colors.font.title};
+  font-family: ${fonts.primary};
+ ${typography.text.xs};
   border: 0px;
   margin-left: 0px;
 
 `
 export const H1 = styled.h1`
  
- color: white;
+ color: ${colors.font.title};
  font-size: 22px;
  margin-left: 50px;
  margin-top: 20px;
@@ -184,7 +176,7 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`
-color: white;
+color: ${colors.font.title};
 font-size: 18px;
 margin-top: 40px;
 font-family:"Inter";
@@ -192,7 +184,7 @@ font-style: italic;
 `
 
 export const Canvas = styled.canvas`
- background-color: white;
+ background-color: ${colors.font.title};
  width: 500px;
  height: 300px;
  margin-bottom:20px;

@@ -34,10 +34,10 @@ export default function SpringTravelTable() {
     }
 
     return(
-        <div style={{backgroundColor: colors.black}}>
+        <div style={{backgroundColor: colors.background}}>
             <table>
                 <thead>
-                    <tr style={{backgroundColor: colors.gray, color:colors.white}}>
+                    <tr style={{backgroundColor: colors.secondary.dark, color:colors.font.text}}>
                         <td colSpan="2" align="center">
                             <Th3>Carrera (mm)</Th3>
                         </td>
@@ -45,7 +45,7 @@ export default function SpringTravelTable() {
                 </thead>
                 <tbody>
                     {carreras.map((punto, indice) => (
-                        <tr key={punto.id} style={{color:colors.white}}>
+                        <tr key={punto.id} style={{color:colors.font.text}}>
                             <Td1>
                                 {"S"+(punto.id)}
                             </Td1>

@@ -88,7 +88,7 @@ export const global = (dark) =>{
       font-size: 1rem;
       line-height: 1.5rem;
       font-family: ${fonts.primary};
-      color: ${colors.blue[100]};
+      color: ${colors.button.text};
       background-color: ${ColorStyle(dark).mainBackground};
     }
     `

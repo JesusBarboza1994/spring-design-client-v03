@@ -20,6 +20,7 @@ import { useAuth } from '../../context/auth-context';
 import { calculateLinearRegression, generatePointForChart } from "../../utils/chart-utils";
 import { isNullLiteral } from "@babel/types";
 import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas } from "./styles";
+import { colors } from "../../styles/colors";
 
 export default function Design() {
 
@@ -145,7 +146,7 @@ export default function Design() {
   }
   
   return (
-  <div className="App" style={{backgroundColor:"#1A1A1A", display:"flex", columnGap: 80 }}>
+  <div className="App" style={{backgroundColor:colors.background, display:"flex", columnGap: 80 }}>
     
     <div>
       <H1> Diseño de Resortes</H1>
@@ -275,7 +276,7 @@ export default function Design() {
         
         <ControlLoadGraphic puntos={puntosCCGrafica} slope={lineaCC.k} intercept={lineaCC.b} rSquared={lineaCC.r2}/>
 
-        <div style={{backgroundColor:"black"}} >
+        <div style={{backgroundColor: colors.tablebackground}} >
             
           <Spring3DLine points={springPoints3D} wire={dimensions.d}></Spring3DLine>
           

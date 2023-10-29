@@ -21,7 +21,7 @@ export const LoginContainer=styled.form`
     height: 100%;
     flex-shrink: 0;
     padding: 16px;
-    background-color: ${colors.red};
+    background-color: ${colors.primary.light};
 
 `
 export const LogoContainer_LoginPage = styled.div`
@@ -36,7 +36,7 @@ export const RegisterContainer = styled.div`
     
 `
 export const Label = styled.label`
-   color: ${colors.white};
+   color: ${colors.font.title};
    ${typography.text.lg};
    ${fonts.primary};
    
@@ -49,7 +49,7 @@ export const StyledInput = styled.input`
     height: 35px;
     flex-shrink: 0;
     border-radius: 5px;
-    background: #D3D3D3;
+    background: ${colors.primary.light};
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
     
     padding: 15px;
@@ -66,9 +66,9 @@ export const Button=styled.button`
     flex-shrink: 0;
     margin-top: 35px;
     border-radius: 10px;
-    background-color: ${colors.blackfondo};
+    background-color: ${colors.background};
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
-    color: ${colors.white};
+    color: ${colors.font.title};
     padding: 16px 20px;
     border: none;
     cursor: pointer;

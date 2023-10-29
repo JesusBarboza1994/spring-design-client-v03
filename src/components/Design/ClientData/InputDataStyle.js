@@ -1,22 +1,22 @@
 import styled from "@emotion/styled";
-import { colors } from "../../styles/colors";
-import { typography } from "../../styles/typography";
-import { fonts } from "../../styles/typography";
+import { colors } from "../../../styles/colors";
+import { typography } from "../../../styles/typography";
+import { fonts } from "../../../styles/typography";
 
 export const MediumCell = styled.input`
  width: 150px;
  height: 25px;
  border-radius: 8px;
- border: 1px solid ${colors.black};
- background: ${colors.white};
+ border: 1px solid ${colors.cell};
+ background: ${colors.font.text};
 
 `
 export const LargeCell = styled.input`
  width: 300px;
  height: 25px;
  border-radius: 8px;
- border: 1px solid ${colors.black};
- background: ${colors.white};
+ border: 1px solid ${colors.cell};
+ background: ${colors.font.text};
 
 `
 
@@ -27,7 +27,7 @@ export const GrisContainer = styled.div`
  margin-left: 104px;
  flex-shrink: 0;   
  border-radius: 18px;
- background: ${colors.greylight};
+ background: ${colors.secondary.light};
  display: flex;
  position: relative;
  gap-column: 10px;
@@ -43,12 +43,12 @@ export const DivElement = styled.div`
 `
 export const CellName = styled.p`
  width: 80px;
- color: ${colors.black};
+ color: ${colors.cell};
  padding-left: 20px;
  
 `
 export const H3 = styled.h3`
- color: ${colors.white};
+ color: ${colors.font.title};
  letter-spacing: 1px;
  align-self: center;
 
@@ -67,7 +67,7 @@ export const GrisContainer_ClientData = styled.div`
  margin-left: 104px;
  flex-shrink: 0;   
  border-radius: 18px;
- background: ${colors.greylight};
+ background: ${colors.secondary.light};
  display: flex;
  position: relative;
  gap-column: 10px;

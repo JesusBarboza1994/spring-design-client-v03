@@ -24,7 +24,7 @@ margin: 10px 80px;
 export const Content = styled.div`
 	border-radius: 20px;
 	padding: 20px;
-	background: ${colors.greylight};
+	background: ${colors.secondary.light};
 
 `
 export const TitleContainer = styled.div`
@@ -33,7 +33,7 @@ export const TitleContainer = styled.div`
  gap: 6px;
  margin-bottom: 1rem;
 	>p{
-	color: ${colors.black};
+	color: ${colors.font.text};
 	font-weight: 800;
 	}
 `

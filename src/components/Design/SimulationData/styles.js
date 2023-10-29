@@ -14,7 +14,7 @@ export const DivSimul = styled.div`
   margin-left: 50px;
   width: 500px;
   height: 146px;
-  background-color: ${colors.gray};
+  background-color: ${colors.secondary.dark};
   border-radius: 8px;        
 `
 
@@ -26,7 +26,7 @@ export const Paragraph2 = styled.p`
     font-family: ${fonts.primary};
     ${typography.text.xs};
     width: 133px;
-    color: ${colors.white};  
+    color: ${colors.font.text};  
 `
 export const Div2 = styled.div`
     display: flex;
@@ -34,14 +34,14 @@ export const Div2 = styled.div`
     width: 125px;
     height: 40px;
     margin: 8px 16px 6px 16px;
-    background: ${colors.black};
-    border:2px solid ${colors.grey}; 
+    background: ${colors.cell};
+    border:2px solid ${colors.secondary.light}; 
     border-radius: 8px;
     
 `
 export const Select = styled.select`
-    background-color: ${colors.black};
-    color: ${colors.white};
+    background-color: ${colors.cell};
+    color: ${colors.font.text};
     font-family: ${fonts.primary};
     ${typography.text.xs};
     border: 0px;
@@ -50,8 +50,8 @@ export const Select = styled.select`
 export const Input = styled.input`
   width: 42px;
   height: 18px;
-  color:${colors.white};
-  background-color: ${colors.black};
+  color:${colors.font.text};
+  background-color: ${colors.cell};
   margin: 8px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
@@ -62,12 +62,12 @@ export const Label = styled.label`
   height: 20px;
   width: 65px;
   display: block;
-  background-color: ${colors.black};
+  background-color: ${colors.cell};
   margin-top: 8px;
   margin-left: 10px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
-  color: ${colors.grey};
+  color: ${colors.secondary.light};
             
 `
 export const Button = styled.button`
@@ -75,7 +75,7 @@ export const Button = styled.button`
   height: 40px;
   margin: 3px 12px;
   border-radius: 8px;
-  background-color: ${colors.back};
-  color: ${colors.white};
+  background-color: ${colors.button.tertiary};
+  color: ${colors.button.text};
   
 `

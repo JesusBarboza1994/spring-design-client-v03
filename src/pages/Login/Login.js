@@ -4,18 +4,16 @@ import RegisterForm from "../../components/Login/RegisterForm";
 
 export default function Login(){
  
+  return(
+    <Wrap>
 
+      <LoginContainer>
 
-    return(
-        <Wrap>
+        <RegisterForm/>
 
-            <LoginContainer>
+      </LoginContainer>
+   </Wrap>
 
-             <RegisterForm/>
-
-            </LoginContainer>
-      </Wrap>
-
-    
-    );
+  
+  );
 }
