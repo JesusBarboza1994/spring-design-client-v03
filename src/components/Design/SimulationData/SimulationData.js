@@ -25,8 +25,6 @@ export function SimulationData(){
     setMater(e.target.value)
   }
 
-  // Prueba API ------------------------------------------------------------------------------------------------------------------------------------------
-
   async function createSpring() {
 
     let endpoint = 'create-spring/';
@@ -48,8 +46,8 @@ export function SimulationData(){
       "detail3_end1":"-",
       "eccentricity1":0,
       "end2":dimensions.Ext2,
-      "luz2":Number(dimensions.Luz1),
-      "coils_red_2":Number(dimensions.Vtas1),
+      "luz2":Number(dimensions.Luz2),
+      "coils_red_2":Number(dimensions.Vtas2),
       "coils_amp_2":0,
       "detail1_end2":"-",
       "detail2_end2":"-",
@@ -94,8 +92,8 @@ export function SimulationData(){
       "detail3_end1":"-",
       "eccentricity1":0,
       "end2":dimensions.Ext2,
-      "luz2":Number(dimensions.Luz1),
-      "coils_red_2":Number(dimensions.Vtas1),
+      "luz2":Number(dimensions.Luz2),
+      "coils_red_2":Number(dimensions.Vtas2),
       "coils_amp_2":0,
       "detail1_end2":"-",
       "detail2_end2":"-",
@@ -118,8 +116,6 @@ export function SimulationData(){
       
     }
   }
-
-  // Prueba API ------------------------------------------------------------------------------------------------------------------------------------------
 
   useEffect(() => {
     let materiales = mater

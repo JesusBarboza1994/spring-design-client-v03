@@ -1,3 +1,1 @@
-// export const BASE_URI = ;
-export const BASE_URI = "http://127.0.0.1:8000/"
-//export const BASE_URI = "https://ingenieria-back-end.vercel.app/"
+export const BASE_URI = "https://web-production-40f8.up.railway.app/"
