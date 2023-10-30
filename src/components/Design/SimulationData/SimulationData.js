@@ -25,8 +25,6 @@ export function SimulationData(){
     setMater(e.target.value)
   }
 
-  // Prueba API ------------------------------------------------------------------------------------------------------------------------------------------
-
   async function createSpring() {
 
     let endpoint = 'create-spring/';
@@ -118,8 +116,6 @@ export function SimulationData(){
       
     }
   }
-
-  // Prueba API ------------------------------------------------------------------------------------------------------------------------------------------
 
   useEffect(() => {
     let materiales = mater
