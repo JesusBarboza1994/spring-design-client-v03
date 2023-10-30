@@ -13,7 +13,7 @@ export const ScreenStyle = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   height: 190px;
-  background-color: #BA181B;
+  background-color: ${colors.primary.light};
   position: absolute;
   top: 0px;
   left: 0px;
@@ -30,7 +30,7 @@ export const LogoContainer = styled.div`
 `
 
 export const Logo = styled.h1`
-  color: ${colors.white};
+  color: ${colors.font.title};
   ${typography.head.xl};
   font-weight: 700;
   font-family: ${fonts.secondary};
@@ -42,7 +42,7 @@ export const Logo = styled.h1`
 
 export const CompanyName = styled.h2`
   align-self: flex-start;
-  color: ${colors.white};
+  color: ${colors.font.title};
   ${typography.head.md};
   font-family: ${fonts.secondary};
   letter-spacing: 1px;
@@ -84,10 +84,10 @@ export const DivStyle = styled.div`
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background: ${colors.pink};
-  color: ${colors.white};
+  background: ${colors.button.tertiary};
+  color: ${colors.font.title};
   font-family: ${fonts.primary};
-  :hover {font-weight: bold; background:${colors.red}};
+  :hover {font-weight: bold; background:${colors.primary.light}};
   letter-spacing: 1px;
   text-align: center;
   padding-top: 18px; 

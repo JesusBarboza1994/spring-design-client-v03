@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "@fontsource/abeezee/400-italic.css";
 import { useAuth } from '../../../context/auth-context';
 import { Table4, Td_processtable, Input, Th3_processtable, Button4, Button2, Button3 } from "./styles";
+import { colors } from "../../../styles/colors";
 
 export default function ProcessTable(props) {
 
@@ -407,7 +408,7 @@ export default function ProcessTable(props) {
             {/* <Button onClick={CalculateOrReset3Points}>Calcular</Button> */}
             <Table4>
                 <thead>
-                    <tr style={{backgroundColor: "#5B5B5B", color:"white",}}>
+                    <tr style={{backgroundColor: colors.secondary.dark, color: colors.font.title,}}>
                         <Th3_processtable>Punto</Th3_processtable>
                         <Th3_processtable>Luz (mm)</Th3_processtable>
                         <Th3_processtable>Long (mm)</Th3_processtable>
@@ -446,7 +447,7 @@ export default function ProcessTable(props) {
                 </thead>
                 <tbody>
                     {processTableStage1Inv.map((punto, indice) => (
-                        <tr key={punto.id} style={{color:"grey"}}>
+                        <tr key={punto.id} style={{color: colors.secondary.medium}}>
                             <Td_processtable style={{width: 40}}>
                                 {punto.id}
                             </Td_processtable>

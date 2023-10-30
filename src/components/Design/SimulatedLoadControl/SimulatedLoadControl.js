@@ -32,7 +32,7 @@ export default function SimulatedLoadControl(props) {
         <div>
             <Table2>
                 <thead>
-                    <tr style={{backgroundColor: colors.gray, color: colors.white,}}>
+                    <tr style={{backgroundColor: colors.secondary.dark, color: colors.font.text,}}>
                     
                      <Th3 style={{width: 41}}>N°</Th3>
                      <Th3 style={{width: 63}}>F (kg)</Th3>

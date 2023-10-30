@@ -1,5 +1,5 @@
-import { ClientData } from "../../components/Design/ClientData";
-import { GeneralHeadElement } from "../../components/Design/GeneralHeadElement";
+import { ClientData } from "../../components/Design/ClientData/ClientData";
+import { GeneralHeadElement } from "../../components/Design/NavigationComponent/GeneralHeadElement";
 import { ScreenStyle, Wrapper } from "../../components/Home/styles";
 import { HeaderElement } from "../../components/SpringType/HeaderElement";
 

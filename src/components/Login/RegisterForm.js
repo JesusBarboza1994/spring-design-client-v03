@@ -1,5 +1,6 @@
-import { StyledInput, Button, LogoContainer_LoginPage, RegisterContainer, Label} from "./styles";
+import { Wrap, StyledInput, Button, LogoContainer_LoginPage, RegisterContainer, Label} from "./styles";
 import { Logo, CompanyName } from "../Home/styles";
+
 
 
 function RegisterForm(){
@@ -13,6 +14,7 @@ function RegisterForm(){
 
     return(
      <>
+        
       <LogoContainer_LoginPage>
          {/*<Logo>MRC</Logo>*/}
          <img src="/Images/MRC1.png" align="left" hspace="0px" width="40%" />

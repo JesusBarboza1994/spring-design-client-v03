@@ -3,6 +3,7 @@ import Input from "../../Input"
 import { Container, Content, TitleContainer, Wrapper } from "./styles"
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { colors } from "../../../styles/colors"
+
 export function DataTypeDesign({text, Data}){
 	const [ showData, setShowData ] = useState(true)
 	return(
@@ -12,9 +13,9 @@ export function DataTypeDesign({text, Data}){
 				{
 					showData ? 
 					<MdKeyboardArrowUp 
-					style={{scale: "2", color:colors.black}}/>
+					style={{scale: "2", color:colors.icon}}/>
 					:
-					<MdKeyboardArrowDown style={{scale: "2", color:colors.black}}/>
+					<MdKeyboardArrowDown style={{scale: "2", color:colors.icon}}/>
 				}
 			</TitleContainer>
 			{
@@ -23,7 +24,6 @@ export function DataTypeDesign({text, Data}){
 		</Content>
 	)
 }
-
 
 
 export function DataClient(){

@@ -1,4 +1,4 @@
-import { CellName, DivElement, GrisContainer, MediumCell } from "./InputDataStyle";
+import { CellName, DivElement, GrisContainer, MediumCell } from "../ClientData/InputDataStyle";
 
 
 

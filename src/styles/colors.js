@@ -1,16 +1,35 @@
 import { grey } from "@mui/material/colors";
 import { useAuth } from "../context/auth-context";
 
-export const colors = {
-  gray:{
-    dark:"#212121",
-    medium: "#333649",
-    light: "#C7CADE"
+export const basicColors = {
+  
+  blackfondo: "#161A1D",
+  black: "#000000",
+  white: "#FFFFFF",
+  
+  grey:{
+    dark: "#363636", //
+    medium: "#B1A7A6",
+    light: "#D9D9D9", //
   },
-  blue:{
+
+  red: {
+    dark: "#660708",
+    medium: "A4161A", //
+    light: "#BA181B",
+  },
+
+  pink: {
+    dark: "#E5383B",
+    medium: "#F34949", //
+    
+  },
+
+ /* blue:{
     100: "#086CB5",
     200: "#212438"
   },
+
   stone: {
     50: "#FAFAF9",
     100: "#F5F5F4",
@@ -22,30 +41,53 @@ export const colors = {
     700: "#44403C",
     800: "#292524",
     900: "#1C1917",
-  },
-  blackfondo: "#161A1D",
-  black: "black",
-  white: "#FFFFFF",
-  gray: "#363636",
-  purple: "#adc5fff1",
-  back: "#fc1221c5",
-  grey: "gray",
-  red: "#BA181B",
-  pink: "#F34949",
-  greylight: "#D9D9D9"
+  },*/
+  
 };
+
+export const colors = {
+  
+  primary:{
+    dark:basicColors.red.dark,
+    medium:basicColors.red.medium,
+    light:basicColors.red.light,
+  }, 
+  secondary:{
+    dark:basicColors.grey.dark,
+    medium:basicColors.grey.medium,
+    light:basicColors.grey.light,
+  },
+  tertiary:{
+    dark: basicColors.pink.dark,
+    medium: basicColors.pink.medium,
+  },
+  font: {
+    text: basicColors.black,
+    title: basicColors.white,
+  },
+  button: {
+    text: basicColors.white,
+    secondary: basicColors.grey.dark,
+    secondary2: basicColors.grey.medium,
+    tertiary: basicColors.pink.medium,
+  },
+  cell: basicColors.white,
+  icon: basicColors.black,
+  tablebackground: basicColors.black,
+  background: basicColors.blackfondo,
+}
 
 export const ColorStyle = (dark) =>{
   
   return {
-    text: dark ? colors.white : colors.black,
-    background: colors.black,
-    button: colors.blue[100],
-    mainText: colors.blue[100],
-    mainBackground: dark ? colors.black : colors.white,
-    backCard: dark ? colors.blue[200]: colors.gray.light,
-    textHover: dark ? colors.gray.light : colors.white,
-    switch: dark ? colors.black : colors.white,
-    buttonNav: dark ? colors.blue[100] : colors.blue[100]
+    text: dark ? colors.font.title : colors.font.text,
+    //background: colors.background,
+    button: colors.button.tertiary,
+    mainText: colors.button.text,
+    mainBackground: dark ? colors.background : basicColors.white,
+    backCard: dark ? colors.tertiary.dark : colors.tertiary.medium,
+    textHover: dark ? colors.secondary.light : basicColors.white,
+    switch: dark ? colors.secondary.dark : colors.secondary.medium,
+    buttonNav: dark ? colors.button.tertiary : colors.button.tertiary
   }
 }

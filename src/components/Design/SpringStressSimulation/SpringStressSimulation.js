@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { Euler } from '../../../../node_modules/three/build/three.module.js';
 import { Stats, OrbitControls } from '@react-three/drei'
 import texture from '../../../textures/NormalMap2.png'
+import { colors } from "../../../styles/colors.js";
 
 function getColorScale(value, minValue, maxValue) {
   // Se define la escala de colores
@@ -139,7 +140,7 @@ export default function SpringStressSimulation({dataSimulation}) {
   }
 
   return (
-    <div id="canvas-container" style={{height: 800, width: 700, backgroundColor:"white"}}>
+    <div id="canvas-container" style={{height: 800, width: 700, backgroundColor: colors.cell}}>
       <Canvas dpr={[1, 2]} camera={{ fov: 50, near: 0.1, far:5000, position: [0, 1000, 300]}}>
         <ambientLight intensity={3} />
         {

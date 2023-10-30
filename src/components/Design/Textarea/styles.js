@@ -9,7 +9,7 @@ export const Paragraph3 = styled.p`
   margin-bottom: 20px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
-  color: ${colors.white};  
+  color: ${colors.font.text};  
   width: 450px;
 `
 export const Textarea = styled.textarea`
@@ -17,11 +17,11 @@ export const Textarea = styled.textarea`
  height: 40px;
  margin-left: 50px;
  margin-top: 0px;
- border: 2px solid ${colors.grey};
+ border: 2px solid ${colors.secondary.light};
  border-radius: 8px;
- border-top:1px solid ${colors.grey};
- background-color: ${colors.black};
- color: ${colors.grey};
+ border-top:1px solid ${colors.secondary.light};
+ background-color: ${colors.cell};
+ color: ${colors.secondary.light};
  font-family: ${fonts.primary};
  ${typography.text.xs};
  padding-left: 30px;
@@ -32,12 +32,12 @@ export const DescripDiv = styled.div`
   height: 100px; 
   margin-left: 50px;
   margin-bottom: 0px; 
-  border: 2px solid ${colors.grey};
+  border: 2px solid ${colors.secondary.light};
   border-radius:8px; 
-  border-bottom: 1px solid ${colors.grey};
-  border-color: ${colors.grey};
-  background-color: ${colors.black};
-  color: ${colors.grey};
+  border-bottom: 1px solid ${colors.secondary.light};
+  border-color: ${colors.secondary.light};
+  background-color: ${colors.cell};
+  color: ${colors.secondary.light};
   font-family: ${fonts.primary};
   ${typography.text.sm};
   padding: 10px;

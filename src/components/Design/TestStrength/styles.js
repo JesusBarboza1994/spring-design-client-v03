@@ -11,21 +11,21 @@ export const DivSimul1 = styled.div`
   margin-bottom: 30px;
   margin-top: 40px;
   width: 236px;
-  background-color: ${colors.gray};  
+  background-color: ${colors.secondary.dark};  
   border-radius: 8px; 
 
 `   
 export const DivCalculo = styled.div`
   width: 40px;
   height: 18px;
-  color:${colors.white};
-  background-color: ${colors.black};
+  color:${colors.font.text};
+  background-color: ${colors.cell};
   margin: 9px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
   line-height: 18px;
   border-radius: 4px;
-  border: 2px ${colors.grey};
+  border: 2px ${colors.secondary.light};
   border-style: outset;
     
 `
@@ -36,14 +36,14 @@ export const Paragraph1 = styled.p`
   margin-top: 8px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
-  color: ${colors.white};  
+  color: ${colors.font.text};  
   width: 148px;
 `
 export const Input8 = styled.input`
   width:40px;
   height:18px;
-  color:${colors.white};
-  background-color: ${colors.black};
+  color:${colors.font.text};
+  background-color: ${colors.cell};
   margin: 9px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
@@ -58,20 +58,20 @@ export const Div1 = styled.div`
   width: 100px;
   height: 40px;
   margin: 3px 7px;
-  background: ${colors.black};
-  border:2px solid ${colors.grey};
+  background: ${colors.cell};
+  border:2px solid ${colors.secondary.light};
   border-radius:8px;  
   
 `
 export const Label1 = styled.label`
   height: 20px;
   width: 30px;
-  display:block;
-  background-color:black;
+  display: block;
+  background-color: ${colors.font.text};
   margin-top:8px;
   margin-left: 9px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
-  color: ${colors.grey};
+  color: ${colors.secondary.light};
             
 `
