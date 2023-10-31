@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Design from "./pages/Design";
+import Design from "./pages/Design/Design";
 import SpringType from "./pages/SpringType";
 import DesignInputData from "./pages/DesignInputData/DesignInputData";
-import { TotalizedFormat } from "./pages/TotalizedFormat/TotalizedFormat";
+import TotalizedFormat from "./pages/TotalizedFormat/TotalizedFormat";
 
 function App() {
     return(

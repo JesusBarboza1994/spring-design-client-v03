@@ -7,7 +7,7 @@ function HomeComponent ({backgroundImage,text}){
  
  const navigate = useNavigate();
  const navigateToNewPage = () => {
-    navigate (`/design`);
+    navigate ("/design");
  } 
 
  return (

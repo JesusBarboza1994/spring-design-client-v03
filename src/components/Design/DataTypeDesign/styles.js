@@ -3,12 +3,13 @@ import { colors } from "../../../styles/colors";
 
 
 export const Container = styled.div`
- margin: 10px 80px;
+ margin: 12px 80px;
 
 `
 export const Content = styled.div`
 	border-radius: 20px;
-	padding: 20px;
+	padding: 20px 35px;
+	margin-bottom: 20px;
 	background: ${colors.secondary.light};
 
 `
