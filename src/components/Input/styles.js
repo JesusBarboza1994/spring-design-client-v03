@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 		margin: 0;
 		color: ${colors.font.text};
 		margin-bottom: 0.5rem;
-		min-width: 150px;
+		min-width: 170px;
 	}
 	input{
 		width:300px;
@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
 		}
 		input{
 			height: 25px;
-			width:100%;
+			width: 100%;
 		}
 	}
 `
