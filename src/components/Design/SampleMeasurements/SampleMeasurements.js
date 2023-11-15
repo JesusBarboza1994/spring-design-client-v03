@@ -2,6 +2,7 @@ import { useState } from "react"
 import Input from "../../Input"
 import ProgresiveInput from "./ProgresiveInput"
 import { Wrapper, Select, Label, Div } from "./styles"
+import { Switch } from "@mui/material";
 
 export function SampleMeasurements(){
 	const [dataSample, setDataSample] = useState({
@@ -46,6 +47,12 @@ export function SampleMeasurements(){
     luz11: "",
     luz12: "",
 	})
+
+  const [isChecked, setIsChecked] = useState(false);
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  }
+  
 
 	return(
 		<Wrapper>
@@ -121,7 +128,7 @@ export function SampleMeasurements(){
         
 		  </div>
       <div>
-        <Label>Resorte progresivo</Label>
+        <Label>Resorte progresivo  NO<Switch onChange= {handleChange} size="big"/>SI</Label>
         <ProgresiveInput title="Luz 1" value={dataSample.luz1} onChange={(e)=>setDataSample({...dataSample,luz1:e.target.value})} id="luz1"/>
         <ProgresiveInput title="Luz 2" value={dataSample.luz2} onChange={(e)=>setDataSample({...dataSample,luz2:e.target.value})} id="luz2"/>
         <ProgresiveInput title="Luz 3" value={dataSample.luz3} onChange={(e)=>setDataSample({...dataSample,luz3:e.target.value})} id="luz3"/>     

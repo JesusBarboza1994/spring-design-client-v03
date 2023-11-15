@@ -48,7 +48,7 @@ export function VehicleData(){
 				<Input title="Tipo de suple" value={dataVehicle.supplementType} onChange={(e)=>setDataVehicle({...dataVehicle, supplementType: e.target.value})} id="supplementType"/>
 				<Input title="Espesor de suple" value={dataVehicle.thickness} onChange={(e)=>setDataVehicle({...dataVehicle, thickness:e.target.value})} id="thickness"/>
 		  </div>
-      <div>
+          <div>
 				<Input title="Tanque de gas" value={dataVehicle.tank} onChange={(e)=>setDataVehicle({...dataVehicle, tank:e.target.value})} id="tank"/>
 				<Input title="Peso neto (kg)" value={dataVehicle.neto} onChange={(e)=>setDataVehicle({...dataVehicle, neto:e.target.value})} id="neto"/>
 				<Input title="Peso bruto (kg)" value={dataVehicle.bruto} onChange={(e)=>setDataVehicle({...dataVehicle, bruto: e.target.value})} id="bruto"/>
