@@ -4,14 +4,17 @@ import { DataTypeDesign } from "../../components/Design/DataTypeDesign/DataTypeD
 import { Container } from "../../components/Design/DataTypeDesign/styles";
 import { SampleMeasurements } from "../../components/Design/SampleMeasurements/SampleMeasurements";
 import { VehicleData } from "../../components/Design/VehicleData/VehicleData";
+import { VehicleDimentions } from "../../components/Design/VehicleDimentions/VehicleDimentions";
 
 export default function TotalizedFormat(){
 	return(
 		<Container>
 			<CorrelativeData/>
-			<DataTypeDesign Data={<DataClient/>} text={"DATOS DE CLIENTE"}/>
-			<DataTypeDesign Data={<VehicleData/>} text={"DATOS DE VEHICULO"}/>
+			<DataTypeDesign Data={<DataClient/>} text={"DATOS DEL CLIENTE"}/>
+			<DataTypeDesign Data={<VehicleData/>} text={"DATOS DEL VEHICULO"}/>
 			<DataTypeDesign Data={<SampleMeasurements/>} text={"DATOS DE LA MUESTRA"}/>
+			<DataTypeDesign Data={<VehicleDimentions/>} text={"MEDIDAS DEL VEHICULO"}/>
+
             
 		</Container>
 	);
