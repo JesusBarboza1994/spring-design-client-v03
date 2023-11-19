@@ -6,21 +6,34 @@ export const Wrapper = styled.div`
 	
 	> div{
 		display: flex;
-		flex-direction: column;
+		
 		gap: 6px;
 		width: 90%;
 	}
+	label{
+		margin: 0;
+		color: ${colors.font.text};
+		margin-bottom: 0.5rem;
+		min-width: 170px;
+	}
+	
 	@media(max-width: 1024px){
 		display:flex;
 		flex-direction:column;
 		gap: 0.5rem;
 	}
 `
-export const DimentionsInput = styled.div`
-  width: 45px;
-  height: 20px;
-  border-radius: 8px;
-  color: ${colors.cell};
+export const DimentionsContainer = styled.div`
+ 
+ display: grid;
+ gap: 6px;
+`
+
+export const DimentionsInput = styled.input`
+  width: 55px;
+  height: 25px;
+  border-radius: 5px;
+  color: "black";
   
 `
 export const Label = styled.label`
