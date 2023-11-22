@@ -1,7 +1,11 @@
 import { useState } from "react"
 //import Input from "../../Input"
-import { DimentionsInput, Wrapper, Label, DimentionsContainer } from "./styles"
+import styled from "@emotion/styled";
+import { colors } from "../../../styles/colors";
+import { Wrapper, Label, DimentionsContainer, DivContainer, Lado, SpanDot, Next } from "./styles"
 import { Switch } from "@mui/material";
+import Slideshow from "./script";
+import { DimentionsInput } from "./DimentionsInput";
 
 export function VehicleDimentions(){
 	const [vehicleDimentions, setVehicleDimentions] = useState({
@@ -45,13 +49,15 @@ export function VehicleDimentions(){
     return(
 		<Wrapper>
           <Label>Modo imagen<Switch onChange= {handleChange} size="big"/>Modo tabla</Label>
-            <img src="/Images/Component-58-Izq.webp" align="center" width="100%" />
+		  <Slideshow/>
+			
+
             
-			<div> 
+			<div style={{display: "flex", columnGap: 50, marginTop: 50, justifyContent: "center"}}> 
 			 <DimentionsContainer>
 				 <label>DEL IZQ</label>
-			     <DimentionsInput id="pgDel_Izq" title ="P-G" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})}/>
-			     <DimentionsInput id="llgDel_Izq" title ="LL-G" value={vehicleDimentions.llgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, llgDel_Izq:e.target.value})}/>
+			     <DimentionsInput title="P-G" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})} id="pgDel_Izq" />
+			     <DimentionsInput title="LL-G" value={vehicleDimentions.llgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, llgDel_Izq:e.target.value})} id="llgDel_Izq" />
 			     <DimentionsInput id="pesoDel_Izq1" title ="PESO 1" value={vehicleDimentions.pesoDel_Izq1} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pesoDel_Izq1:e.target.value})}/>
 			     <DimentionsInput id="pesoDel_Izq2" title ="PESO 2" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})}/>
 			     <DimentionsInput id="pesoDel_Izq3" title ="PESO 3" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})}/>
@@ -68,6 +74,7 @@ export function VehicleDimentions(){
 			 </DimentionsContainer>
              
              <DimentionsContainer>
+			     <label></label>
 				 <DimentionsInput id="frontWheel_firstline" title ="EJE DEL-1° FILA" value={vehicleDimentions.frontWheel_firstline} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, frontWheel_firstline:e.target.value})}/>
 			     <DimentionsInput id="frontWheel_secondline" title ="EJE DEL-2° FILA" value={vehicleDimentions.frontWheel_secondline} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, frontWheel_secondline:e.target.value})}/>
 				 <DimentionsInput id="frontWheel_rearWheel" title ="EJE DEL-EJE POST" value={vehicleDimentions.frontWheel_rearWheel} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, frontWheel_rearWheel:e.target.value})}/>

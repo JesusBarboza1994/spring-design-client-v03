@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { colors } from "../../styles/colors";
 
 export const Wrapper = styled.div`
-  display: flex;
+    display: flex;
 	justify-content: space-between;
 	width: 100%;
 	max-width: 500px;
