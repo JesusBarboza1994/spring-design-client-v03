@@ -6,17 +6,20 @@ import { fonts } from "../../../styles/typography";
 export const Wrapper = styled.div`
 	display: grid;
   
-	label{
-		margin: 0;
-		color: ${colors.font.text};
-		margin-bottom: 0.5rem;
-		min-width: 170px;
-	}
+  label{
+    color: ${colors.font.text};
+    margin-bottom: 0.5rem;
+    min-width: 150px;
+    font-family: ${fonts.primary};
+    ${typography.text.sm};
+    
+   }
   input{
    width: 70px;
    height: 25px;
    border-radius: 5px;
    color: "black";
+
   }
 	
 	@media(max-width: 1024px){
@@ -28,12 +31,17 @@ export const Wrapper = styled.div`
 export const DimentionsContainer = styled.div`
  
  display: grid;
- 
- 
+ gap: 5px;
+  
 `
 
 export const Label = styled.label`
  color: ${colors.font.text};
+ font-family: ${fonts.primary};
+  ${typography.text.md};
+  font-weight: bold;
+  font-style: italic;
+ 
 `
 export const DivContainer = styled.div`
   position: relative;
@@ -68,11 +76,11 @@ export const Next = styled.a`
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -22px;
-  color: white;
+  margin-top: -80px;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  :hover {background-color: rgba(0,0,0,0.8);}
+  :hover {background-color: white;}
 `

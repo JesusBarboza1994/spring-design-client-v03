@@ -14,7 +14,7 @@ const Slideshow = () => {
 
   const showSlides = (n) => {
     const slides = document.getElementsByClassName('mySlides');
-    const dots = document.getElementsByClassName('dot');
+    //const dots = document.getElementsByClassName('dot');
 
     if (n > slides.length) {
       setSlideIndex(1);
@@ -28,12 +28,12 @@ const Slideshow = () => {
       slides[i].style.display = 'none';
     }
 
-    for (let i = 0; i < dots.length; i++) {
+    {/*for (let i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(' active', '');
-    }
+    }*/}
 
     slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].className += ' active';
+    //dots[slideIndex - 1].className += ' active';
   };
 
   useEffect(() => {
@@ -54,18 +54,16 @@ const Slideshow = () => {
        
       </div>
 
-      <Next className="prev" onClick={() => plusSlides(-1)}>
-        ❮
-      </Next>
+      <Next className="prev" onClick={() => plusSlides(-1)}> </Next>
       <Next className="next" onClick={() => plusSlides(1)}>
         ❯
       </Next>
 
-      <div style={{ textAlign: 'center' }}>
+     {/*<div style={{ textAlign: 'center' }}>
         <SpanDot className="dot" onClick={() => currentSlide(1)}></SpanDot>
         <SpanDot className="dot" onClick={() => currentSlide(2)}></SpanDot>
         
-      </div>
+  </div>*/}
     </DivContainer>
   );
 };
