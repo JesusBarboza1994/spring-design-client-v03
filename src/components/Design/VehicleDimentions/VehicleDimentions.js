@@ -67,7 +67,8 @@ export function VehicleDimentions(){
 			     <DimentionsInput id="inclinationDel_Izq" title ="INCLIN" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})}/>
 			 </DimentionsContainer>
 			 <DimentionsContainer>
-				 <label style={{fontWeight: "bold", height: typography.text.md}}>POST IZQ<img src="/Images/2.png" width="28px"/></label>
+			     <div style={{display: "flex"}}><label style={{fontWeight: "bold", height: typography.text.md}}>POST IZQ</label>
+				 <img src="/Images/2.png" width="28px"/></div>
 			     <DimentionsInput id="pgPost_Izq" title ="P-G" value={vehicleDimentions.pgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgPost_Izq:e.target.value})}/>
 			     <DimentionsInput id="llgPost_Izq" title ="LL-G" value={vehicleDimentions.llgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, llgPost_Izq:e.target.value})}/>
 			     <DimentionsInput id="pesoPost_Izq1" title ="PESO 1" value={vehicleDimentions.pesoPost_Izq1} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pesoPost_Izq1:e.target.value})}/>
