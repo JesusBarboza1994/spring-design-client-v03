@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, MySlides, ArrowButton, CaptionContainer, Row, Column, Demo } from "./styles";
+import { Container, MySlides, ArrowButton, CaptionContainer, Row, Column, Demo, Imagen, Carusel, MainImage } from "./styles";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 // const Galery = () => {
@@ -112,22 +112,31 @@ const Galery = () => {
 
   return(
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <FaAngleLeft onClick={() => setCurrentImageIndex(currentImageIndex - 1)}/>
-        <img src={images[currentImageIndex]} style={{ width: "100%" }} alt="imagen"/>
-        <FaAngleRight onClick={() => setCurrentImageIndex(currentImageIndex + 1)}/>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px", }}>
+        
+        <MainImage src={images[currentImageIndex]} alt="imagen"/>
+       
       </div>
-      <div style={{ display: "flex",  }}>
+
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+        <FaAngleLeft style={{ cursor: "pointer",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex - 1)}/>
+
+        <Carusel>
+        
         {images.map((image, index) => (
-          <img
+          <Demo
             key={index}
             src={image}
-            style={{ width: "80px" }}
             alt="imagen"
             onClick={() => setCurrentImageIndex(index)}
           />
-        ))}
+         ))}
+        
+      </Carusel>
+
+        <FaAngleRight style={{ cursor: "pointer",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex + 1)}/>
       </div>
+      
     </div>
   )
 }
