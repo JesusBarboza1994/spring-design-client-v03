@@ -43,11 +43,7 @@ export const Label = styled.label`
   font-style: italic;
  
 `
-export const DivContainer = styled.div`
-  position: relative;
-  
-`
-export const Lado = styled.div`
+export const Lado = styled.p`
   color: ${colors.font.text}; 
   display: flex;
   justify-content: right;
