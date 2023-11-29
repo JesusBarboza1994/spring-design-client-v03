@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 //import Input from "../../Input"
 import styled from "@emotion/styled";
 import { typography } from "../../../styles/typography";
@@ -8,6 +8,7 @@ import { Wrapper, Label, DimentionsContainer, DivContainer, Lado, SpanDot, Next 
 import { Switch } from "@mui/material";
 import Slideshow from "./script";
 import { DimentionsInput } from "./DimentionsInput";
+import { FaAngleRight } from "react-icons/fa6";
 
 export function VehicleDimentions(){
 	const [vehicleDimentions, setVehicleDimentions] = useState({
@@ -47,18 +48,41 @@ export function VehicleDimentions(){
     const handleChange = () => {
       setIsChecked(!isChecked);
     }
-  
+		const vehiclePoisitionData = [
+			{
+				text:"LADO IZQUIERDO",
+				img:"/Images/Component-58-Izq.webp",
+				imgNumberDel: "/Images/1.png",
+				imgNumberPost: "/Images/2.png",
+			},
+			{
+				text:"LADO DERECHO",
+				img:"/Images/Component-58-Der.webp",
+				imgNumberDel: "/Images/4.png",
+				imgNumberPost: "/Images/3.png",
+			}
+		]
+		const [vehiclePosition, setVehiclePosition] = useState(0)
+		useEffect(() => {
+			
+		},[vehiclePosition])
     return(
 		<Wrapper>
-          <Label>MODO IMAGEN<Switch onChange= {handleChange} size="big"/>MODO TABLA</Label>
-		  <Slideshow/>
-			
-
-            
+			<Label>MODO IMAGEN<Switch onChange= {handleChange} size="big"/>MODO TABLA</Label>
+		  {/* <Slideshow/>   */}
+			<div>
+				<p>{vehiclePoisitionData[vehiclePosition].text}</p>
+				<div style={{display: "flex", justifyContent: "space-evenly", alignItems: "center"}}>
+					<img src={vehiclePoisitionData[vehiclePosition].img} alt="imagen-vehiculo"/>
+					<FaAngleRight onClick={() => setVehiclePosition(vehiclePosition === 0 ? 1 : 0)}/>
+				</div>
+			</div>
 			<div style={{display: "flex", columnGap: 150, marginTop: 50, justifyContent: "center"}}> 
 			 <DimentionsContainer>
-				 <div style={{display: "flex"}}><label style={{fontWeight: "bold", height: typography.text.md }}>DEL IZQ</label>
-				 <img src="/Images/1.png" width="28px" height="28px"/></div>
+				 	<div style={{display: "flex", gap: 10, alignItems: "center"}}>
+						<p style={{fontWeight: "bold", height: typography.text.md, color: colors.font.text }}>DEL {vehiclePosition === 0 ? "IZQ" : "DER"}</p>
+				 		<img src={vehiclePoisitionData[vehiclePosition].imgNumberDel} width="28px" height="28px" alt="imagen1"/>
+					</div>
 			     <DimentionsInput title="P-G" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})} id="pgDel_Izq" />
 			     <DimentionsInput title="LL-G" value={vehicleDimentions.llgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, llgDel_Izq:e.target.value})} id="llgDel_Izq" />
 			     <DimentionsInput id="pesoDel_Izq1" title ="PESO 1" value={vehicleDimentions.pesoDel_Izq1} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pesoDel_Izq1:e.target.value})}/>
@@ -67,8 +91,8 @@ export function VehicleDimentions(){
 			     <DimentionsInput id="inclinationDel_Izq" title ="INCLIN" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})}/>
 			 </DimentionsContainer>
 			 <DimentionsContainer>
-			     <div style={{display: "flex"}}><label style={{fontWeight: "bold", height: typography.text.md}}>POST IZQ</label>
-				 <img src="/Images/2.png" width="28px"/></div>
+			     <div style={{display: "flex"}}><label style={{fontWeight: "bold", height: typography.text.md}}>POST {vehiclePosition === 0 ? "IZQ" : "DER"}</label>
+				 <img src={vehiclePoisitionData[vehiclePosition].imgNumberPost} width="28px"/></div>
 			     <DimentionsInput id="pgPost_Izq" title ="P-G" value={vehicleDimentions.pgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgPost_Izq:e.target.value})}/>
 			     <DimentionsInput id="llgPost_Izq" title ="LL-G" value={vehicleDimentions.llgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, llgPost_Izq:e.target.value})}/>
 			     <DimentionsInput id="pesoPost_Izq1" title ="PESO 1" value={vehicleDimentions.pesoPost_Izq1} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pesoPost_Izq1:e.target.value})}/>
