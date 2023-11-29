@@ -54,11 +54,11 @@ import { colors } from "../../../styles/colors";
 //   width: 16.66%;
 // `;
 export const MainImage = styled.img`
- width: 60%;
+ width: 100%;
  display: flex;
  justify-content: center;
  border-radius: 18px;
- max-height: 400px;
+ height: 400px;
 `
 
 export const Carusel = styled.div`
@@ -75,7 +75,7 @@ export const Carusel = styled.div`
 `;
 export const Demo = styled.img`
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.7;
   max-height: 130px;
   border-radius: 10px; 
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
