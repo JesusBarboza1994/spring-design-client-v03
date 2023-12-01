@@ -53,6 +53,36 @@ import { colors } from "../../../styles/colors";
 //   float: left;
 //   width: 16.66%;
 // `;
+export const Wrapper = styled.div`
+  display: grid;
+  gap: 20px;
+  
+`
+
+export const Button = styled.button`
+  background-color: "none";
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  
+`
+export const CloseButton = styled.button`
+ width: 40px;
+ height: 40px;
+ flex-shrink: 0;
+ background-color: ${colors.primary.medium};
+ border-radius: 50%;
+`
+export const FondoDiv = styled.div`
+ width: 617.085px;
+ height: 369.6px;
+ flex-shrink: 0;
+ background-color: ${colors.primary.light};
+ border-radius: 20px;
+ background: #FFF;
+ box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.25);
+`
+
 export const MainImage = styled.img`
  width: 100%;
  display: flex;
