@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Container, MySlides, ArrowButton, CaptionContainer, Row, Column, Wrapper, Demo, Imagen, Carusel, MainImage, Button } from "./styles";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { PiUpload } from "react-icons/pi";
-import { Modal } from "./Modal";
 import { colors } from "../../../styles/colors";
+import Modal from "../Modal";
 
 // const Galery = () => {
 //   const [slideIndex, setSlideIndex] = useState(1);
@@ -127,46 +127,50 @@ const Galery = () => {
 
 
   return(
-    <Wrapper>
 
-    <div>
-     <Button onClick={openModal}><PiUpload size={35}/></Button>
-     <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h2>Contenido del Modal</h2>
-        <p>Este es un modal simple en React.</p>
-      </Modal>
-    </div>
-
-    <div style={{ margin: "auto", maxWidth: 1400, display: "flex", alignItems: "center", flexDirection: "column", justifyContent: "center"}}>
-      
-      
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px", }}>
+      <Wrapper>
+        <Modal isOpen={isModalOpen} onClose={closeModal}>
+          <h2>Contenido del Modal</h2>
+          <p>Este es un modal simple en React.</p>
+        </Modal>
+        <div>
+        <Button onClick={openModal}><PiUpload size={35}/></Button>
+        <input type="file" />
         
-        <MainImage src={images[currentImageIndex]} alt="imagen"/>
-       
+        </div>
+
+          <div style={{ margin: "auto", maxWidth: 1400, display: "flex", alignItems: "center", flexDirection: "column", justifyContent: "center"}}>
+        
+        
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px", }}>
+          
+            <MainImage src={images[currentImageIndex]} alt="imagen"/>
+        
+          </div>
+
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <FaAngleLeft style={{ cursor: "pointer", color: "black",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex === 0 ? (images.length - 1) : (currentImageIndex - 1))}/>
+          
+          <Carusel>
+          
+          {images.map((image, index) => (
+            <Demo
+              key={index}
+              src={image}
+              alt="imagen"
+              onClick={() => setCurrentImageIndex(index)}
+            />
+          ))}
+          
+        </Carusel>
+
+          <FaAngleRight style={{ cursor: "pointer",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex === (images.length - 1) ? 0 : (currentImageIndex + 1))}/>
+        </div>
+        
       </div>
-
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
-        <FaAngleLeft style={{ cursor: "pointer", color: "black",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex === 0 ? (images.length - 1) : (currentImageIndex - 1))}/>
-        
-        <Carusel>
-        
-        {images.map((image, index) => (
-          <Demo
-            key={index}
-            src={image}
-            alt="imagen"
-            onClick={() => setCurrentImageIndex(index)}
-          />
-         ))}
-        
-      </Carusel>
-
-        <FaAngleRight style={{ cursor: "pointer",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex === (images.length - 1) ? 0 : (currentImageIndex + 1))}/>
-      </div>
+      </Wrapper>
       
-    </div>
-    </Wrapper>
+
     
   )
 }

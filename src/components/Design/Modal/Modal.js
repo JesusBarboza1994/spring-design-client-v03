@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import './styles.js'; 
-import { CloseButton, FondoDiv } from './styles.js';
+import { CloseButton, FondoDiv, Wrapper } from './styles';
 
 export const Modal = ({ isOpen, onClose, children }) => {
   return (
     isOpen && (
-      <div className="modal-overlay">
+      <Wrapper className="modal-overlay">
         <FondoDiv className="modal">
           <CloseButton onClick={onClose}>
             X
           </CloseButton>
           {children}
         </FondoDiv>
-      </div>
+      </Wrapper>
     )
   );
 };
