@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import Modal from 'react-modal';
 import './styles.js'; 
 import { CloseButton, FondoDiv } from './styles.js';
 
-export const Modal = ({ isOpen, onClose, children }) => {
+
+export const Modal_element = ({ isOpen, onClose, children }) => {
   return (
     isOpen && (
       <div className="modal-overlay">
@@ -16,4 +18,6 @@ export const Modal = ({ isOpen, onClose, children }) => {
     )
   );
 };
+
+
 

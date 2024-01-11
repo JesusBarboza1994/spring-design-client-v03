@@ -6,6 +6,7 @@ import { SampleMeasurements } from "../../components/Design/SampleMeasurements/S
 import { VehicleData } from "../../components/Design/VehicleData/VehicleData";
 import { VehicleDimentions } from "../../components/Design/VehicleDimentions/VehicleDimentions";
 import  Galery  from "../../components/Design/Galery/Galery";
+import { ClientRequirements } from "../../components/Design/ClientRequirements/ClientRequirements";
 
 export default function TotalizedFormat(){
 	return(
@@ -16,6 +17,7 @@ export default function TotalizedFormat(){
 			<DataTypeDesign Data={<SampleMeasurements/>} text={"DATOS DE LA MUESTRA"}/>
 			<DataTypeDesign Data={<VehicleDimentions/>} text={"MEDIDAS DEL VEHICULO"}/>
 			<DataTypeDesign Data={<Galery/>} text={"GALERIA"}/>
+			<DataTypeDesign Data={<ClientRequirements/>} text={"REQUERIMIENTOS DEL CLIENTE"}/>
 
             
 		</Container>

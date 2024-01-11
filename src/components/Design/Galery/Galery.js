@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, MySlides, ArrowButton, CaptionContainer, Row, Column, Wrapper, Demo, Imagen, Carusel, MainImage, Button } from "./styles";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { PiUpload } from "react-icons/pi";
-import { Modal } from "./Modal";
+import { Modal, Modal_element } from "./Modal";
 import { colors } from "../../../styles/colors";
 
 // const Galery = () => {
@@ -128,13 +128,14 @@ const Galery = () => {
 
   return(
     <Wrapper>
-
     <div>
      <Button onClick={openModal}><PiUpload size={35}/></Button>
-     <Modal isOpen={isModalOpen} onClose={closeModal}>
+     <Modal_element isOpen={isModalOpen} onClose={closeModal}>
         <h2>Contenido del Modal</h2>
         <p>Este es un modal simple en React.</p>
-      </Modal>
+      </Modal_element>
+      
+      
     </div>
 
     <div style={{ margin: "auto", maxWidth: 1400, display: "flex", alignItems: "center", flexDirection: "column", justifyContent: "center"}}>
