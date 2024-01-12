@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { colors } from "../../../styles/colors";
+import { typography } from "../../../styles/typography";
+import { fonts } from "../../../styles/typography";
 
 export const Wrapper = styled.div`
 	display: grid;
@@ -39,4 +41,30 @@ export const Label = styled.label`
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   color: ${colors.font.text};
+`
+export const ReqTable = styled.table`
+  padding: 10px;
+  border-radius: 8px;
+  //border: 1px solid #000;
+  box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
+  background: ${colors.cell};
+  color: ${colors.font.text};
+`
+export const TableTitle = styled.p`
+  width: 100%;
+  background: ${colors.cell};
+  font-family: ${fonts.primary};
+  ${typography.text.md}
+  color: ${colors.font.text};
+` 
+
+export const Th = styled.th`
+  width: 50%;
+  text-align: center;
+  border: 1px solid #000;
+`
+export const Td = styled.td`
+  width: 50%;
+  text-align: center;
+  border: 1px solid #000;
 `
