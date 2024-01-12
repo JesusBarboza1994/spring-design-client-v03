@@ -1,15 +1,17 @@
 import { useState } from "react";
-import styled from "@emotion/styled";
-import { colors } from "../../styles/colors";
-import { typography } from "../../styles/typography";
-import { fonts } from "../../styles/typography";
 import {ElementStyle, DivStyle} from "./styles";
+import { useNavigate } from "react-router-dom";
 
 
 function HomeComponent ({backgroundImage,text}){
  
+ const navigate = useNavigate();
+ const navigateToNewPage = () => {
+    navigate ("/design");
+ } 
+
  return (
-    <ElementStyle style={{ backgroundImage: `url(${backgroundImage})`}}>
+    <ElementStyle style={{ backgroundImage: `url(${backgroundImage})`}} onClick={navigateToNewPage}>
         <DivStyle>{text}</DivStyle>
     </ElementStyle>
  );

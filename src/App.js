@@ -2,9 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Design from "./pages/Design/Design";
-import SpringType from "./pages/SpringType/SpringType";
+import SpringType from "./pages/SpringType";
 import DesignInputData from "./pages/DesignInputData/DesignInputData";
-import { Page } from "./components/Design/DataTypeDesign/DataTypeDesign";
+import TotalizedFormat from "./pages/TotalizedFormat/TotalizedFormat";
 
 function App() {
     return(
@@ -13,9 +13,10 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/spring_type" element={<SpringType/>}/>
           <Route path="/design_inputdata" element={<DesignInputData/>}/>
-          <Route path="/prueba" element={<Page/>}/>
+          <Route path="/prueba" element={<TotalizedFormat/>}/>
           <Route path="/design" element={<Design/>}/>
         </Routes> 
+        
       )
   }
   
