@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 		width: 80%;
      	    
 	}
-    >div1{
+    >divText{
         display: flex;
         gap: 20px;
 		width: 80%;

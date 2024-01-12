@@ -12,10 +12,10 @@ export function CorrelativeData(){
 		<Wrapper>
 			<div><Input title="Fecha" value={dataCorrel.date}  id="date"/></div>
 			<div><Input title="Correlativo de diseño" value={dataCorrel.correl} id="correl"/></div>
-			<div1>
+			<divText>
                 <Text>Tipo de resorte:</Text>
                 <Text>SUSPENSION</Text>
-            </div1>
+            </divText>
 			
         </Wrapper>
         )
