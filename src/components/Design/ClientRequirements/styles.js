@@ -45,26 +45,34 @@ export const Label = styled.label`
 export const ReqTable = styled.table`
   padding: 10px;
   border-radius: 8px;
-  //border: 1px solid #000;
+  border: 1px solid #000;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   background: ${colors.cell};
   color: ${colors.font.text};
 `
-export const TableTitle = styled.p`
+export const TableTitle = styled.th`
   width: 100%;
   background: ${colors.cell};
   font-family: ${fonts.primary};
   ${typography.text.md}
   color: ${colors.font.text};
+  text-align: left;
 ` 
 
-export const Th = styled.th`
-  width: 50%;
-  text-align: center;
-  border: 1px solid #000;
-`
 export const Td = styled.td`
   width: 50%;
   text-align: center;
   border: 1px solid #000;
+  gap: 0;
+`
+export const Select = styled.select`
+  width: 100%;
+  background-color: ${colors.cell};
+  color: ${colors.font.text};
+  font-family: ${fonts.primary};
+  ${typography.text.md};
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #000;
+  
 `

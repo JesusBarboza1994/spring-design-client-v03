@@ -1,22 +1,35 @@
-import { ReqTable, TableTitle, Td, Th } from "./styles";
+import { ReqTable, TableTitle, Td, Select } from "./styles";
+import apiFetch from "../../../services/api-fetch";
 
 
 export default function RequirementsTable(){
     return(
         <div>
             
-            <TableTitle>Requerimientos funcionales y de desempeño</TableTitle>
             <ReqTable>
                 
                 <thead>
                     <tr>
-                     <Th>Rigidez:</Th>
-                     <Th>Altura instalada:</Th>
+                     <TableTitle colSpan="2">Requerimientos funcionales y de desempeño</TableTitle>
+                     
                     </tr> 
                 </thead>
                 <tbody>
+                  <tr>
+                        <Td>Rigidez:</Td>
+                        <Td>Altura instalada:</Td>
+                    </tr>
+
                     <tr>
-                        <Td>Aumentar</Td>
+                        <div style={{display: "flex",}}>
+                         <Select>
+                             <option> Seleccionar</option>
+                             <option> Aumentar</option>
+                             <option> Mantener</option>
+                             <option> Disminuir</option>
+                          </Select>
+                        </div>
+                        
                         <Td>aumentar</Td>
                     </tr>
                     <tr>
