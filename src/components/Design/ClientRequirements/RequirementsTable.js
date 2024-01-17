@@ -1,6 +1,4 @@
 import { ReqTable, TableTitle, Td, Select } from "./styles";
-import apiFetch from "../../../services/api-fetch";
-
 
 export default function RequirementsTable(){
     return(
@@ -21,19 +19,42 @@ export default function RequirementsTable(){
                     </tr>
 
                     <tr>
+                        <Td> 
                         <div style={{display: "flex",}}>
                          <Select>
-                             <option> Seleccionar</option>
+                             <option> Seleccione</option>
                              <option> Aumentar</option>
                              <option> Mantener</option>
                              <option> Disminuir</option>
                           </Select>
                         </div>
+                        </Td>
                         
-                        <Td>aumentar</Td>
+                        <Td>
+                        <div style={{display: "flex",}}>
+                         <Select>
+                         <option> Seleccione</option>
+                                <option> Aumentar</option>
+                                <option> Mantener</option>
+                                <option> Disminuir</option>
+                                
+                          </Select>
+                        </div>
+                        </Td>
                     </tr>
                     <tr>
-                        <Td>5%</Td>
+                        <Td>
+                            <div style={{display: "flex",}}>
+                             <Select>
+                                <option> -- </option>
+                                <option> 5 a 10% (muy leve)</option>
+                                <option> 12 a 15% (leve)</option>
+                                <option> 18 a 25% (moderado)</option>
+                                <option> 27 a 35% (alto)</option>
+                                <option> 38% a mas (muy alto)</option>
+                             </Select>
+                           </div>
+                        </Td>
                         <Td>
                             <input type="number"></input>
                         </Td>

@@ -57,12 +57,13 @@ export const TableTitle = styled.th`
   ${typography.text.md}
   color: ${colors.font.text};
   text-align: left;
+  
 ` 
 
 export const Td = styled.td`
   width: 50%;
   text-align: center;
-  border: 1px solid #000;
+  //border: 1px solid #000;
   gap: 0;
 `
 export const Select = styled.select`
@@ -75,4 +76,15 @@ export const Select = styled.select`
   padding: 5px;
   border: 1px solid #000;
   
+`
+export const Title = styled.td`
+  width: 90px;
+  text-align: center;
+`
+export const Cell = styled.input`
+  width: 100%;
+`
+export const Comment= styled.td`
+  width: 150px;
+  text-align: center;
 `
