@@ -6,6 +6,8 @@ import { fonts } from "../../../styles/typography";
 export const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+  padding-top: 10px;
+  margin-bottom: 50px;
 	> div{
 		display: flex;
 		flex-direction: column;
@@ -44,11 +46,14 @@ export const Label = styled.label`
 `
 export const ReqTable = styled.table`
   padding: 10px;
-  border-radius: 8px;
+  
   border: 1px solid #000;
+  
+  border-radius: 8px;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   background: ${colors.cell};
   color: ${colors.font.text};
+  
 `
 export const TableTitle = styled.th`
   width: 100%;
@@ -57,13 +62,20 @@ export const TableTitle = styled.th`
   ${typography.text.md}
   color: ${colors.font.text};
   text-align: left;
+  
 ` 
 
 export const Td = styled.td`
   width: 50%;
   text-align: center;
-  border: 1px solid #000;
-  gap: 0;
+  //border: 1px solid #000;
+  
+`
+export const Td1 = styled.td`
+  
+  text-align: left;
+  //border: 1px solid #000;
+  
 `
 export const Select = styled.select`
   width: 100%;
@@ -74,5 +86,28 @@ export const Select = styled.select`
   text-align: center;
   padding: 5px;
   border: 1px solid #000;
+  border-radius: 6px;
   
+`
+export const Title = styled.td`
+  width: 90px;
+  text-align: center;
+`
+export const Cell = styled.input`
+  width: 100%;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #000;
+
+`
+export const Cell1 = styled.input`
+  width: 40px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #000;
+
+`
+export const Comment= styled.td`
+  width: 150px;
+  text-align: center;
 `
