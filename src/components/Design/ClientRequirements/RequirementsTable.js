@@ -1,4 +1,4 @@
-import { ReqTable, TableTitle, Td, Select } from "./styles";
+import { ReqTable, TableTitle, Td, Select, Cell } from "./styles";
 
 export default function RequirementsTable(){
     return(
@@ -56,7 +56,7 @@ export default function RequirementsTable(){
                            </div>
                         </Td>
                         <Td>
-                            <input type="number"></input>
+                            <Cell type="number"></Cell>
                         </Td>
                     </tr>
 
