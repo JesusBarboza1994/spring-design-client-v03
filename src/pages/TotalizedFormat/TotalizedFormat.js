@@ -7,6 +7,7 @@ import { VehicleData } from "../../components/Design/VehicleData/VehicleData";
 import { VehicleDimentions } from "../../components/Design/VehicleDimentions/VehicleDimentions";
 import  Galery  from "../../components/Design/Galery/Galery";
 import { ClientRequirements } from "../../components/Design/ClientRequirements/ClientRequirements";
+import { TechnicalStandard } from "../../components/Design/TechnicalStandard/TechnicalStandard";
 
 export default function TotalizedFormat(){
 	return(
@@ -18,7 +19,7 @@ export default function TotalizedFormat(){
 			<DataTypeDesign Data={<VehicleDimentions/>} text={"MEDIDAS DEL VEHICULO"}/>
 			<DataTypeDesign Data={<Galery/>} text={"GALERIA"}/>
 			<DataTypeDesign Data={<ClientRequirements/>} text={"REQUERIMIENTOS DEL CLIENTE"}/>
-
+			<DataTypeDesign Data={<TechnicalStandard/>} text={"NORMAS TECNICAS"}/>
             
 		</Container>
 	);

@@ -22,10 +22,10 @@ export default function RequirementsTable(){
                         <Td> 
                         <div style={{display: "flex",}}>
                          <Select>
-                             <option> Seleccione</option>
-                             <option> Aumentar</option>
-                             <option> Mantener</option>
-                             <option> Disminuir</option>
+                             <option hidden disabled> Seleccione </option>
+                             <option value="Aumentar"> Aumentar </option>
+                             <option value="Mantener"> Mantener </option>
+                             <option value="Disminuir"> Disminuir </option>
                           </Select>
                         </div>
                         </Td>
@@ -33,10 +33,10 @@ export default function RequirementsTable(){
                         <Td>
                         <div style={{display: "flex",}}>
                          <Select>
-                         <option> Seleccione</option>
-                                <option> Aumentar</option>
-                                <option> Mantener</option>
-                                <option> Disminuir</option>
+                                <option hidden disabled> Seleccione </option>
+                                <option value={"Aumentar"}> Aumentar </option>
+                                <option value={"Mantener"}> Mantener </option>
+                                <option value={"Disminuir"}> Disminuir </option>
                                 
                           </Select>
                         </div>

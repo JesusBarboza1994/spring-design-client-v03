@@ -7,7 +7,7 @@ import React, { useReducer } from 'react';
 
 const coilSpringData = {
   suspensionType: "",
-  ware: "",
+  wire: "",
   outDiam1: "",
 	outDiam2: "",
 	coilsNumber: "",
@@ -83,7 +83,7 @@ export function SampleMeasurements() {
       {/* ... your existing JSX code ... */}
       <div>
         <Input title="Tipo de suspensión" value={dataSample.suspensionType} onChange={(e) => handleChange('suspensionType', e.target.value)} id="suspensionType" />
-        <Input title="Alambre" value={dataSample.ware} onChange={(e)=> handleChange("ware", e.target.value)} id="ware"/>
+        <Input title="Alambre" value={dataSample.wire} onChange={(e)=> handleChange("wire", e.target.value)} id="wire"/>
  			  <Input title="Diam.exterior 1" value={dataSample.outDiam1} onChange={(e)=> handleChange("outDiam1", e.target.value)} id="outDiam1"/>
  				<Input title="Diam.exterior 2" value={dataSample.outDiam2} onChange={(e)=> handleChange("outDiam2", e.target.value)} id="outDiam2"/>
 		    <Input title="Nro de vueltas" value={dataSample.coilsNumber} onChange={(e)=> handleChange("coilsNumber", e.target.value)} id="coilsNumber"/>
@@ -91,12 +91,12 @@ export function SampleMeasurements() {
           <Label>Extremo 1</Label>
           <Select value={dataSample.endType1} onChange={(e)=> handleChange("endType1", e.target.value)} id="endType1">
             <option value="TASE">TASE</option>
-          <option value="TCSE">TCSE</option>
-          <option value="TCE">TCE</option>
-          <option value="TAE">TAE</option>
+            <option value="TCSE">TCSE</option>
+            <option value="TCE">TCE</option>
+            <option value="TAE">TAE</option>
           </Select>
           <Select value={dataSample.endDetail11} onChange={(e)=> handleChange("endDetail11", e.target.value)} id="endDetail1">
-          <option value="no">--</option>
+            <option value="no">--</option>
             <option value="sobrepuesta">sobrepuesta</option>
             <option value="libre">libre</option>
           </Select>

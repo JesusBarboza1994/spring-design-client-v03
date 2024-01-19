@@ -8,18 +8,20 @@ export const Wrapper = styled.div`
 	grid-template-columns: 1fr 1fr;
   padding-top: 10px;
   margin-bottom: 50px;
-	> div{
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-		width: 90%;
-	}
+	
 	@media(max-width: 1024px){
 		display:flex;
 		flex-direction:column;
 		gap: 0.5rem;
 	}
 `
+export const Div = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  column-gap: 70px;
+`
+
 export const Input = styled.input`
   width: 560px;
   height: 108px;
@@ -46,9 +48,7 @@ export const Label = styled.label`
 `
 export const ReqTable = styled.table`
   padding: 10px;
-  
   border: 1px solid #000;
-  
   border-radius: 8px;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   background: ${colors.cell};
@@ -72,7 +72,6 @@ export const Td = styled.td`
   
 `
 export const Td1 = styled.td`
-  
   text-align: left;
   //border: 1px solid #000;
   
