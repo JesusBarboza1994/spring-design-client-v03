@@ -1,11 +1,12 @@
 import { useState } from "react"
 //import Input from "../../Input"
-import { Wrapper, Label, Input } from "./styles"
+//import styled from "@emotion/styled";
+import { Wrapper, Label, Input, Div, Input2 } from "./styles"
 
 export function TechnicalStandard(){
     const [checks, setChecks] = useState({
-		brand:"",
-
+		X:"si",
+        Detail:"",
     })
 
     return(
@@ -15,23 +16,35 @@ export function TechnicalStandard(){
                 <p>Normas o codigos de practicas que la organizacion se ha comprometido a implementar</p>
             </div>
             <div>
-            {/* <Input title="Marca" value={checks.brand} onChange={(e)=>setChecks({...checks, brand:e.target.value})} id="brand"/> */}
-				<label>Aplica</label> 
-                <Input></Input> 
-                <label>Aplica</label> 
-                <Input></Input> 
+                <Div>
+                {/* <Input title="Marca" value={checks.brand} onChange={(e)=>setChecks({...checks, brand:e.target.value})} id="brand"/> */}
+                    <label>Aplica</label> 
+                    <Input></Input> 
+                </Div>
+                <Div>
+                    <label>Aplica</label> 
+                    <Input></Input> 
+                </Div>
             </div>
             <div>
-                <label>No aplica</label> 
-                <Input></Input> 
-                <label>No aplica</label> 
-                <Input></Input> 
+                <Div>
+                    <label>No aplica</label> 
+                    <Input></Input> 
+                </Div>
+                <Div>
+                    <label>No aplica</label> 
+                    <Input></Input> 
+                </Div>
             </div>
             <div>
-                <label>Detalle</label> 
-                <Input></Input> 
-                <label>Detalle</label> 
-                <Input></Input> 
+                <Div>
+                    <label>Detalle</label> 
+                    <Input2 />
+                </Div>
+                <Div>
+                    <label>Detalle</label> 
+                    <Input2/>
+                </Div>
             </div>
 
         </Wrapper>
