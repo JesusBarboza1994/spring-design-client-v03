@@ -2,7 +2,7 @@ import { useState } from "react"
 import styled from "@emotion/styled";
 import Input from "../../Input"
 import { Switch } from "@mui/material";
-import { Wrapper} from "./styles"
+import { DivPlano, InputPlano, DivPrecio, Wrapper} from "./styles"
 import TextArea from "../ClientRequirements/TextArea";
 
 export function DevelopedDesign(){
@@ -28,18 +28,18 @@ export function DevelopedDesign(){
                 
             </div>
             <div>
-                <div>
-                    <label>Plano NO<Switch onChange={handleToggleCheckbox} size="big" />SI</label>
+                <DivPlano>
+                    <label>Plano  NO <Switch onChange={handleToggleCheckbox} size="big" /> SI</label>
                     {link.isChecked && (
-                        <>
-                        <Input value={link.drawing} onChange={(e) => setLink({...link, drawing:e.target.value})} id="drawing" />
-                        </>
+                        
+                        <InputPlano value={link.drawing} onChange={(e) => setLink({...link, drawing:e.target.value})} id="drawing" />
+                        
                         )}
-                </div>
-                <div>
+                </DivPlano>
+                <DivPrecio>
                     <Input title="Precio unitario S/." />
                     <Input title="Cantidad"/>
-                </div>
+                </DivPrecio>
             </div>            
 
         </Wrapper>

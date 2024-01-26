@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
 		gap: 25px;
 		width: 90%;
         color: ${colors.font.text};
+		position: relative;
 	}
 	
 	@media(max-width: 1024px){
@@ -23,6 +24,20 @@ export const Wrapper = styled.div`
 		gap: 0.5rem;
 	}
 `
-export const Div = styled.div`
- space-between: 25px;
+export const DivPrecio = styled.div`
+	display: grid;
+	gap: 10px;
+	> input{
+		max-width: 60px;
+	}
+`
+export const DivPlano = styled.div`
+  display: grid;
+  gap: 10px;
+`
+
+export const InputPlano = styled.input`
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #000;
+  gap: 10px;
 `

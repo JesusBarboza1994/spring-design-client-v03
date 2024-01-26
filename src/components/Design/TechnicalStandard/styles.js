@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	//column-gap: 70px;
+  
 
 	> div{
 		display: flex;
@@ -21,11 +22,12 @@ export const Wrapper = styled.div`
 `
 export const Input = styled.input`
   width: 60px;
-   
   border-radius: 8px 8px 8px 8px;
   border: 1px solid #000;
   background: #FFF;
-  //box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
+   
+&:checked {
+  accent-color: ${(props) => (props.applies ? '#1976d2' : 'gris')}; 
 `
 export const Input2 = styled.input`
     

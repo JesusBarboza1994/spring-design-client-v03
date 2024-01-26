@@ -5,10 +5,17 @@ import { Wrapper, Label, Input, Div, Input2 } from "./styles"
 
 export function TechnicalStandard(){
     const [checks, setChecks] = useState({
-		X:"si",
-        Detail:"",
+		applies: false,
+        noApplies: false,
+        detail:"",
     })
+    const handleAppliesChange = (e) => {
+        setChecks({ ...checks, applies: e.target.value, noApplies: false });
+    };
 
+    const handleNoAppliesChange = (e) => {
+        setChecks({ ...checks, noApplies: e.target.value, applies: false });
+    };
     return(
         <Wrapper>
             <div>
@@ -17,33 +24,56 @@ export function TechnicalStandard(){
             </div>
             <div>
                 <Div>
-                {/* <Input title="Marca" value={checks.brand} onChange={(e)=>setChecks({...checks, brand:e.target.value})} id="brand"/> */}
                     <label>Aplica</label> 
-                    <Input></Input> 
+                    <Input type="radio"
+                        value={checks.applies}
+                        name="requisitos" 
+                        onChange={handleAppliesChange}
+                        id="applies"
+                        applies={checks.applies}/> 
                 </Div>
                 <Div>
                     <label>Aplica</label> 
-                    <Input></Input> 
+                    <Input type="radio"
+                        value={checks.applies}
+                        name="requisitos" 
+                        onChange={handleAppliesChange}
+                        id="applies"
+                        applies={checks.applies}/>  
                 </Div>
             </div>
             <div>
                 <Div>
                     <label>No aplica</label> 
-                    <Input></Input> 
+                    <Input type="radio"
+                        value={checks.noApplies}
+                        name="requisitos" 
+                        onChange={handleNoAppliesChange}
+                        id="noApplies"
+                        applies={checks.applies}/>  
                 </Div>
                 <Div>
                     <label>No aplica</label> 
-                    <Input></Input> 
+                    <Input type="radio"
+                        value={checks.noApplies}
+                        name="requisitos" 
+                        onChange={handleNoAppliesChange}
+                        id="noApplies"
+                        applies={checks.applies}/>  
                 </Div>
             </div>
             <div>
                 <Div>
                     <label>Detalle</label> 
-                    <Input2 />
+                    <Input2 value={checks.detail} 
+                        onChange={(e) => setChecks({ ...checks, detail: e.target.value })}
+                    />
                 </Div>
                 <Div>
                     <label>Detalle</label> 
-                    <Input2/>
+                    <Input2 value={checks.detail} 
+                        onChange={(e) => setChecks({ ...checks, detail: e.target.value })}
+                    />
                 </Div>
             </div>
 
