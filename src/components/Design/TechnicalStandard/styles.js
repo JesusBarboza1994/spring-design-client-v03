@@ -5,13 +5,14 @@ export const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	//column-gap: 70px;
+  
 
 	> div{
 		display: flex;
 		flex-direction: column;
 		gap: 6px;
 		width: 90%;
-        color: ${colors.font.text};
+    color: ${colors.font.text};
 	}
 	@media(max-width: 1024px){
 		display:flex;
@@ -21,16 +22,30 @@ export const Wrapper = styled.div`
 `
 export const Input = styled.input`
   width: 60px;
-  height: 25px;  
   border-radius: 8px 8px 8px 8px;
   border: 1px solid #000;
   background: #FFF;
-  box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
+   
+&:checked {
+  accent-color: ${(props) => (props.applies ? '#1976d2' : 'gris')}; 
 `
+export const Input2 = styled.input`
+    
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #000;
+  background: #FFF;
+  //box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
+`
+
 export const Label = styled.label`
   display: flex;
   width: 132px;
   justify-content: center;
   align-items: flex-end;
   gap: 25px;
+`
+export const Div = styled.div`
+ display: flex;
+ gap: 25px;
+ justify-content: center;
 `
