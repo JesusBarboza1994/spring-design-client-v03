@@ -26,11 +26,24 @@ export const Wrapper = styled.div`
 `
 export const DivPrecio = styled.div`
 	display: grid;
-	gap: 10px;
-	> input{
-		max-width: 60px;
-	}
+	gap: 5px;
 `
+
+export const Precio = styled.input`
+	max-width: 70px;
+	min-width: 30px;
+	border-radius: 8px 8px 8px 8px;
+    border: 1px solid #000;
+    margin-left: 15px;
+`
+export const Cantidad = styled.input`
+	max-width: 70px;
+	min-width: 30px;
+	border-radius: 8px 8px 8px 8px;
+    border: 1px solid #000;
+    margin-left: 79px;
+`
+
 export const DivPlano = styled.div`
   display: grid;
   gap: 10px;

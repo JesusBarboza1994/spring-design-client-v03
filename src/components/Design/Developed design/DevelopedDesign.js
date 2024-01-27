@@ -2,7 +2,7 @@ import { useState } from "react"
 import styled from "@emotion/styled";
 import Input from "../../Input"
 import { Switch } from "@mui/material";
-import { DivPlano, InputPlano, DivPrecio, Wrapper} from "./styles"
+import { DivPlano, InputPlano, DivPrecio, Wrapper, Precio, Cantidad} from "./styles"
 import TextArea from "../ClientRequirements/TextArea";
 
 export function DevelopedDesign(){
@@ -19,10 +19,10 @@ export function DevelopedDesign(){
     return(
 		<Wrapper>
             <div>
-                <div>
+                <DivPrecio>
                  <Input title="Diseños relacionados" />
                  <Input/>
-                </div>
+                </DivPrecio>
                 <TextArea title="Medidas del resorte desarrollado" value="" onChange={(e)=>console.log(e)} id=""/>
                 <TextArea title="Control de cargas" value="" onChange={(e)=>console.log(e)} id=""/>
                 
@@ -37,8 +37,13 @@ export function DevelopedDesign(){
                         )}
                 </DivPlano>
                 <DivPrecio>
-                    <Input title="Precio unitario S/." />
-                    <Input title="Cantidad"/>
+                    <label> Precio unitario S/.
+                      <Precio title="Precio unitario S/." />  +IGV
+                    </label>
+                    <label> Cantidad
+                       <Cantidad title="Cantidad"/> pzas
+                    </label>
+                    
                 </DivPrecio>
             </div>            
 

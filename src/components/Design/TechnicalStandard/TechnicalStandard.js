@@ -62,7 +62,7 @@ export function TechnicalStandard(){
                         applies={checks.applies}/>  
                 </Div>
             </div>
-            <div>
+            <div style={{gap: 5,}}>
                 <Div>
                     <label>Detalle</label> 
                     <Input2 value={checks.detail} 

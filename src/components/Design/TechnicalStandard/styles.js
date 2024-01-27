@@ -46,6 +46,7 @@ export const Label = styled.label`
 `
 export const Div = styled.div`
  display: flex;
- gap: 25px;
+ gap: 25px ;
  justify-content: center;
+ 
 `
