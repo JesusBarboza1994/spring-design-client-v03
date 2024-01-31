@@ -18,7 +18,8 @@ export const Td = styled.td`
   text-align: center;
   width: 40px;
   border: 1px solid ${colors.secondary.light};
-  ${typography.text.xs};
+  ${typography.text.sm};
+  color: ${colors.font.text};
     
 `
 export const Th3 = styled.th`

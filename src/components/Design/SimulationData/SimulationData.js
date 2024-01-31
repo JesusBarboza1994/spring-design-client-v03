@@ -165,12 +165,12 @@ export function SimulationData(){
       </Div2>
       
       <Div2 style={{marginLeft: 0}}>
-        <Label style={{color: colors.font.text}}>deform</Label>
+        <Label>Deform.</Label>
         <Input  value={simulation_data.deform} id={"deform"} onChange={(e) => handleSimulacion(e)}/>
       </Div2>
       
       <Div2>
-        <Label style={{color: colors.font.text}}>grado</Label>
+        <Label>Grado</Label>
         <Input  value={simulation_data.grado} id={"grado"} onChange={(e) => handleSimulacion(e)}/>
       </Div2>
       <div style={{display: "flex",columnGap:6,width:"100%", marginLeft: 20}}>

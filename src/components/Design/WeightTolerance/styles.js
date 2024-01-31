@@ -13,8 +13,8 @@ export const DivSimul = styled.div`
   margin-top: 10px;
   margin-left: 50px;
   width: 500px;
-  height: 146px;
-  background-color: ${colors.secondary.dark};
+  height: 158px;
+  background-color: ${colors.secondary.light};
   border-radius: 8px;        
 `
 export const Paragraph = styled.p`
@@ -23,57 +23,57 @@ export const Paragraph = styled.p`
   margin-bottom: 18px;
   margin-top: 8px;
   font-family: ${fonts.primary};
-  ${typography.text.xs};
+  ${typography.text.sm};
+  font-weight: bold;
   color: ${colors.font.text};  
-  width: 148px;
+  width: 140px;
+  text-align: left;
 `
 export const DivCalculo = styled.div`
-  width: 40px;
-  height: 18px;
+  width: 50px;
+  height: 20px;
   color:${colors.font.text};
   background-color: ${colors.cell};
-  margin: 9px;
+  margin: 10px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
   line-height: 18px;
   border-radius: 4px;
-  border: 2px ${colors.secondary.light};
+  border: 2px ${colors.tablebackground};
   border-style:outset;
     
 `
 export const Div = styled.div`
   display:flex;
   aling-items: center;
-  width: 125px;
+  width: 130px;
   height: 40px;
   margin: 3px 16px 8px 16px;
-  background: ${colors.cell};
-  border: 2px solid ${colors.secondary.light};
+  //background: ${colors.cell};
+  //border: 2px solid ${colors.secondary.light};
   border-radius: 8px;
     
 `
 export const Label = styled.label`
   height: 20px;
-  width: 65px;
   display: block;
-  background-color: ${colors.cell};
-  margin-top: 8px;
-  margin-left: 10px;
+  margin: 10px;
+  margin-right: 20px;
   font-family: ${fonts.primary};
-  ${typography.text.xs}
-  color: ${colors.secondary.light};
+  ${typography.text.sm}
+  color: ${colors.font.text};
+ 
             
 `
 export const InputLDA = styled.input`
-  width: 40px;
-  height: 18px;
-  color: ${colors.font.title};
-  background-color: ${colors.tablebackground};
+  width: 50px;
+  height: 20px;
+  color: ${colors.font.text};
   margin: 9px;
   font-family: ${fonts.primary};
   ${typography.text.xs}
   border-radius: 4px;
-  border: 2px ${colors.secondary.light};
+  border: 2px ${colors.tablebackground};
   border-style: outset;
 `
 export const Select = styled.select`
@@ -81,6 +81,7 @@ export const Select = styled.select`
  color: ${colors.font.text};
  font-family: ${fonts.primary};
  ${typography.text.xs}
- border: 0px;
+ border: 2px solid ${colors.tablebackground};
+ border-radius: 4px;
 
 `

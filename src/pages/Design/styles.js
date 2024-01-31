@@ -9,7 +9,7 @@ export const Form = styled.form`
   justify-content: center;
   row-gap: 6px;
   width: 500px;
-  color: ${colors.font.title};
+  color: ${colors.font.text};
 `
 export const Div = styled.div`
   display:flex;
@@ -17,15 +17,15 @@ export const Div = styled.div`
   width:125px;
   height:40px;
   margin:3px 16px 14px 16px;
-  background: ${colors.tablebackground}
-  border:2px solid ${colors.secondary.dark};
+  background: ${colors.cell}
+  border:2px solid ${colors.secondary.medium};
   border-radius:8px;
   
 `
 export const Input = styled.input`
-  width:40px;
-  height:18px;
-  color: ${colors.font.title};
+  width:48px;
+  height: 20px;
+  //color: ${colors.font.title};
   background-color: ${colors.tablebackground}
   margin: 9px;
   font-family: ${fonts.primary};
@@ -37,7 +37,7 @@ export const Input = styled.input`
 `
 export const DivCalculo = styled.div`
   width:40px;
-  height:18px;
+  height: 20px;
   color: ${colors.font.title};
   background-color: ${colors.tablebackground}
   margin:8px;
@@ -54,7 +54,7 @@ export const Label = styled.label`
   margin-left: 10px;
   font-family: ${fonts.primary};
  ${typography.text.xs};
-  color: ${colors.secondary.light};
+  color: ${colors.font.text};
             
 `
 export const DivSimulForm = styled.div`
@@ -68,7 +68,7 @@ export const DivSimulForm = styled.div`
   margin-left: 50px;
   width: 500px;
   height: 255px;
-  background-color: ${colors.secondary.dark};  
+  background-color: ${colors.secondary.light};  
   border-radius:8px;     
 
 `
@@ -119,7 +119,7 @@ export const Length_table = styled.table`
 
 export const Input8 = styled.input`
   width:42px;
-  height:18px;
+  height: 20px;
   color:${colors.font.title};
   background-color: ${colors.tablebackground}
   margin:8px;

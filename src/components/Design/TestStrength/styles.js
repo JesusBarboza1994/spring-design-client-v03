@@ -11,13 +11,13 @@ export const DivSimul1 = styled.div`
   margin-bottom: 30px;
   margin-top: 40px;
   width: 236px;
-  background-color: ${colors.secondary.dark};  
+  background-color: ${colors.secondary.light};  
   border-radius: 8px; 
 
 `   
 export const DivCalculo = styled.div`
-  width: 40px;
-  height: 18px;
+  width: 50px;
+  height: 20px;
   color:${colors.font.text};
   background-color: ${colors.cell};
   margin: 9px;
@@ -38,10 +38,11 @@ export const Paragraph1 = styled.p`
   ${typography.text.xs};
   color: ${colors.font.text};  
   width: 148px;
+  text-align: center;
 `
 export const Input8 = styled.input`
-  width:40px;
-  height:18px;
+  width:50px;
+  height: 20px;
   color:${colors.font.text};
   background-color: ${colors.cell};
   margin: 9px;
@@ -67,11 +68,9 @@ export const Label1 = styled.label`
   height: 20px;
   width: 30px;
   display: block;
-  background-color: ${colors.font.text};
-  margin-top:8px;
-  margin-left: 9px;
+  margin:10px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
-  color: ${colors.secondary.light};
+  color: ${colors.font.text};
             
 `

@@ -226,6 +226,7 @@ export default function Design() {
         </Form>
       </DivSimulForm>
 
+
       <SimulationData/>
 
       <CalculatedParameters diam={dimensions.d} 

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "../../../styles/colors";
+import { basicColors, colors } from "../../../styles/colors";
 import { typography } from "../../../styles/typography";
 import { fonts } from "../../../styles/typography";
 
@@ -14,17 +14,18 @@ export const DivSimul = styled.div`
   margin-left: 50px;
   width: 500px;
   height: 146px;
-  background-color: ${colors.secondary.dark};
+  background-color: ${colors.secondary.light};
   border-radius: 8px;        
 `
 
 export const Paragraph2 = styled.p`
     block-size:1px;
-    margin-top: 5px;
-    margin-left:30px;
+    margin-top: 8px;
+    margin-left:34px;
     margin-bottom: 10px;
     font-family: ${fonts.primary};
     ${typography.text.xs};
+    font-weight: bold;
     width: 133px;
     color: ${colors.font.text};  
 `
@@ -34,8 +35,8 @@ export const Div2 = styled.div`
     width: 125px;
     height: 40px;
     margin: 8px 16px 6px 16px;
-    background: ${colors.cell};
-    border:2px solid ${colors.secondary.light}; 
+    background: ${basicColors.white};
+    border:2px solid ${colors.secondary.medium}; 
     border-radius: 8px;
     
 `
@@ -48,8 +49,8 @@ export const Select = styled.select`
 
 `
 export const Input = styled.input`
-  width: 42px;
-  height: 18px;
+  width: 48px;
+  height: 20px;
   color:${colors.font.text};
   background-color: ${colors.cell};
   margin: 8px;
@@ -62,12 +63,11 @@ export const Label = styled.label`
   height: 20px;
   width: 65px;
   display: block;
-  background-color: ${colors.cell};
   margin-top: 8px;
   margin-left: 10px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
-  color: ${colors.secondary.light};
+  color: ${colors.font.text};
             
 `
 export const Button = styled.button`

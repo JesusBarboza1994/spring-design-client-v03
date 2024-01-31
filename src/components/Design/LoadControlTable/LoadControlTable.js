@@ -85,7 +85,7 @@ export default function LoadControlTable(props) {
         <div>
             <Table2>
                 <thead>
-                    <tr style={{backgroundColor: colors.secondary.dark, color:colors.font.text,}}>
+                    <tr style={{backgroundColor: colors.secondary.dark,}}>
                     <Th3>N°</Th3>
                      <Th3>F (kg)</Th3>
                      <Th3>L (mm)</Th3>

@@ -14,7 +14,7 @@ export const DivSimul = styled.div`
   margin-left: 50px;
   width: 500px;
   height: 146px;
-  background-color: ${colors.secondary.dark};
+  background-color: ${colors.secondary.light};
   border-radius: 8px;        
 `
 export const Paragraph = styled.p`
@@ -24,20 +24,21 @@ export const Paragraph = styled.p`
   margin-top: 8px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
+  font-weight: bold;
   color: ${colors.font.text};  
   width: 148px;
 `
 export const DivCalculo = styled.div`
-  width: 40px;
-  height: 18px;
+  width: 50px;
+  height: 20px;
   color:${colors.font.text};
   background-color: ${colors.cell};
-  margin: 9px;
+  margin: 8px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
   line-height: 18px;
   border-radius: 4px;
-  border: 2px ${colors.secondary.light};
+  border: 2px solid ${colors.secondary.medium};
   border-style:outset;
     
 `
@@ -48,7 +49,7 @@ export const Div = styled.div`
   height: 40px;
   margin: 3px 16px 8px 16px;
   background: ${colors.cell};
-  border: 2px solid ${colors.secondary.light};
+  border: 2px solid ${colors.secondary.medium};
   border-radius: 8px;
     
 `
@@ -61,6 +62,7 @@ export const Label = styled.label`
   margin-left: 10px;
   font-family: ${fonts.primary};
   ${typography.text.xs}
-  color: ${colors.secondary.light};
+  color: ${colors.font.text};
+  
             
 `
