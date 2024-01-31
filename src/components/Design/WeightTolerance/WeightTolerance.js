@@ -143,12 +143,12 @@ export function WeightTolerance(){
  return(
     <DivSimul style={{marginBottom:10,}}>
       <div style={{display: "flex",}}>
-        <Paragraph style={{marginTop:8, marginLeft: 12,}}>Datos produccion</Paragraph>
-        <Paragraph style={{marginTop:8, textAlign: "center"}}>Maq.Auto<Switch onChange= {handleChange} size="small"/>Torno</Paragraph>
+        <Paragraph>Datos produccion</Paragraph>
+        <Paragraph style={{textAlign: "left", marginLeft: 10, width: 150,}}>Maq.Auto<Switch onChange= {handleChange} size="small"/>Torno</Paragraph>
         <Paragraph></Paragraph>
       </div>
       <Div>
-        <Label>LDA</Label>
+        <Label style={{marginRight: 25,}}>LDA</Label>
         <DivCalculo id={"LDA"}>{production_data.LDA}</DivCalculo>
       </Div> 
       <Div>
@@ -156,7 +156,7 @@ export function WeightTolerance(){
         <InputLDA value={production_data.LDA_adic} type="number" id={"LDA adic"} onChange={(e) => handleLDA_adic(e)}/> 
       </Div>
       <Div>
-        <Label>Peso</Label>
+        <Label >Peso</Label>
         <DivCalculo id={"Peso"}>{(!isNaN(production_data.Peso) && (production_data.Peso > 0)) === true ? (production_data.Peso) : ""}</DivCalculo>
       </Div>
       <div>
@@ -173,15 +173,15 @@ export function WeightTolerance(){
       </Div>
 
       <Div>
-        <Label>Dext={dimensions.Dext}±</Label>
-        <DivCalculo>
+        <Label style={{marginRight: 0,}}>Dext={dimensions.Dext}±</Label>
+        <DivCalculo style={{marginLeft: 0,}}>
           {(!isNaN(tablaToler.valor) && (tablaToler.valor > 0)) === true ? (tablaToler.valor) : ""}
         </DivCalculo>
       </Div>
       
       <Div>
-        <Label>L0={dimensions.L0}± </Label>
-        <DivCalculo id={"toler_L0"}>{!isNaN(coef.toler_L0) === true ? (coef.toler_L0) : ""}</DivCalculo>
+        <Label style={{marginRight: 0,}}>L0={dimensions.L0}±</Label>
+        <DivCalculo style={{marginLeft: 0,}} id={"toler_L0"}>{!isNaN(coef.toler_L0) === true ? (coef.toler_L0) : ""}</DivCalculo>
       </Div>
    </DivSimul>
   );     
