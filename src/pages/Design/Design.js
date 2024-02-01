@@ -19,7 +19,7 @@ import SpringStressSimulation from "../../components/Design/SpringStressSimulati
 import { useAuth } from '../../context/auth-context';
 import { calculateLinearRegression, generatePointForChart } from "../../utils/chart-utils";
 import { isNullLiteral } from "@babel/types";
-import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas } from "./styles";
+import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas, Pform } from "./styles";
 import { colors } from "../../styles/colors";
 
 export default function Design() {
@@ -153,7 +153,7 @@ export default function Design() {
       <DivSimulForm>
         <Form onSubmit={handleSubmit}>
           <div>
-            <p style={{marginLeft:18,marginTop: 5, fontFamily:"ABeeZee",fontSize:12, }}>Datos principales</p>
+            <Pform>Datos principales</Pform>
               <Div>
                 <Label>d</Label>
                 <Input  value={dimensions.d} type="number" id={"d"} onChange={(e) => handleInput(e)}/>
@@ -174,7 +174,7 @@ export default function Design() {
           </div>
 
           <div>
-            <p style={{marginLeft:18,marginTop: 5, fontFamily:"ABeeZee",fontSize:12,}}>Extremo 1</p>
+            <Pform>Extremo 1</Pform>
               <Div>
                 <Label>Luz1</Label>
                 <Input  value={dimensions.Luz1} type="number" id={"Luz1"} onChange={(e) => handleInput(e)}/>
@@ -199,7 +199,7 @@ export default function Design() {
           </div>
           
           <div>
-            <p style={{marginLeft:18,marginTop: 5, fontFamily:"ABeeZee",fontSize:12,}}>Extremo 2</p>
+            <Pform>Extremo 2</Pform>
               <Div>
                 <Label>Luz2</Label>
                 <Input  value={dimensions.Luz2} type="number" id={"Luz2"} onChange={(e) => handleInput(e)}/>

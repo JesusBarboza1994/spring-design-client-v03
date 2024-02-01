@@ -23,7 +23,7 @@ export const Paragraph = styled.p`
   margin-bottom: 18px;
   margin-top: 8px;
   font-family: ${fonts.primary};
-  ${typography.text.sm};
+  ${typography.text.xs};
   font-weight: bold;
   color: ${colors.font.text};  
   width: 140px;
@@ -34,39 +34,39 @@ export const DivCalculo = styled.div`
   height: 20px;
   color:${colors.font.text};
   background-color: ${colors.cell};
-  margin: 10px;
+  margin: 8px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
   line-height: 18px;
   border-radius: 4px;
-  border: 2px ${colors.tablebackground};
+  border: 2px ${colors.secondary.medium};
   border-style:outset;
     
 `
 export const Div = styled.div`
   display:flex;
   aling-items: center;
-  width: 130px;
+  width: 125px;
   height: 40px;
   margin: 3px 16px 8px 16px;
-  //background: ${colors.cell};
-  //border: 2px solid ${colors.secondary.light};
+  background: ${colors.cell};
+  border: 2px solid ${colors.secondary.medium};
   border-radius: 8px;
     
 `
 export const Label = styled.label`
-  height: 20px;
+  height: 30px;
   display: block;
-  margin: 10px;
+  margin: 10px 8px 0px 8px;
   margin-right: 20px;
   font-family: ${fonts.primary};
-  ${typography.text.sm}
+  ${typography.text.xs}
   color: ${colors.font.text};
  
             
 `
 export const InputLDA = styled.input`
-  width: 50px;
+  width: 44px;
   height: 20px;
   color: ${colors.font.text};
   margin: 9px;
@@ -81,7 +81,6 @@ export const Select = styled.select`
  color: ${colors.font.text};
  font-family: ${fonts.primary};
  ${typography.text.xs}
- border: 2px solid ${colors.tablebackground};
  border-radius: 4px;
-
+ align-items: right;
 `

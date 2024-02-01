@@ -11,40 +11,51 @@ export const Form = styled.form`
   width: 500px;
   color: ${colors.font.text};
 `
+export const Pform = styled.p`
+  block-size: 1px;
+  margin-left: 24px;
+  margin-bottom: 34px;
+  margin-top: 8px;
+  font-family: ${fonts.primary};
+  ${typography.text.xs};
+  font-weight: bold;
+  color: ${colors.font.text};  
+`
+
 export const Div = styled.div`
   display:flex;
   aling-items: center;
   width:125px;
   height:40px;
-  margin:3px 16px 14px 16px;
+  margin:3px 16px 8px 16px;
   background: ${colors.cell}
   border:2px solid ${colors.secondary.medium};
   border-radius:8px;
   
 `
 export const Input = styled.input`
-  width:48px;
+  width:50px;
   height: 20px;
-  //color: ${colors.font.title};
+  color: ${colors.font.text};
   background-color: ${colors.tablebackground}
   margin: 9px;
   font-family: ${fonts.primary};
  ${typography.text.xs};
   border-style:inset;
   border-radius: 4px;
-  text-align: left;
+  
      
 `
-export const DivCalculo = styled.div`
-  width:40px;
-  height: 20px;
-  color: ${colors.font.title};
-  background-color: ${colors.tablebackground}
-  margin:8px;
-  font-family: ${fonts.primary};
- ${typography.text.xs};
-  border-style:outset;
-`
+// export const DivCalculo = styled.div`
+//   width:50px;
+//   height: 20px;
+//   color: ${colors.font.title};
+//   background-color: ${colors.tablebackground}
+//   margin:8px;
+//   font-family: ${fonts.primary};
+//  ${typography.text.xs};
+//   border-style:outset;
+// `
 export const Label = styled.label`
   height: 20px;
   width: 60px;
@@ -90,11 +101,13 @@ export const DivSimul = styled.div`
 
 export const Paragraph = styled.p`
   block-size:1px;
-  margin-left:30px;
-  margin-bottom: 10px;
+  margin-left:34px;
+  margin-bottom: 18px;
+  margin-top: 8px;
   font-family: ${fonts.primary};
- ${typography.text.xs};  color: ${colors.font.title};  
-  width: 148px;
+ ${typography.text.xs};
+  color: ${colors.font.text};  
+  width: 140px;
 `
 export const Button = styled.button`
   width:125px;
