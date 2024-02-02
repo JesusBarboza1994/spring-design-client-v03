@@ -7,14 +7,14 @@ export const Form = styled.form`
   display:flex;
   grid-template-columns: auto, auto, auto;
   justify-content: center;
-  row-gap: 6px;
+  //row-gap: 10px;
   width: 500px;
   color: ${colors.font.text};
 `
 export const Pform = styled.p`
   block-size: 1px;
   margin-left: 24px;
-  margin-bottom: 34px;
+  margin-bottom: 28px;
   margin-top: 8px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
@@ -24,13 +24,13 @@ export const Pform = styled.p`
 
 export const Div = styled.div`
   display:flex;
-  aling-items: center;
   width:125px;
   height:40px;
   margin:3px 16px 8px 16px;
-  background: ${colors.cell}
+  align-items: center;
+  background: ${colors.cell};
   border:2px solid ${colors.secondary.medium};
-  border-radius:8px;
+  border-radius: 8px;
   
 `
 export const Input = styled.input`
@@ -40,11 +40,10 @@ export const Input = styled.input`
   background-color: ${colors.tablebackground}
   margin: 9px;
   font-family: ${fonts.primary};
- ${typography.text.xs};
+  ${typography.text.xs};
   border-style:inset;
   border-radius: 4px;
-  
-     
+       
 `
 // export const DivCalculo = styled.div`
 //   width:50px;
@@ -58,11 +57,12 @@ export const Input = styled.input`
 // `
 export const Label = styled.label`
   height: 20px;
-  width: 60px;
+  width: 55px;
   display:block;
-  background-color:${colors.tablebackground}
-  margin-top:8px;
+  //background-color:${colors.tablebackground}
+  margin-top: 5px;
   margin-left: 10px;
+  justify-content: center;
   font-family: ${fonts.primary};
  ${typography.text.xs};
   color: ${colors.font.text};

@@ -58,7 +58,7 @@ export const Label = styled.label`
   width: 65px;
   display: block;
   background-color: ${colors.cell};
-  margin-top: 8px;
+  margin-top: 10px;
   margin-left: 10px;
   font-family: ${fonts.primary};
   ${typography.text.xs}

@@ -50,14 +50,14 @@ export const Div = styled.div`
   height: 40px;
   margin: 3px 16px 8px 16px;
   background: ${colors.cell};
-  border: 2px solid ${colors.secondary.medium};
+  //border: 2px solid ${colors.secondary.medium};
   border-radius: 8px;
     
 `
 export const Label = styled.label`
   height: 30px;
   display: block;
-  margin: 10px 8px 0px 8px;
+  margin: 11px 8px 0px 8px;
   margin-right: 20px;
   font-family: ${fonts.primary};
   ${typography.text.xs}
@@ -81,6 +81,7 @@ export const Select = styled.select`
  color: ${colors.font.text};
  font-family: ${fonts.primary};
  ${typography.text.xs}
- border-radius: 4px;
+ border: 4px;
  align-items: right;
+ 
 `

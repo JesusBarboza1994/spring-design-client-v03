@@ -63,7 +63,7 @@ export const Label = styled.label`
   height: 20px;
   width: 65px;
   display: block;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-left: 10px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
