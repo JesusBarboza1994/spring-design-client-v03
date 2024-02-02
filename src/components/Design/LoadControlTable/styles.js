@@ -17,19 +17,19 @@ export const Table2 = styled.table`
 export const Td1 = styled.td`
   text-align: center;
   width: 40px;
-  border: 1px solid ${colors.secondary.light};
+  border: 1px solid ${colors.secondary.medium};
   color: ${colors.font.text};
+  ${typography.text.xs}
 `
 export const Th3 = styled.th`
   height: 70px;
   ${typography.text.xs}
-  border: 1px solid ${colors.secondary.light};
+  border: 1px solid ${colors.secondary.medium};
   font-family: ${fonts.primary};
-  letter-spacing: 1px;
   padding-left: 5px;
   padding-right:5px;
-  color: ${colors.font.title};
-  
+  color: ${colors.font.text};
+  font-weight: bold;  
 `
 export const Input = styled.input`
   width: 50px;

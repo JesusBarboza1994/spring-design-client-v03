@@ -408,7 +408,7 @@ export default function ProcessTable(props) {
             {/* <Button onClick={CalculateOrReset3Points}>Calcular</Button> */}
             <Table4>
                 <thead>
-                    <tr style={{backgroundColor: colors.secondary.dark, color: colors.font.title,}}>
+                    <tr style={{backgroundColor: colors.secondary.light, }}>
                         <Th3_processtable>Punto</Th3_processtable>
                         <Th3_processtable>Luz (mm)</Th3_processtable>
                         <Th3_processtable>Long (mm)</Th3_processtable>

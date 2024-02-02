@@ -17,18 +17,18 @@ export const Td = styled.td`
   height: 37px;
   text-align: center;
   width: 40px;
-  border: 1px solid ${colors.secondary.light};
+  border: 1px solid ${colors.secondary.medium};
   ${typography.text.sm};
   color: ${colors.font.text};
-    
+  ${typography.text.xs}  
 `
 export const Th3 = styled.th`
   height: 70px;
-  border: 1px solid ${colors.secondary.light};
+  border: 1px solid ${colors.secondary.medium};
   font-family: ${fonts.primary};
   ${typography.text.xs};
-  letter-spacing: 1px;
   padding-left: 5px;
-  padding-right:5px;
-  
+  padding-right: 5px;
+  color: ${colors.font.text};
+  font-weight: bold;
 `

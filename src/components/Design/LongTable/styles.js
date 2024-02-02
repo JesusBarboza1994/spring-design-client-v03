@@ -7,7 +7,7 @@ export const Td_longtable = styled.td`
   height: 36px;
   text-align: center;
   color: ${colors.font.text};
-  background-color: ${colors.secondary.light};
+  background-color: ${colors.cell};
   border: 1px solid ${colors.secondary.medium};
   border-right: none;
   :last-child {
@@ -20,7 +20,7 @@ export const Th = styled.th`
     width: 180px;
     height: 70px;
     ${typography.text.xs};
-    background-color: ${colors.cell};
+    background-color: ${colors.secondary.light};
     border: 1px solid ${colors.secondary.medium};
     border-top: none;
     color: ${colors.font.text};

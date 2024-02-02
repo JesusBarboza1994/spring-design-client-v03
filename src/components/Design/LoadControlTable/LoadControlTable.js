@@ -85,7 +85,7 @@ export default function LoadControlTable(props) {
         <div>
             <Table2>
                 <thead>
-                    <tr style={{backgroundColor: colors.secondary.dark,}}>
+                    <tr style={{backgroundColor: colors.secondary.light,}}>
                     <Th3>N°</Th3>
                      <Th3>F (kg)</Th3>
                      <Th3>L (mm)</Th3>
@@ -94,7 +94,7 @@ export default function LoadControlTable(props) {
                 </thead>
                 <tbody>
                     {puntosCC.map((punto, indice) => (
-                        <tr key={punto.id} style={{color:colors.secondary.light}}>
+                        <tr key={punto.id}>
                             <Td1>
                                 {punto.id}
                             </Td1>

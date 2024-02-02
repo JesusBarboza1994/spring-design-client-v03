@@ -205,3 +205,12 @@ export const Canvas = styled.canvas`
  margin-left: 50px;
  border-radius: 8px;
 `
+export const Spring3d = styled.div`
+ width: 600px;
+ height: 600px;
+ background: ${colors.secondary.medium};
+ margin-top: 30px;
+ margin-bottom: 30px;
+ color: ${colors.font.text};
+ border-radius: 8px;
+`

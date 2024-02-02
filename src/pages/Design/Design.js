@@ -19,7 +19,7 @@ import SpringStressSimulation from "../../components/Design/SpringStressSimulati
 import { useAuth } from '../../context/auth-context';
 import { calculateLinearRegression, generatePointForChart } from "../../utils/chart-utils";
 import { isNullLiteral } from "@babel/types";
-import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas, Pform } from "./styles";
+import { Form, Div, Input, DivCalculo, Label, DivSimulForm, DivSimul, Paragraph, Button, Length_table, Input8, Th, Th2, Td, Select, H1, H2, Canvas, Pform, Spring3d } from "./styles";
 import { colors } from "../../styles/colors";
 
 export default function Design() {
@@ -277,11 +277,12 @@ export default function Design() {
         
         <ControlLoadGraphic puntos={puntosCCGrafica} slope={lineaCC.k} intercept={lineaCC.b} rSquared={lineaCC.r2}/>
 
-        <div style={{backgroundColor: colors.tablebackground}} >
+        <h1>Simulacion</h1>
+        <Spring3d>
             
           <Spring3DLine points={springPoints3D} wire={dimensions.d}></Spring3DLine>
           
-        </div>
+        </Spring3d>
 
         <div>
           <SpringStressSimulation dataSimulation={springPointsSimulation}></SpringStressSimulation>
