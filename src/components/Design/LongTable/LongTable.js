@@ -117,7 +117,7 @@ export default function LongTable() {
                 <thead>
                     <tr>
                         <Th style={{borderTopLeftRadius: 8, borderLeft: "none", }}> </Th>
-                        <Th style={{width: 90}}>Long (mm)</Th>
+                        <Th style={{width: 90,}}>Long (mm)</Th>
                         <Th style={{width: 90}}>Deform (mm)</Th>
                         <Th style={{width: 80}}>LL-G (mm)</Th>
                         <Th style={{width: 90}}>Fuerza (kg)</Th>
@@ -127,8 +127,8 @@ export default function LongTable() {
                 </thead>
                 <tbody>
                     {nombreFilas.map((fila, indice) => (
-                        <tr style={{color: colors.font.title}}>
-                            <Td_longtable>
+                        <tr>
+                            <Td_longtable style={{borderLeft: "none", borderBottomLeftRadius: 8,}}>
                                 {fila}
                             </Td_longtable>
                             <Td_longtable>

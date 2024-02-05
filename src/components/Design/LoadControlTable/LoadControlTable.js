@@ -86,16 +86,16 @@ export default function LoadControlTable(props) {
             <Table2>
                 <thead>
                     <tr style={{backgroundColor: colors.secondary.light,}}>
-                    <Th3>N°</Th3>
+                    <Th3 style={{borderTopLeftRadius: 8, borderLeft: "none" }}>N°</Th3>
                      <Th3>F (kg)</Th3>
                      <Th3>L (mm)</Th3>
-                     <Th3>Deform (mm)</Th3>
+                     <Th3 style={{borderTopRightRadius: 8, borderRight: "none"}}>Deform (mm)</Th3>
                     </tr>
                 </thead>
                 <tbody>
                     {puntosCC.map((punto, indice) => (
                         <tr key={punto.id}>
-                            <Td1>
+                            <Td1 style={{borderLeft: "none", borderBottomLeftRadius: 8}}>
                                 {punto.id}
                             </Td1>
                             <Td1>
@@ -104,7 +104,7 @@ export default function LoadControlTable(props) {
                             <Td1>
                                 <Input value={punto.Longitud} type="number" id={punto.id+",Long"} onChange={(e) => handleInputControlCargas(e)}/>
                             </Td1>
-                            <Td1>
+                            <Td1 style={{borderRight: "none", borderBottomRightRadius: 8, }}>
                                 {
                                     (!isNaN(defs[indice].Def) && Number.isFinite(defs[indice].Def)) === true ? (defs[indice].Def).toFixed(1) : ""
                                 }

@@ -9,10 +9,10 @@ export const Td_longtable = styled.td`
   color: ${colors.font.text};
   background-color: ${colors.cell};
   border: 1px solid ${colors.secondary.medium};
-  border-right: none;
   :last-child {
-    border-bottom-right-radius: 8px;
+    
   }
+  
   ${typography.text.xs};
   
 `
@@ -39,7 +39,7 @@ export const Input1 = styled.input`
   border-radius: 4px;  
 `
 export const Length_table = styled.table`
- background-color: ${colors.cell}; 
+ 
  width: 550px;
  //height: 270px;
  font-family: ${fonts.primary};

@@ -13,7 +13,7 @@ export const DivSimul = styled.div`
   margin-top: 10px;
   margin-left: 50px;
   width: 500px;
-  height: 158px;
+  height: 160px;
   background-color: ${colors.secondary.light};
   border-radius: 8px;        
 `
