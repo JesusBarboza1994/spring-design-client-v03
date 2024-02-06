@@ -18,6 +18,7 @@ export const Td1 = styled.td`
   width: 40px;
   background: ${colors.cell};
   border: 1px solid ${colors.secondary.medium};
+  border-bottom: none;
   color: ${colors.font.text};
   ${typography.text.xs}
 `

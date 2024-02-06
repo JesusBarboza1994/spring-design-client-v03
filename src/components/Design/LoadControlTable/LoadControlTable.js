@@ -95,7 +95,7 @@ export default function LoadControlTable(props) {
                 <tbody>
                     {puntosCC.map((punto, indice) => (
                         <tr key={punto.id}>
-                            <Td1 style={{borderLeft: "none", borderBottomLeftRadius: 8}}>
+                            <Td1 style={{borderLeft: "none", borderBottomLeftRadius: indice === puntosCC.length - 1 ? 8 : 0 }}>
                                 {punto.id}
                             </Td1>
                             <Td1>
@@ -104,7 +104,7 @@ export default function LoadControlTable(props) {
                             <Td1>
                                 <Input value={punto.Longitud} type="number" id={punto.id+",Long"} onChange={(e) => handleInputControlCargas(e)}/>
                             </Td1>
-                            <Td1 style={{borderRight: "none", borderBottomRightRadius: 8, }}>
+                            <Td1 style={{borderRight: "none", borderBottomRightRadius: indice === puntosCC.length - 1 ? 8 : 0 }}>
                                 {
                                     (!isNaN(defs[indice].Def) && Number.isFinite(defs[indice].Def)) === true ? (defs[indice].Def).toFixed(1) : ""
                                 }

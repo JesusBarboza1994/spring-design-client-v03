@@ -128,7 +128,7 @@ export default function LongTable() {
                 <tbody>
                     {nombreFilas.map((fila, indice) => (
                         <tr>
-                            <Td_longtable style={{borderLeft: "none", borderBottomLeftRadius: 8,}}>
+                            <Td_longtable style={{borderLeft: "none", borderBottomLeftRadius: indice === nombreFilas.length - 1 ? 8 : 0}}>
                                 {fila}
                             </Td_longtable>
                             <Td_longtable>
@@ -154,7 +154,7 @@ export default function LongTable() {
                                     (!isNaN(esfuerzo[indice]) && Number.isFinite(esfuerzo[indice])) === true ? (esfuerzo[indice]).toFixed(2) : ""
                                 }
                             </Td_longtable>
-                            <Td_longtable>
+                            <Td_longtable style={{ borderRight: "none", borderBottomRightRadius: indice === nombreFilas.length - 1 ? 8 : 0 }}>
                                 {
                                     (!isNaN(carreraParcial[indice]) && Number.isFinite(carreraParcial[indice])) === true ? (carreraParcial[indice]).toFixed(0) : ""
                                 }%

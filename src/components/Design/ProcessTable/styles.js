@@ -5,9 +5,7 @@ import { fonts } from "../../../styles/typography";
 
 export const Table4 = styled.table`
   width: 500px; 
-  background-color: ${colors.cell};
   font-family: ${fonts.primary};
-  border: 2px solid ${colors.secondary.light};
   border-collapse: collapse;
   border: 2px solid ${colors.secondary.light};
   color: ${colors.font.text};
@@ -28,7 +26,8 @@ export const Input = styled.input`
 export const Td_processtable = styled.td`
   height: 36px;  
   text-align: center;
-  border: 1px solid ${colors.secondary.light};
+  background-color: ${colors.cell};
+  border: 1px solid ${colors.secondary.medium};
   ${typography.text.xs};
   color: ${colors.font.text};
 `
@@ -36,6 +35,7 @@ export const Th3_processtable = styled.th`
   height: 70px;
   ${typography.text.xs};
   border: 1px solid ${colors.secondary.medium};
+  border-top: none;
   font-family:${fonts.primary};
   padding-left: 5px;
   padding-right:5px;

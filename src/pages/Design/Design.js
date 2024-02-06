@@ -243,8 +243,8 @@ export default function Design() {
       <WeightTolerance/>
       
       <TextArea/>
-      <H1>Simulacion</H1>
-      <Canvas/>
+      {/* <H1>Simulacion</H1>
+      <Canvas/> */}
     </div>
 
     <div style={{display:"flex", marginTop:58, marginLeft: 50,}}>
@@ -264,7 +264,13 @@ export default function Design() {
           <TestStrength/>
           <TestStrength/>
         </div>
-        
+
+        <H1 style={{marginLeft: 0, marginTop: 5,}}>Simulacion 3D</H1>
+        <Spring3d>
+            
+          <Spring3DLine points={springPoints3D} wire={dimensions.d}></Spring3DLine>
+          
+        </Spring3d>
       </div>
       
     </div> 
@@ -277,14 +283,9 @@ export default function Design() {
         
         <ControlLoadGraphic puntos={puntosCCGrafica} slope={lineaCC.k} intercept={lineaCC.b} rSquared={lineaCC.r2}/>
 
-        <h1>Simulacion</h1>
-        <Spring3d>
-            
-          <Spring3DLine points={springPoints3D} wire={dimensions.d}></Spring3DLine>
-          
-        </Spring3d>
-
-        <div>
+        
+        <H1 style={{marginLeft: 0, marginTop: 30,}}>Simulacion de esfuerzos</H1>
+        <div style={{marginTop:20,}}>
           <SpringStressSimulation dataSimulation={springPointsSimulation}></SpringStressSimulation>
         </div>
 

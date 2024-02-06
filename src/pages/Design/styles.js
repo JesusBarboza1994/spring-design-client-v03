@@ -208,8 +208,8 @@ export const Canvas = styled.canvas`
 export const Spring3d = styled.div`
  width: 600px;
  height: 600px;
- background: ${colors.secondary.medium};
- margin-top: 30px;
+ background: ${colors.cell};
+ margin-top: 25px;
  margin-bottom: 30px;
  color: ${colors.font.text};
  border-radius: 8px;

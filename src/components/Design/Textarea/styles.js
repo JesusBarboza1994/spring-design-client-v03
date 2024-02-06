@@ -18,7 +18,6 @@ export const Textarea = styled.textarea`
  height: 40px;
  margin-left: 50px;
  margin-top: 0px;
- border: 2px solid ${colors.secondary.light};
  border-radius: 0px 0px 8px 8px;
  border-top:1px solid ${colors.secondary.light};
  background-color: ${colors.cell};
@@ -35,10 +34,8 @@ export const DescripDiv = styled.div`
   margin-bottom: 0px; 
   //border: 2px solid ${colors.secondary.light};
   border-radius:8px 8px 0px 0px; 
-  //border-bottom: 1px solid ${colors.secondary.light};
-  //border-color: ${colors.secondary.light};
   background-color: ${colors.secondary.light};
-  color: "black";
+  color: ${colors.font.text};
   font-family: ${fonts.primary};
   ${typography.text.sm};
   padding: 10px;

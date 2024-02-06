@@ -409,7 +409,7 @@ export default function ProcessTable(props) {
             <Table4>
                 <thead>
                     <tr style={{backgroundColor: colors.secondary.light, }}>
-                        <Th3_processtable>Punto</Th3_processtable>
+                        <Th3_processtable style={{borderTopLeftRadius: 8,}}>Punto</Th3_processtable>
                         <Th3_processtable>Luz (mm)</Th3_processtable>
                         <Th3_processtable>Long (mm)</Th3_processtable>
                         <Th3_processtable>N.Vtas</Th3_processtable>
@@ -438,7 +438,7 @@ export default function ProcessTable(props) {
                                 kVisible ? <Button2 onClick={visibleColumnK}>K (N/mm)</Button2> : <Button3 onClick={visibleColumnK}>+</Button3>
                             }
                         </Th3_processtable>
-                        <Th3_processtable>
+                        <Th3_processtable style={{borderTopRightRadius: 8,}}>
                             {
                                 bVisible ? <Button2 onClick={visibleColumnB}>b</Button2> : <Button3 onClick={visibleColumnB}>+</Button3>
                             }
@@ -448,7 +448,7 @@ export default function ProcessTable(props) {
                 <tbody>
                     {processTableStage1Inv.map((punto, indice) => (
                         <tr key={punto.id} style={{color: colors.secondary.medium}}>
-                            <Td_processtable style={{width: 40}}>
+                            <Td_processtable style={{width: 40,  borderBottomLeftRadius: indice === processTableStage1Inv.length - 1 ? 8 : 0 }}>
                                 {punto.id}
                             </Td_processtable>
                             <Td_processtable style={{width: 65}}>
@@ -464,7 +464,7 @@ export default function ProcessTable(props) {
                             <Td_processtable style={{width: 65}}>
                                 <Input value={punto.Vtas} type="number" id={punto.id+",Vtas"} onChange={(e) => handleInputProcessTableStage1(e)} disabled={indice === (0)}/>
                             </Td_processtable>
-                            <Td_processtable style={{width: 50}}>
+                            <Td_processtable style={{width: 50,}}>
                                 {
                                     pasoVisible ? ((!isNaN(processTableStage2Inv[indice].Paso) && Number.isFinite(processTableStage2Inv[indice].Paso) && (processTableStage2Inv[indice].Paso !== 0)) === true ? (processTableStage2Inv[indice].Paso).toFixed(2) : "") : null
                                 }
@@ -489,7 +489,7 @@ export default function ProcessTable(props) {
                                     kVisible ? ((!isNaN(processTableStage2Inv[indice].K) && Number.isFinite(processTableStage2Inv[indice].K) && (processTableStage2Inv[indice].K !== 0)) === true ? (processTableStage2Inv[indice].K).toFixed(2) : "") : null
                                 }
                             </Td_processtable>
-                            <Td_processtable>
+                            <Td_processtable style={{borderBottomRightRadius: indice === processTableStage1Inv.length - 1 ? 8 : 0 }}>
                                 {
                                     bVisible ? ((!isNaN(processTableStage2Inv[indice].b) && Number.isFinite(processTableStage2Inv[indice].b)) === true ? (processTableStage2Inv[indice].b.toFixed(2)) : "") : null
                                 }

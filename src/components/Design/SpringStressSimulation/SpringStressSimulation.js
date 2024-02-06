@@ -140,7 +140,7 @@ export default function SpringStressSimulation({dataSimulation}) {
   }
 
   return (
-    <div id="canvas-container" style={{height: 800, width: 700, backgroundColor: colors.cell}}>
+    <div id="canvas-container" style={{height: 600, width: 600, backgroundColor: colors.cell, borderRadius: 10, marginTop: 20,}}>
       <Canvas dpr={[1, 2]} camera={{ fov: 50, near: 0.1, far:5000, position: [0, 1000, 300]}}>
         <ambientLight intensity={3} />
         {

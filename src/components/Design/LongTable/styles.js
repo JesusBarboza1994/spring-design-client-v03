@@ -9,11 +9,8 @@ export const Td_longtable = styled.td`
   color: ${colors.font.text};
   background-color: ${colors.cell};
   border: 1px solid ${colors.secondary.medium};
-  :last-child {
-    
-  }
-  
   ${typography.text.xs};
+  border-bottom: none;
   
 `
 export const Th = styled.th`
@@ -45,6 +42,4 @@ export const Length_table = styled.table`
  font-family: ${fonts.primary};
  border-collapse: collapse;
  //color: ${colors.font.text};
- border-radius: 8px;
-     
-`
+ `
