@@ -6,22 +6,27 @@ import { fonts } from "../../../styles/typography";
 export const Td_longtable = styled.td`
   height: 36px;
   text-align: center;
-  border: 1px solid ${colors.secondary.dark};
+  color: ${colors.font.text};
+  background-color: ${colors.cell};
+  border: 1px solid ${colors.secondary.medium};
   ${typography.text.xs};
+  border-bottom: none;
+  
 `
 export const Th = styled.th`
     width: 180px;
     height: 70px;
-    //writing-mode: vertical-lr;
-    //text-orientation: upright;
     ${typography.text.xs};
-    border: 1px solid ${colors.secondary.dark};
-    letter-spacing: 1px;
+    background-color: ${colors.secondary.light};
+    border: 1px solid ${colors.secondary.medium};
+    border-top: none;
+    color: ${colors.font.text};
+    font-weight: bold;
   
 `
 export const Input1 = styled.input`
-  width: 46px;
-  height: 18px;
+  width: 48px;
+  height: 20px;
   color: ${colors.font.text};
   background-color: ${colors.cell};
   margin: 5px;
@@ -31,12 +36,10 @@ export const Input1 = styled.input`
   border-radius: 4px;  
 `
 export const Length_table = styled.table`
- background-color: ${colors.tablebackground}; 
+ 
  width: 550px;
  //height: 270px;
  font-family: ${fonts.primary};
  border-collapse: collapse;
- color: ${colors.secondary.dark};
- border: 2px solid ${colors.secondary.dark};
-     
-`
+ //color: ${colors.font.text};
+ `

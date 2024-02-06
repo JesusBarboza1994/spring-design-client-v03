@@ -32,17 +32,17 @@ export default function SimulatedLoadControl(props) {
         <div>
             <Table2>
                 <thead>
-                    <tr style={{backgroundColor: colors.secondary.dark, color: colors.font.title,}}>
+                    <tr>
                     
-                     <Th3 style={{width: 41}}>N°</Th3>
-                     <Th3 style={{width: 63}}>F (kg)</Th3>
-                     <Th3 style={{width: 63}}>L (mm)</Th3>
-                     <Th3 >Deform (mm)</Th3>
+                     <Th3 style={{width: 41, borderTopLeftRadius: 8, borderTop: "none", borderLeft: "none", }}>N°</Th3>
+                     <Th3 style={{width: 63, borderTop: "none"}}>F (kg)</Th3>
+                     <Th3 style={{width: 63, borderTop: "none"}}>L (mm)</Th3>
+                     <Th3 style={{borderTopRightRadius: 8, borderTop: "none", }}>Deform (mm)</Th3>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <Td>
+                        <Td style={{borderLeft: "none", }}>
                             1
                         </Td>
                         <Td>
@@ -56,7 +56,7 @@ export default function SimulatedLoadControl(props) {
                         </Td>
                     </tr>
                     <tr>
-                        <Td>
+                        <Td style={{borderLeft: "none", }}>
                             2
                         </Td>
                         <Td>
@@ -70,7 +70,7 @@ export default function SimulatedLoadControl(props) {
                         </Td>
                     </tr>
                     <tr>
-                        <Td>
+                        <Td style={{borderLeft: "none", }}>
                             3
                         </Td>
                         <Td>
@@ -84,7 +84,7 @@ export default function SimulatedLoadControl(props) {
                         </Td>
                     </tr>
                     <tr>
-                        <Td>
+                        <Td style={{borderLeft: "none", }}>
                             4
                         </Td>
                         <Td>
@@ -98,7 +98,7 @@ export default function SimulatedLoadControl(props) {
                         </Td>
                     </tr>
                     <tr>
-                        <Td>
+                        <Td style={{borderLeft: "none", }}>
                             5
                         </Td>
                         <Td>
@@ -112,7 +112,7 @@ export default function SimulatedLoadControl(props) {
                         </Td>
                     </tr>
                     <tr>
-                        <Td>
+                        <Td style={{borderLeft: "none", borderBottomLeftRadius: 8,}}>
                             6
                         </Td>
                         <Td>
@@ -121,7 +121,7 @@ export default function SimulatedLoadControl(props) {
                         <Td>
                             0.0
                         </Td>
-                        <Td>
+                        <Td style={{borderBottomRightRadius: 8, }}>
                             0.0
                         </Td>
                     </tr>

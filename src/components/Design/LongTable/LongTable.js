@@ -115,20 +115,20 @@ export default function LongTable() {
             
             <Length_table>
                 <thead>
-                    <tr style={{backgroundColor: colors.secondary.dark, color: colors.font.title,}}>
-                        <Th> </Th>
-                        <Th style={{width: 90}}>Long (mm)</Th>
+                    <tr>
+                        <Th style={{borderTopLeftRadius: 8, borderLeft: "none", }}> </Th>
+                        <Th style={{width: 90,}}>Long (mm)</Th>
                         <Th style={{width: 90}}>Deform (mm)</Th>
                         <Th style={{width: 80}}>LL-G (mm)</Th>
                         <Th style={{width: 90}}>Fuerza (kg)</Th>
                         <Th style={{width: 90}}>Esf (MPa)</Th>
-                        <Th style={{width: 80}}>Compr. (%)</Th>
+                        <Th style={{width: 80, borderTopRightRadius: 8, borderRight: "none"}}>Compr. (%)</Th>
                     </tr>
                 </thead>
                 <tbody>
                     {nombreFilas.map((fila, indice) => (
-                        <tr style={{color: colors.font.title}}>
-                            <Td_longtable>
+                        <tr>
+                            <Td_longtable style={{borderLeft: "none", borderBottomLeftRadius: indice === nombreFilas.length - 1 ? 8 : 0}}>
                                 {fila}
                             </Td_longtable>
                             <Td_longtable>
@@ -154,7 +154,7 @@ export default function LongTable() {
                                     (!isNaN(esfuerzo[indice]) && Number.isFinite(esfuerzo[indice])) === true ? (esfuerzo[indice]).toFixed(2) : ""
                                 }
                             </Td_longtable>
-                            <Td_longtable>
+                            <Td_longtable style={{ borderRight: "none", borderBottomRightRadius: indice === nombreFilas.length - 1 ? 8 : 0 }}>
                                 {
                                     (!isNaN(carreraParcial[indice]) && Number.isFinite(carreraParcial[indice])) === true ? (carreraParcial[indice]).toFixed(0) : ""
                                 }%

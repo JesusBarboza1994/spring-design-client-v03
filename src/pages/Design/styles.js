@@ -7,51 +7,62 @@ export const Form = styled.form`
   display:flex;
   grid-template-columns: auto, auto, auto;
   justify-content: center;
-  row-gap: 6px;
+  //row-gap: 10px;
   width: 500px;
   color: ${colors.font.text};
 `
+export const Pform = styled.p`
+  block-size: 1px;
+  margin-left: 24px;
+  margin-bottom: 28px;
+  margin-top: 8px;
+  font-family: ${fonts.primary};
+  ${typography.text.xs};
+  font-weight: bold;
+  color: ${colors.font.text};  
+`
+
 export const Div = styled.div`
   display:flex;
-  aling-items: center;
   width:125px;
   height:40px;
-  margin:3px 16px 14px 16px;
-  background: ${colors.cell}
+  margin:3px 16px 8px 16px;
+  align-items: center;
+  background: ${colors.cell};
   border:2px solid ${colors.secondary.medium};
-  border-radius:8px;
+  border-radius: 8px;
   
 `
 export const Input = styled.input`
-  width:48px;
+  width:50px;
   height: 20px;
-  //color: ${colors.font.title};
+  color: ${colors.font.text};
   background-color: ${colors.tablebackground}
   margin: 9px;
   font-family: ${fonts.primary};
- ${typography.text.xs};
+  ${typography.text.xs};
   border-style:inset;
   border-radius: 4px;
-  text-align: left;
-     
+       
 `
-export const DivCalculo = styled.div`
-  width:40px;
-  height: 20px;
-  color: ${colors.font.title};
-  background-color: ${colors.tablebackground}
-  margin:8px;
-  font-family: ${fonts.primary};
- ${typography.text.xs};
-  border-style:outset;
-`
+// export const DivCalculo = styled.div`
+//   width:50px;
+//   height: 20px;
+//   color: ${colors.font.title};
+//   background-color: ${colors.tablebackground}
+//   margin:8px;
+//   font-family: ${fonts.primary};
+//  ${typography.text.xs};
+//   border-style:outset;
+// `
 export const Label = styled.label`
   height: 20px;
-  width: 60px;
+  width: 55px;
   display:block;
-  background-color:${colors.tablebackground}
-  margin-top:8px;
+  //background-color:${colors.tablebackground}
+  margin-top: 5px;
   margin-left: 10px;
+  justify-content: center;
   font-family: ${fonts.primary};
  ${typography.text.xs};
   color: ${colors.font.text};
@@ -90,11 +101,13 @@ export const DivSimul = styled.div`
 
 export const Paragraph = styled.p`
   block-size:1px;
-  margin-left:30px;
-  margin-bottom: 10px;
+  margin-left:34px;
+  margin-bottom: 18px;
+  margin-top: 8px;
   font-family: ${fonts.primary};
- ${typography.text.xs};  color: ${colors.font.title};  
-  width: 148px;
+ ${typography.text.xs};
+  color: ${colors.font.text};  
+  width: 140px;
 `
 export const Button = styled.button`
   width:125px;
@@ -190,5 +203,14 @@ export const Canvas = styled.canvas`
  margin-bottom:20px;
  margin-top: 20px;
  margin-left: 50px;
+ border-radius: 8px;
+`
+export const Spring3d = styled.div`
+ width: 600px;
+ height: 600px;
+ background: ${colors.cell};
+ margin-top: 25px;
+ margin-bottom: 30px;
+ color: ${colors.font.text};
  border-radius: 8px;
 `

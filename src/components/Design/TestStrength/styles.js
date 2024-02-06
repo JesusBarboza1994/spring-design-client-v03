@@ -20,7 +20,7 @@ export const DivCalculo = styled.div`
   height: 20px;
   color:${colors.font.text};
   background-color: ${colors.cell};
-  margin: 9px;
+  margin: 8px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
   line-height: 18px;
@@ -37,6 +37,7 @@ export const Paragraph1 = styled.p`
   font-family: ${fonts.primary};
   ${typography.text.xs};
   color: ${colors.font.text};  
+  font-weight: bold;
   width: 148px;
   text-align: center;
 `
@@ -61,16 +62,18 @@ export const Div1 = styled.div`
   margin: 3px 7px;
   background: ${colors.cell};
   border:2px solid ${colors.secondary.light};
-  border-radius:8px;  
+  border-radius: 8px;  
   
 `
 export const Label1 = styled.label`
   height: 20px;
   width: 30px;
   display: block;
-  margin:10px;
+  margin-top: 11px;
+  margin-left: 10px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
   color: ${colors.font.text};
+  font-weight: bold;
             
 `
