@@ -12,6 +12,10 @@ export const ButtonGuardar = styled.button`
   color: ${colors.button.text};
   position: absolute;
   right: 85px;
-  
-  
+    
+`
+export const A = styled.a`
+ cursor: pointer;
+ 
+
 `
