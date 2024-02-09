@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAuth } from '../../context/auth-context';
+import { useAuth } from '../../../context/auth-context';
 import { Form, Div, Input, Label, DivSimulForm, Pform, Select } from "./styles";
 
 export default function PrincipalData(){
@@ -34,6 +34,8 @@ export default function PrincipalData(){
     })
 
   }, [type1, type2])
+
+  const {dimensions, setDimensions} = useAuth();
 
   function handleInput(e){
     setDimensions({...dimensions, [e.target.id]:e.target.value})
