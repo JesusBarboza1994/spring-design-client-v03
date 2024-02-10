@@ -64,12 +64,11 @@ export const DivSimulForm = styled.div`
   justify-content: center;
   row-gap:none;
   margin-bottom:20px;
-  margin-top: 10px;
-  margin-left: 50px;
-  width: 500px;
+  width: auto;
+  min-width: 500px;
   height: 255px;
   background-color: ${colors.secondary.light};  
-  border-radius:8px;     
+  border-radius: 16px;     
 
 `
 export const Select = styled.select`

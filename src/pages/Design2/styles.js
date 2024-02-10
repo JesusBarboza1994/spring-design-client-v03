@@ -6,21 +6,14 @@ import { fonts } from "../../styles/typography"
 export const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	column-gap: 70px;
-    margin: 12px 108px;
+	column-gap: 80px;
+    
 
     @media(max-width: 1024px){
 		display:flex;
 		flex-direction:column;
 		gap: 0.5rem;
 	}
-`
-export const Columna1 = styled.div`
-  //margin: 12px 80px;
-  background-color: ${colors.background};
-  display: grid;
-  column-gap: 50px; 
-
 `
 export const Form = styled.form`
   display:flex;
