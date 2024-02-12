@@ -3,23 +3,35 @@ import { colors } from "../../../styles/colors";
 import { typography } from "../../../styles/typography";
 import { fonts } from "../../../styles/typography";
 
-export const Paragraph3 = styled.p`
-  block-size:1px;
-  margin-left: 75px;
-  margin-bottom: 20px;
-  font-family: ${fonts.primary};
-  ${typography.text.sm};
-  color: ${colors.font.title}; 
-  font-weight: bold; 
-  width: 450px;
+export const Wrapper = styled.div`
+  display: grid;
+  width: auto;
+  min-width: 500px;
+  height: 200px;
+  margin-top: 20px;
+  background-color: ${colors.secondary.light};
+  border-radius: 16px;        
 `
-export const Textarea = styled.textarea`
- width: 500px;
- height: 40px;
+
+export const Paragraph = styled.p`
+
+margin-left: 34px;
+margin-bottom: 10px;
+margin-top: 10px;
+font-family: ${fonts.primary};
+${typography.text.xs};
+font-weight: bold;
+color: ${colors.font.text};  
+width: 140px;
+text-align: left;
+`
+export const Textarea = styled.div`
+ width: 420px;
+ height: 60px;
  margin-left: 50px;
- margin-top: 0px;
+ 
  border-radius: 0px 0px 8px 8px;
- border-top:1px solid ${colors.secondary.light};
+ border-top: 1px solid ${colors.secondary.medium};
  background-color: ${colors.cell};
  color: ${colors.font.text};
  font-family: ${fonts.primary};
@@ -28,13 +40,12 @@ export const Textarea = styled.textarea`
 
 `
 export const DescripDiv = styled.div`
-  width: 500px; 
-  height: 100px; 
-  margin-left: 50px;
-  margin-bottom: 0px; 
-  //border: 2px solid ${colors.secondary.light};
-  border-radius:8px 8px 0px 0px; 
-  background-color: ${colors.secondary.light};
+  width: 420px; 
+  height: 60px; 
+  margin-left: 34px;
+  border: 1px solid ${colors.secondary.medium};
+  border-radius:8px; 
+  background-color: ${colors.cell};
   color: ${colors.font.text};
   font-family: ${fonts.primary};
   ${typography.text.sm};

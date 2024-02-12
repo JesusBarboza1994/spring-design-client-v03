@@ -1,18 +1,24 @@
 import "@fontsource/abeezee/400-italic.css";
 import { Description } from "../Description";
-import { DescripDiv, Paragraph3, Textarea } from "./styles";
+import { DescripDiv, Paragraph, Textarea, Wrapper } from "./styles";
 
 export function TextArea(){
    
     let descripcion = Description()
 
  return(
-    <div>  
-        <Paragraph3>Descripcion</Paragraph3>
-        <DescripDiv placeholder="Descripcion">{descripcion}</DescripDiv>
-        <Textarea placeholder="Datos adicionales"/>
-          
-    </div>  
+    <Wrapper>  
+        
+        <div>
+         <Paragraph>Descripcion</Paragraph>
+         <DescripDiv>{descripcion}</DescripDiv>
+        </div>
+
+        <div>
+         <Paragraph>Material</Paragraph>
+         <DescripDiv placeholder="Datos adicionales"/>
+        </div>
+    </Wrapper>  
     )
     
-}   
+}
