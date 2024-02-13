@@ -141,12 +141,13 @@ export function WeightTolerance(){
 
   
  return(
-    <DivSimul style={{marginBottom:10,}}>
+    <DivSimul>
       <div style={{display: "flex",}}>
         <Paragraph>Datos produccion</Paragraph>
-        <Paragraph style={{textAlign: "left", marginLeft: 10, width: 150,}}>Maq.Auto<Switch onChange= {handleChange} size="small"/>Torno</Paragraph>
-        <Paragraph></Paragraph>
+        <Paragraph style={{textAlign: "center", marginLeft: 10, width: 150,}}>Maq.Auto<Switch onChange= {handleChange} size="small"/>Torno</Paragraph>
+        
       </div>
+      <div style={{display: "flex", columnGap: 8, justifyContent: "center",}}>
       <Div>
         <Label style={{marginRight: 25,}}>LDA</Label>
         <DivCalculo id={"LDA"}>{production_data.LDA}</DivCalculo>
@@ -159,11 +160,15 @@ export function WeightTolerance(){
         <Label >Peso</Label>
         <DivCalculo id={"Peso"}>{(!isNaN(production_data.Peso) && (production_data.Peso > 0)) === true ? (production_data.Peso) : ""}</DivCalculo>
       </Div>
+      </div>
+      
+
       <div>
-        <Paragraph style={{width: 450, marginLeft: 20, }}>Grado tolerancias</Paragraph>
-        
+        <Paragraph style={{display: "flex", marginTop: 0,}}>Grado tolerancias</Paragraph>
       </div>    
-      <Div>
+      <div style={{display: "flex", columnGap: 8, justifyContent: "center", }}>
+ 
+        <Div>
         <Label>Grado</Label>
         <Select value={grado} id={"grado"} onChange={(e) => setGrado(e.target.value)}>
           <option value="1">1</option>
@@ -183,6 +188,8 @@ export function WeightTolerance(){
         <Label style={{marginRight: 0,}}>L0={dimensions.L0}±</Label>
         <DivCalculo style={{marginLeft: 0,}} id={"toler_L0"}>{!isNaN(coef.toler_L0) === true ? (coef.toler_L0) : ""}</DivCalculo>
       </Div>
+      </div>
+      
    </DivSimul>
   );     
 }

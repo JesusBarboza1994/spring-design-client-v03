@@ -13,8 +13,13 @@ import LongTable from "../../components/Design/LongTable";
 import ProcessTable from "../../components/Design/ProcessTable/ProcessTable";
 import LoadControlTable from "../../components/Design/LoadControlTable";
 import ControlLoadGraphic from "../../components/Design/ControlLoadGraphic";
+import SimulatedLoadControl from "../../components/Design/SimulatedLoadControl";
+import Spring3DLine from "../../components/Design/Spring3DLine/Spring3DLine";
+import SpringStressSimulation from "../../components/Design/SpringStressSimulation";
+
 import { DataTypeDesign } from "../../components/Design/DataTypeDesign/DataTypeDesign";
 import { Wrapper, Columna1 } from "./styles";
+import { Spring3d } from "../Design/styles";
 
 
 export default function Design2() {
@@ -70,6 +75,10 @@ export default function Design2() {
             <div>
             <DataTypeDesign Data={<LongTable/>} text={"TABLA DE LONGITUDES"}/>
             <DataTypeDesign Data={<ProcessTable/>} text={"TABLA DE CALCULO"}/>
+            <DataTypeDesign Data={<LoadControlTable/>} text={"CONTROL DE CARGAS"}/>
+            <SimulatedLoadControl/>
+             
+            <DataTypeDesign Data={<Spring3d/>} text={"SIMULACION"}/>
             </div>
         </Wrapper>
  </div>

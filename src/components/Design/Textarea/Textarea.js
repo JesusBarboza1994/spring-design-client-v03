@@ -1,6 +1,6 @@
 import "@fontsource/abeezee/400-italic.css";
 import { Description } from "../Description";
-import { DescripDiv, Paragraph, Textarea, Wrapper } from "./styles";
+import { DescripDiv, Paragraph, Wrapper, Div } from "./styles";
 
 export function TextArea(){
    
@@ -10,13 +10,17 @@ export function TextArea(){
     <Wrapper>  
         
         <div>
-         <Paragraph>Descripcion</Paragraph>
-         <DescripDiv>{descripcion}</DescripDiv>
-        </div>
-
-        <div>
-         <Paragraph>Material</Paragraph>
-         <DescripDiv placeholder="Datos adicionales"/>
+            <div>
+                <Paragraph>Descripcion</Paragraph>
+                <DescripDiv>{descripcion}</DescripDiv>
+            </div>
+         
+                
+            <div>
+                <Paragraph>Material</Paragraph>
+               <DescripDiv style={{height: 40}}/>
+            </div>
+         
         </div>
     </Wrapper>  
     )

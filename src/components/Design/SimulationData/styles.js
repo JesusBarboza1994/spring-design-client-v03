@@ -4,9 +4,9 @@ import { typography } from "../../../styles/typography";
 import { fonts } from "../../../styles/typography";
 
 export const DivSimul = styled.div`
-  display: flex;
-  grid-template-columns: auto, auto, auto;
-  flex-wrap: wrap;
+  display: grid;
+  //grid-template-columns: auto, auto, auto;
+  //flex-wrap: wrap;
   justify-content: center;
   row-gap: none;
   margin-bottom: 20px;

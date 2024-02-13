@@ -8,9 +8,11 @@ export const Table2 = styled.table`
   width: 220px;  
   margin: 10px 0px;
   font-family: ${fonts.primary};
+  ${typography.text.xs};
   //border: 2px solid ${colors.secondary.light};
   border-collapse: collapse;
-  color: ${colors.secondary.light};
+  color: ${colors.font.text};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 `
 export const Td1 = styled.td`

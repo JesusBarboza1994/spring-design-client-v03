@@ -7,7 +7,6 @@ export const Form = styled.form`
   display:flex;
   grid-template-columns: auto, auto, auto;
   justify-content: center;
-  //row-gap: 10px;
   width: 500px;
   color: ${colors.font.text};
 `

@@ -141,6 +141,8 @@ export function SimulationData(){
         <Paragraph2 style={{textAlign: "center",}}>nodos</Paragraph2>
       </div>
     
+      <div style={{display: "flex",columnGap:6,width:"100%", justifyContent: "center",}}>
+
       <Div2 style={{width:138}}>
         
         <Select style={{borderRadius:8,}} id={"Mater"} value={mater} onChange={(e) => handleListaMP(e)}>
@@ -177,13 +179,15 @@ export function SimulationData(){
         <Label>Grado</Label>
         <Input  value={simulation_data.grado} id={"grado"} onChange={(e) => handleSimulacion(e)}/>
       </Div2>
+      </div>
+      
       <div style={{display: "flex",columnGap:6,width:"100%", justifyContent: "center",}}>
         <Button onClick={createSpring}>Generar 3D</Button>
         <Button onClick={simulateSpring}>Simular</Button>
         <Button onClick={iniciarFuncion}>Calcular</Button>
 
-      </div>
-                              
+      
+      </div>               
     </DivSimul>
   )
 }

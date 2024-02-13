@@ -4,7 +4,7 @@ import { typography } from "../../../styles/typography";
 import { fonts } from "../../../styles/typography";
 
 export const DivSimul = styled.div`
-  display: flex;
+  display: grid;
   grid-template-columns: auto, auto, auto;
   flex-wrap: wrap;
   justify-content: center;

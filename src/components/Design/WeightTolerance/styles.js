@@ -4,12 +4,12 @@ import { typography } from "../../../styles/typography";
 import { fonts } from "../../../styles/typography";
 
 export const DivSimul = styled.div`
-  display: flex;
-  grid-template-columns: auto, auto, auto;
-  flex-wrap: wrap;
+  display: grid;
+  //grid-template-columns: auto, auto, auto;
+  //flex-wrap: wrap;
   justify-content: center;
   row-gap: none;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   width: auto;
   min-width: 500px;
   height: 160px;
@@ -18,9 +18,9 @@ export const DivSimul = styled.div`
 `
 export const Paragraph = styled.p`
   block-size: 1px;
-  margin-left: 34px;
-  margin-bottom: 18px;
-  margin-top: 8px;
+  margin-left: 20px;
+  margin-bottom: 16px;
+  margin-top: 10px;
   font-family: ${fonts.primary};
   ${typography.text.xs};
   font-weight: bold;
@@ -47,10 +47,11 @@ export const Div = styled.div`
   aling-items: center;
   width: 125px;
   height: 40px;
-  margin: 3px 16px 8px 16px;
+  margin: 5px 16px 10px 16px;
   background: ${colors.cell};
-  //border: 2px solid ${colors.secondary.medium};
+  border: 2px solid ${colors.secondary.medium};
   border-radius: 8px;
+  
     
 `
 export const Label = styled.label`
@@ -80,7 +81,6 @@ export const Select = styled.select`
  color: ${colors.font.text};
  font-family: ${fonts.primary};
  ${typography.text.xs}
- border: 4px;
- align-items: right;
+ border: 1px;
  
 `
