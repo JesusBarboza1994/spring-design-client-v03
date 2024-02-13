@@ -1,15 +1,14 @@
 import { useState } from "react"
 import { Content, TitleContainer} from "./styles"
+import { BsPatchCheckFill } from "react-icons/bs";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { colors } from "../../../styles/colors"
 
-
-export function DataTypeDesign({text, Data}){
-	const [ showData, setShowData ] = useState(true)
+export function DataTypeDesign({text, Data, counter}){
+	const [ showData, setShowData ] = useState(false)
 	return(
 		<Content>
 			<TitleContainer onClick={()=>setShowData(!showData)}>
-				<p>{text}</p>
 				{
 					showData ? 
 					<MdKeyboardArrowUp 
@@ -17,6 +16,8 @@ export function DataTypeDesign({text, Data}){
 					:
 					<MdKeyboardArrowDown style={{scale: "2", color:colors.icon}}/>
 				}
+				<p>{text}</p>
+				{(counter && counter.quantity === counter.counter && counter.quantity !== 0) && <BsPatchCheckFill style={{color:"green", scale: "1.2"}}/>}
 			</TitleContainer>
 			{
 				showData && Data
