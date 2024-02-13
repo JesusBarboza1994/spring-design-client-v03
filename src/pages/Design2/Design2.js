@@ -21,7 +21,14 @@ import { DataTypeDesign } from "../../components/Design/DataTypeDesign/DataTypeD
 import { Wrapper, Columna1 } from "./styles";
 import { Spring3d } from "../Design/styles";
 
-
+const TotalLoadControl = () =>{
+    return(
+        <div style={{display: "flex", justifyContent: "space-between",}}>
+            <LoadControlTable/>
+            <SimulatedLoadControl/>
+        </div>
+    )
+}
 export default function Design2() {
     const {dimensions,controlCargas, setKControlCargas, setBControlCargas, } = useAuth();
     const [puntosCCGrafica, setPuntosCCGrafica] = useState([
@@ -75,8 +82,8 @@ export default function Design2() {
             <div>
             <DataTypeDesign Data={<LongTable/>} text={"TABLA DE LONGITUDES"}/>
             <DataTypeDesign Data={<ProcessTable/>} text={"TABLA DE CALCULO"}/>
-            <DataTypeDesign Data={<LoadControlTable/>} text={"CONTROL DE CARGAS"}/>
-            <SimulatedLoadControl/>
+            <DataTypeDesign Data={<TotalLoadControl/>} text={"CONTROL DE CARGAS"}/>
+            
              
             <DataTypeDesign Data={<Spring3d/>} text={"SIMULACION"}/>
             </div>
