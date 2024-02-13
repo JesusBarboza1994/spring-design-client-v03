@@ -80,7 +80,6 @@ export function SampleMeasurements() {
 
   return (
     <Wrapper>
-      {/* ... your existing JSX code ... */}
       <div>
         <Input title="Tipo de suspensión" value={dataSample.suspensionType} onChange={(e) => handleChange('suspensionType', e.target.value)} id="suspensionType" />
         <Input title="Alambre" value={dataSample.wire} onChange={(e)=> handleChange("wire", e.target.value)} id="wire"/>
