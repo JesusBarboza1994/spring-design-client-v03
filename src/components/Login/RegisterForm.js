@@ -23,10 +23,10 @@ function RegisterForm(){
 
       <RegisterContainer>
          
-         <Label for="usuario"><b>USUARIO</b></Label>
+         <Label htmlFor="usuario"><b>USUARIO</b></Label>
          <TextInput placeholder="Enter user name" name="usuario" required/>
 
-         <Label for="contraseña"><b>CONTRASEÑA</b></Label>
+         <Label htmlFor="contraseña"><b>CONTRASEÑA</b></Label>
          <PasswordInput placeholder="Enter password" name="contraseña" required/>
 
          <Button type="submit" class="btn"> ENTRAR </Button>
