@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
     padding-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 	
 	> div{
 		display: flex;
@@ -27,10 +27,23 @@ export const Wrapper = styled.div`
 export const DivPrecio = styled.div`
 	display: grid;
 	gap: 10px;
-	> input{
-		max-width: 60px;
+    position: absolute;
+	right: 0px;	
+	bottom: 0px;
+`
+export const InputPrecio=styled.input`
+    width: 80px;
+	height: 30px;
+	border-radius: 8px;
+	margin-left: 10px;
+	>label{
+		margin: 0;
+		color: ${colors.font.text};
+		margin-bottom: 0.5rem;
+		min-width: 170px;
 	}
 `
+
 export const DivPlano = styled.div`
   display: grid;
   gap: 10px;

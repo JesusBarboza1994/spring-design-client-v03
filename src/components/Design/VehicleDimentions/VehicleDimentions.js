@@ -74,7 +74,7 @@ export function VehicleDimentions(){
 				<Lado>{vehiclePositionData[vehiclePosition].text}</Lado>
 				<div style={{display: "flex", justifyContent: "space-evenly", alignItems: "center"}}>
 					<img src={vehiclePositionData[vehiclePosition].img} alt="imagen-vehiculo"/>
-					<FaAngleRight onClick={() => setVehiclePosition(vehiclePosition === 0 ? 1 : 0)}/>
+					<FaAngleRight style={{ cursor: "pointer", color: "black",}} size={40} onClick={() => setVehiclePosition(vehiclePosition === 0 ? 1 : 0)}/>
 				</div>
 			</div>
 			<div style={{display: "flex", columnGap: 150, marginTop: 50, justifyContent: "center"}}> 

@@ -9,6 +9,8 @@ import  Galery  from "../../components/Design/Galery/Galery";
 import { ClientRequirements } from "../../components/Design/ClientRequirements/ClientRequirements";
 import { TechnicalStandard } from "../../components/Design/TechnicalStandard/TechnicalStandard";
 import { DevelopedDesign } from "../../components/Design/Developed design/DevelopedDesign";
+import { ButtonGuardar, A } from "./styles";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 export default function TotalizedFormat(){
 	return(
@@ -21,8 +23,23 @@ export default function TotalizedFormat(){
 			<DataTypeDesign Data={<Galery/>} text={"GALERIA"}/>
 			<DataTypeDesign Data={<ClientRequirements/>} text={"REQUERIMIENTOS DEL CLIENTE"}/>
 			<DataTypeDesign Data={<TechnicalStandard/>} text={"NORMAS TECNICAS"}/>
-			<DataTypeDesign Data={<DevelopedDesign/>} text={"DESEÑO DESARROLLADO"}/>
+			<DataTypeDesign Data={<DevelopedDesign/>} text={"DISEÑO DESARROLLADO"}/>
+			<div>
+			<ButtonGuardar type="submit">Guardar datos</ButtonGuardar>
+			</div>
             
+			<div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", }}> 
+				<div style={{ display: "flex", alignItems: "center", justifyItems: "center",}}>
+				 <FaAngleLeft style={{ cursor: "pointer", color: "white",}} size={35}/>
+				 <A>Volver</A>
+				</div>
+				
+				<div>
+				 <a>Siguiente</a>
+				 <FaAngleRight style={{ cursor: "pointer", color: "white",}} size={35} />
+				</div>
+			
+			</div>
 		</Container>
 	);
 }

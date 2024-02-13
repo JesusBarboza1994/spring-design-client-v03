@@ -83,6 +83,7 @@ export default function LoadControlTable(props) {
     return(
 
         <div>
+            <p style={{color: colors.font.text, fontWeight: "bold"}}>Cargas reales</p>
             <Table2>
                 <thead>
                     <tr style={{backgroundColor: colors.secondary.light,}}>

@@ -4,18 +4,17 @@ import { typography } from "../../../styles/typography";
 import { fonts } from "../../../styles/typography";
 
 export const DivSimul = styled.div`
-  display: flex;
-  grid-template-columns: auto, auto, auto;
-  flex-wrap: wrap;
+  display: grid;
+  //grid-template-columns: auto, auto, auto;
+  //flex-wrap: wrap;
   justify-content: center;
   row-gap: none;
   margin-bottom: 20px;
-  margin-top: 10px;
-  margin-left: 50px;
-  width: 500px;
+  width: auto;
+  min-width: 500px;
   height: 146px;
   background-color: ${colors.secondary.light};
-  border-radius: 8px;        
+  border-radius: 16px;        
 `
 
 export const Paragraph2 = styled.p`

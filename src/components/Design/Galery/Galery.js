@@ -57,7 +57,7 @@ const Galery = () => {
         
       </Carusel>
 
-        <FaAngleRight style={{ cursor: "pointer",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex === (images.length - 1) ? 0 : (currentImageIndex + 1))}/>
+        <FaAngleRight style={{ cursor: "pointer", color: "black",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex === (images.length - 1) ? 0 : (currentImageIndex + 1))}/>
       </div>
       
     </div>

@@ -87,48 +87,53 @@ export function CalculatedParameters({diam,diamext1,diamint1,diamint2,vred1,vred
   console.log( calculated_data)
 
   return(
-      <DivSimul>
-    <Paragraph style={{width: 480}}>Parametros calculados</Paragraph>
-    <Div>
+    <DivSimul>
+     <Paragraph style={{width: 480}}>Parametros calculados</Paragraph>
+
+     <div style={{display: "flex",columnGap:6, justifyContent: "center"}}>
+      <Div>
         <Label>C</Label>  
-                  
+                    
         <DivCalculo id={"C"}>
           {(!isNaN(calculated_data.C) && (calculated_data.C > 0) ) === true ? (Number(calculated_data.C)).toFixed(1): ""}
         </DivCalculo>
-    </Div>
-    <Div>
+      </Div>
+      <Div>
         <Label>D medio</Label>
         <DivCalculo id={"Dmedio"}>
-            {(!isNaN(calculated_data.Dmedio) && (calculated_data.Dmedio > 0)) === true ? Number((calculated_data.Dmedio)) : ""}
+          {(!isNaN(calculated_data.Dmedio) && (calculated_data.Dmedio > 0)) === true ? Number((calculated_data.Dmedio)) : ""}
         </DivCalculo>
-    </Div>
-    <Div>
+      </Div>
+      <Div>
         <Label>f</Label>
         <DivCalculo id={"f"}>{calculated_data.f}</DivCalculo>
-    </Div>
-    <Div>
+      </Div>
+    </div>
+
+    <div style={{display: "flex",columnGap:6, justifyContent: "center"}}>
+      <Div>
         <Label>Rel.d1</Label>
         <DivCalculo id={"Rel.d1"}>
           {(!isNaN(calculated_data.Rel_d1) && (calculated_data.Rel_d1 > 0) && Number.isFinite(calculated_data.Rel_d1)) === true ? (Number(calculated_data.Rel_d1)).toFixed(1) : ""}
         </DivCalculo>
-    </Div>
-    <Div>
+      </Div>
+      <Div>
         <Label>Rel.d2</Label>
         <DivCalculo id={"Rel.d2"}>
           {(!isNaN(calculated_data.Rel_d2) && (calculated_data.Rel_d2 > 0) && Number.isFinite(calculated_data.Rel_d2)) === true ? (Number(calculated_data.Rel_d2)).toFixed(1) : ""}
         </DivCalculo>
-    </Div>
-    <Div>
+      </Div>
+      <Div>
         <Label>Vt.red/VT</Label>
         <DivCalculo id={"Vt.red/VT"}>
           {(!isNaN(calculated_data.Vt_red_VT) && (calculated_data.Vt_red_VT > 0) && Number.isFinite(calculated_data.Vt_red_VT)) === true ? Number((calculated_data.Vt_red_VT)) : ""}
         </DivCalculo>
-    </Div>
+      </Div>
+    </div>
 
-    
-    </DivSimul> 
+  </DivSimul> 
 
       
-    );
+  );
 
 }

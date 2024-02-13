@@ -43,7 +43,7 @@ export default function Design() {
     { x: 0, y: 0},
     { x: 0, y: 0}
   ])
-  const [regLinealCCGrafica, setRegLinealCCGrafica] = useState([])
+  //const [regLinealCCGrafica, setRegLinealCCGrafica] = useState([])
 
   const [lineaCC, setLineaCC] = useState({
     k:0,      

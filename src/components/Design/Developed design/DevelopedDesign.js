@@ -2,7 +2,7 @@ import { useState } from "react"
 import styled from "@emotion/styled";
 import Input from "../../Input"
 import { Switch } from "@mui/material";
-import { DivPlano, InputPlano, DivPrecio, Wrapper} from "./styles"
+import { DivPlano, InputPlano, DivPrecio, Wrapper, InputPrecio} from "./styles"
 import TextArea from "../ClientRequirements/TextArea";
 
 export function DevelopedDesign(){
@@ -20,25 +20,27 @@ export function DevelopedDesign(){
 		<Wrapper>
             <div>
                 <div>
-                 <Input title="Diseños relacionados" />
-                 <Input/>
+                 <Input title="Diseños relacionados" id="diseñoRelacionado1"/>
+                 <Input id="diseñoRelacionado2"/>
                 </div>
                 <TextArea title="Medidas del resorte desarrollado" value="" onChange={(e)=>console.log(e)} id=""/>
                 <TextArea title="Control de cargas" value="" onChange={(e)=>console.log(e)} id=""/>
                 
             </div>
-            <div>
+            <div style={{gap:100, }}>
                 <DivPlano>
                     <label>Plano  NO <Switch onChange={handleToggleCheckbox} size="big" /> SI</label>
                     {link.isChecked && (
                         
-                        <InputPlano value={link.drawing} onChange={(e) => setLink({...link, drawing:e.target.value})} id="drawing" />
+                        <InputPlano placeholder=" Ingrese un link" value={link.drawing} onChange={(e) => setLink({...link, drawing:e.target.value})} id="drawing" />
                         
                         )}
                 </DivPlano>
                 <DivPrecio>
-                    <Input title="Precio unitario S/." />
-                    <Input title="Cantidad"/>
+                 <label> Precio unitario S/. <InputPrecio/> +IGV
+                 </label>
+                    
+                 <label> Cantidad <InputPrecio/> piezas </label>   
                 </DivPrecio>
             </div>            
 

@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
   padding-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 	
 	@media(max-width: 1024px){
 		display:flex;
