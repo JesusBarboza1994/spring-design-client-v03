@@ -77,7 +77,8 @@ export function VehicleDimentions(){
 					<FaAngleRight style={{ cursor: "pointer", color: "black",}} size={40} onClick={() => setVehiclePosition(vehiclePosition === 0 ? 1 : 0)}/>
 				</div>
 			</div>
-			<div style={{display: "flex", columnGap: 150, marginTop: 50, justifyContent: "center"}}> 
+
+			<div style={{display: "flex", columnGap: "auto", marginTop: 50, justifyContent: "center"}}> 
 			 <DimentionsContainer>
 				 	<div style={{display: "flex", gap: 10, alignItems: "center"}}>
 						<p style={{fontWeight: "bold", height: typography.text.md, color: colors.font.text }}>DEL {vehiclePosition === 0 ? "IZQ" : "DER"}</p>

@@ -6,7 +6,7 @@ import { fonts } from "../../../styles/typography";
 export const Wrapper = styled.div`
 	display: grid;
   
-  label{
+  > label{
     color: ${colors.font.text};
     margin-bottom: 0.5rem;
     min-width: 150px;
@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
    height: 25px;
    border-radius: 5px;
    color: "black";
+   margin-bottom: 0.5rem;
 
   }
 	

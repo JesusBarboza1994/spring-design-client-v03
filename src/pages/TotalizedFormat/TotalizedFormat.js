@@ -36,17 +36,17 @@ export default function TotalizedFormat(){
 			<DataTypeDesign Data={<TechnicalStandard/>} text={"NORMAS TECNICAS"}/>
 			<DataTypeDesign Data={<DevelopedDesign/>} text={"DISEÑO DESARROLLADO"}/>
 			<div>
-			<ButtonGuardar type="submit">Guardar datos</ButtonGuardar>
+			{/* <ButtonGuardar type="submit">Guardar datos</ButtonGuardar> */}
 			</div>
             
 			<div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", }}> 
-				<div style={{ display: "flex", alignItems: "center", justifyItems: "center",}}>
+				<div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
 				 <FaAngleLeft style={{ cursor: "pointer", color: "white",}} size={35}/>
-				 <A>Volver</A>
+				 <A>VOLVER</A>
 				</div>
 				
-				<div>
-				 <a>Siguiente</a>
+				<div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
+				 <A>SIGUIENTE</A>
 				 <FaAngleRight style={{ cursor: "pointer", color: "white",}} size={35} />
 				</div>
 			

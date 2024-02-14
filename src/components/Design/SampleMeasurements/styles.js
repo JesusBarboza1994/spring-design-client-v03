@@ -43,13 +43,11 @@ export const Div = styled.div`
 	justify-content: start;
 	row-gap: 6px;
 	column-gap: 126px;
+
 	@media(max-width: 640px){
-				
 	 grid-template-columns: auto;
-		   
-		   
+		   		   
 	}
-	
 `
 
 export const Wrap = styled.div`
