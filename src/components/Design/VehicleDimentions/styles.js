@@ -4,16 +4,15 @@ import { typography } from "../../../styles/typography";
 import { fonts } from "../../../styles/typography";
 
 export const Wrapper = styled.div`
-	display: grid;
+	display: flex;
   
-  > label{
+  >label{
     color: ${colors.font.text};
-    margin-bottom: 0.5rem;
-    min-width: 150px;
+    width: 100px
     font-family: ${fonts.primary};
     ${typography.text.sm};
     
-   }
+  }
   input{
    width: 70px;
    height: 25px;
@@ -26,7 +25,7 @@ export const Wrapper = styled.div`
 	@media(max-width: 1024px){
 		display:flex;
 		flex-direction:column;
-		gap: 0.5rem;
+		gap: 0.25rem;
 	}
 `
 export const DimentionsContainer = styled.div`
@@ -35,7 +34,20 @@ export const DimentionsContainer = styled.div`
  gap: 5px;
   
 `
-
+export const DivSimul = styled.div`
+  display: grid;
+  grid-template-columns: auto, auto, auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: none;
+  margin-bottom: 20px;
+  width: auto;
+  min-width: 500px;
+  height: 200px;
+  background-color: ${colors.secondary.light};
+  border-radius: 16px;   
+  box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
+  `
 export const Label = styled.label`
  color: ${colors.font.text};
  font-family: ${fonts.primary};
