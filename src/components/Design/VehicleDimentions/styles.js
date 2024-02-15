@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   
   >label{
     color: ${colors.font.text};
-    width: 100px
+    width: 60px;
     font-family: ${fonts.primary};
     ${typography.text.sm};
     
@@ -28,26 +28,57 @@ export const Wrapper = styled.div`
 		gap: 0.25rem;
 	}
 `
-export const DimentionsContainer = styled.div`
- 
- display: grid;
- gap: 5px;
+export const DimCont = styled.div`
+ display: flex;
+ align-items: center;
+ gap: 30px;
   
 `
 export const DivSimul = styled.div`
   display: grid;
   grid-template-columns: auto, auto, auto;
-  flex-wrap: wrap;
   justify-content: center;
   row-gap: none;
   margin-bottom: 20px;
-  width: auto;
-  min-width: 500px;
-  height: 200px;
+  padding: 20px;
+  min-width: auto;
+  max-width: 500px;
+  height: 220px;
   background-color: ${colors.secondary.light};
+  border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
-  `
+`
+export const DimEjes= styled.div`
+ display: flex;
+  padding: 20px;
+  min-width: auto;
+  max-width: 1000px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  background-color: ${colors.secondary.light};
+  border: 1px solid ${colors.secondary.medium};
+  border-radius: 16px;   
+  box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
+}
+>label{
+  color: ${colors.font.text};
+  width: 60px;
+  font-family: ${fonts.primary};
+  ${typography.text.sm};
+  
+}
+input{
+ width: 70px;
+ height: 25px;
+ border-radius: 5px;
+ color: "black";
+ margin-bottom: 0.5rem;
+
+}
+`
+
 export const Label = styled.label`
  color: ${colors.font.text};
  font-family: ${fonts.primary};
@@ -59,8 +90,7 @@ export const Label = styled.label`
 export const Lado = styled.p`
   color: ${colors.font.text}; 
   display: flex;
-  justify-content: right;
-  margin-right: 130px;
+  justify-content: center;
   font-family: ${fonts.primary};
   ${typography.text.md};
   font-weight: bold;
