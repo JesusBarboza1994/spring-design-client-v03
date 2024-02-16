@@ -11,8 +11,8 @@ import { DimentionsInput } from "./DimentionsInput";
 import { FaAngleRight } from "react-icons/fa6";
 import { Div } from "../SampleMeasurements/styles";
 
-export function VehicleDimentions(){
-	const [vehicleDimentions, setVehicleDimentions] = useState({
+export function VehicleDimentions({setCounter, counter}){
+	const [vehicleDimentions, setVehicleDimentions] = useState(localStorage.getItem("VehicleDimentions") ? JSON.parse(localStorage.getItem("VehicleDimentions")) : {
 		pgDel_Izq:"",
 		llgDel_Izq: "",
 		pesoDel_Izq1: "",
@@ -45,8 +45,32 @@ export function VehicleDimentions(){
 		frontWheel_thirdline: "",
 
 	})
+
+	useEffect(()=>{
+		let acc = 0
+		for (let i in vehicleDimentions){
+				if(vehicleDimentions[i] !== "") acc += 1
+		}
+		setCounter({...counter, VehicleDimentions: {quantity: Object.keys(vehicleDimentions).length, counter: acc}})
+	}, [])
+
+	const handleChange = (e) =>{
+		setVehicleDimentions({...vehicleDimentions,	[e.target.id]: e.target.value })
+		let acc = 0
+		for (let i in vehicleDimentions){
+			if(i === e.target.id){
+				if (e.target.value !== "") acc += 1
+			}else{
+				if(vehicleDimentions[i] !== "") acc += 1
+			}
+		}
+		setCounter({...counter, VehicleDimentions: {quantity: Object.keys(vehicleDimentions).length, counter: acc}})
+		localStorage.setItem("VehicleDimentions", JSON.stringify({...vehicleDimentions, [e.target.id]: e.target.value }))
+		localStorage.setItem("counter", JSON.stringify({...counter, VehicleDimentions: {quantity: Object.keys(vehicleDimentions).length, counter: acc}}))
+	}
+
     const [isChecked, setIsChecked] = useState(false);
-    const handleChange = () => {
+    const handleChangeChecked = () => {
       setIsChecked(!isChecked);
     }
 		const vehiclePositionData = [
@@ -87,14 +111,14 @@ export function VehicleDimentions(){
 						<img src={vehiclePositionData[vehiclePosition].imgNumberDel} width="28px" height="28px" alt="imagen1"/>
 					</div>
 					<DimCont>
-					<DimentionsInput title="P-G" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})} id="pgDel_Izq" />
-					<DimentionsInput title="LL-G" value={vehicleDimentions.llgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, llgDel_Izq:e.target.value})} id="llgDel_Izq" />
-					<DimentionsInput id="inclinationDel_Izq" title ="INCLIN" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})}/>
+					<DimentionsInput title="P-G" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>handleChange(e)} id="pgDel_Izq" />
+					<DimentionsInput title="LL-G" value={vehicleDimentions.llgDel_Izq} onChange={(e)=>handleChange(e)} id="llgDel_Izq" />
+					<DimentionsInput id="inclinationDel_Izq" title ="INCLIN" value={vehicleDimentions.inclinationDel_Izq} onChange={(e)=>handleChange(e)}/>
 					</DimCont>
 					<DimCont>
-					<DimentionsInput id="pesoDel_Izq1" title ="PESO 1" value={vehicleDimentions.pesoDel_Izq1} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pesoDel_Izq1:e.target.value})}/>
-					<DimentionsInput id="pesoDel_Izq2" title ="PESO 2" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})}/>
-					<DimentionsInput id="pesoDel_Izq3" title ="PESO 3" value={vehicleDimentions.pgDel_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgDel_Izq:e.target.value})}/>
+					<DimentionsInput id="pesoDel_Izq1" title ="PESO 1" value={vehicleDimentions.pesoDel_Izq1} onChange={(e)=>handleChange(e)}/>
+					<DimentionsInput id="pesoDel_Izq2" title ="PESO 2" value={vehicleDimentions.pesoDel_Izq2} onChange={(e)=>handleChange(e)}/>
+					<DimentionsInput id="pesoDel_Izq3" title ="PESO 3" value={vehicleDimentions.pesoDel_Izq3} onChange={(e)=>handleChange(e)}/>
 					</DimCont>			 			     
 			 </DivSimul>
 
@@ -104,23 +128,23 @@ export function VehicleDimentions(){
 					<img src={vehiclePositionData[vehiclePosition].imgNumberPost} width="28px" height="28px" alt="imagen1"/>
 				</div>
 				<DimCont>
-					<DimentionsInput id="pgPost_Izq" title ="P-G" value={vehicleDimentions.pgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgPost_Izq:e.target.value})}/>
-					<DimentionsInput id="llgPost_Izq" title ="LL-G" value={vehicleDimentions.llgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, llgPost_Izq:e.target.value})}/>
-					<DimentionsInput id="inclinationPost_Izq" title ="INCLIN" value={vehicleDimentions.pgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgPost_Izq:e.target.value})}/>
+					<DimentionsInput id="pgPost_Izq" title ="P-G" value={vehicleDimentions.pgPost_Izq} onChange={(e)=>handleChange(e)}/>
+					<DimentionsInput id="llgPost_Izq" title ="LL-G" value={vehicleDimentions.llgPost_Izq} onChange={(e)=>handleChange(e)}/>
+					<DimentionsInput id="inclinationPost_Izq" title ="INCLIN" value={vehicleDimentions.inclinationPost_Izq} onChange={(e)=>handleChange(e)}/>
 						
 				</DimCont>
 				<DimCont>  
-					<DimentionsInput id="pesoPost_Izq1" title ="PESO 1" value={vehicleDimentions.pesoPost_Izq1} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pesoPost_Izq1:e.target.value})}/>
-					<DimentionsInput id="pesoPost_Izq2" title ="PESO 2" value={vehicleDimentions.pgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgPost_Izq:e.target.value})}/>
-					<DimentionsInput id="pesoPost_Izq3" title ="PESO 3" value={vehicleDimentions.pgPost_Izq} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, pgPost_Izq:e.target.value})}/>
+					<DimentionsInput id="pesoPost_Izq1" title ="PESO 1" value={vehicleDimentions.pesoPost_Izq1} onChange={(e)=>handleChange(e)}/>
+					<DimentionsInput id="pesoPost_Izq2" title ="PESO 2" value={vehicleDimentions.pesoPost_Izq2} onChange={(e)=>handleChange(e)}/>
+					<DimentionsInput id="pesoPost_Izq3" title ="PESO 3" value={vehicleDimentions.pesoPost_Izq3} onChange={(e)=>handleChange(e)}/>
 				</DimCont>
 		     </DivSimul>
 		   </div>
 			<DimEjes>
 				<label></label>
-				<DimentionsInput id="frontWheel_firstline" title ="EJE DEL-1° FILA" value={vehicleDimentions.frontWheel_firstline} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, frontWheel_firstline:e.target.value})}/>
-				<DimentionsInput id="frontWheel_secondline" title ="EJE DEL-2° FILA" value={vehicleDimentions.frontWheel_secondline} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, frontWheel_secondline:e.target.value})}/>
-				<DimentionsInput id="frontWheel_rearWheel" title ="EJE DEL-EJE POST" value={vehicleDimentions.frontWheel_rearWheel} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, frontWheel_rearWheel:e.target.value})}/>
+				<DimentionsInput id="frontWheel_firstline" title ="EJE DEL-1° FILA" value={vehicleDimentions.frontWheel_firstline} onChange={(e)=>handleChange(e)}/>
+				<DimentionsInput id="frontWheel_secondline" title ="EJE DEL-2° FILA" value={vehicleDimentions.frontWheel_secondline} onChange={(e)=>handleChange(e)}/>
+				<DimentionsInput id="frontWheel_rearWheel" title ="EJE DEL-EJE POST" value={vehicleDimentions.frontWheel_rearWheel} onChange={(e)=>handleChange(e)}/>
 				<DimentionsInput id="frontWheel_thirdline" title ="EJE DEL-MALETERO" value={vehicleDimentions.frontWheel_thirdline} onChange={(e)=>setVehicleDimentions({...vehicleDimentions, frontWheel_thirdline:e.target.value})}/>
 			</DimEjes>
 			

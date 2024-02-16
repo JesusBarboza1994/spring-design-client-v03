@@ -76,7 +76,7 @@ export function SampleMeasurements({setCounter, counter}) {
 		for (let i in dataSample){
 				if(dataSample[i] !== "") acc += 1
 		}
-		setCounter({...counter, SampleMeasurements: {quantity: Object.keys(dataSample).length, counter: acc}})
+		setCounter({...counter, SampleMeasurements: {quantity: Object.keys(dataSample).length, counter: acc}}); console.log(counter)
 	}, [])
 
   const handleChange = (e) => {
@@ -116,17 +116,17 @@ export function SampleMeasurements({setCounter, counter}) {
             <option value="TCE">TCE</option>
             <option value="TAE">TAE</option>
           </Select>
-          <Select value={dataSample.endDetail11} onChange={(e)=> handleChange(e)} id="endDetail1">
+          <Select value={dataSample.endDetail11} onChange={(e)=> handleChange(e)} id="endDetail11">
             <option value="no">--</option>
             <option value="sobrepuesta">sobrepuesta</option>
             <option value="libre">libre</option>
           </Select>
-          <Select value={dataSample.endDetail21} onChange={(e)=> handleChange(e)} id="endDetail2">
+          <Select value={dataSample.endDetail21} onChange={(e)=> handleChange(e)} id="endDetail21">
           <option value="no">--</option>
           <option value="a nivel">a nivel</option>
           <option value="inclinada">inclinada</option>
           </Select>
-          <Select value={dataSample.endDetail31} onChange={(e)=> handleChange(e)} id="endDetail3">
+          <Select value={dataSample.endDetail31} onChange={(e)=> handleChange(e)} id="endDetail31">
             <option value="no">--</option>
             <option value="descentrado">descentrado</option>
           </Select>
@@ -178,18 +178,18 @@ export function SampleMeasurements({setCounter, counter}) {
         <Label>Resorte progresivo NO<Switch onChange={handleToggleCheckbox} size="big" />SI</Label>
         {dataSample.isChecked && (
          <>
-          <ProgresiveInput title="Luz 1" value={dataSample.luz1} onChange={(e) => handleChange('luz1', e.target.value)} id="luz1" />
-          <ProgresiveInput title="Luz 2" value={dataSample.luz2} onChange={(e) => handleChange('luz2', e.target.value)} id="luz2" />
-          <ProgresiveInput title="Luz 3" value={dataSample.luz3} onChange={(e)=> handleChange("luz3", e.target.value)} id="luz3"/>     
-         <ProgresiveInput title="Luz 4" value={dataSample.luz4} onChange={(e)=> handleChange("luz4", e.target.value)} id="luz4"/>
-         <ProgresiveInput title="Luz 5" value={dataSample.luz5} onChange={(e)=> handleChange("luz5", e.target.value)} id="luz5"/>
-         <ProgresiveInput title="Luz 6" value={dataSample.luz6} onChange={(e)=> handleChange("luz6", e.target.value)} id="luz6"/>
-         <ProgresiveInput title="Luz 7" value={dataSample.luz7} onChange={(e)=> handleChange("luz7", e.target.value)} id="luz7"/>     
-         <ProgresiveInput title="Luz 8" value={dataSample.luz8} onChange={(e)=> handleChange("luz8", e.target.value)} id="luz8"/>
-         <ProgresiveInput title="Luz 9" value={dataSample.luz9} onChange={(e)=> handleChange("luz9", e.target.value)} id="luz9"/>
-         <ProgresiveInput title="Luz 10" value={dataSample.luz10} onChange={(e)=> handleChange("luz10", e.target.value)} id="luz10"/>
-         <ProgresiveInput title="Luz 11" value={dataSample.luz11} onChange={(e)=> handleChange("luz11", e.target.value)} id="luz11"/>     
-         <ProgresiveInput title="Luz 12" value={dataSample.luz12} onChange={(e)=> handleChange("luz12", e.target.value)} id="luz12"/>
+          <ProgresiveInput title="Luz 1" value={dataSample.luz1} onChange={(e) => handleChange(e)} id="luz1" />
+          <ProgresiveInput title="Luz 2" value={dataSample.luz2} onChange={(e) => handleChange(e)} id="luz2" />
+          <ProgresiveInput title="Luz 3" value={dataSample.luz3} onChange={(e)=> handleChange(e)} id="luz3"/>     
+         <ProgresiveInput title="Luz 4" value={dataSample.luz4} onChange={(e)=> handleChange(e)} id="luz4"/>
+         <ProgresiveInput title="Luz 5" value={dataSample.luz5} onChange={(e)=> handleChange(e)} id="luz5"/>
+         <ProgresiveInput title="Luz 6" value={dataSample.luz6} onChange={(e)=> handleChange(e)} id="luz6"/>
+         <ProgresiveInput title="Luz 7" value={dataSample.luz7} onChange={(e)=> handleChange(e)} id="luz7"/>     
+         <ProgresiveInput title="Luz 8" value={dataSample.luz8} onChange={(e)=> handleChange(e)} id="luz8"/>
+         <ProgresiveInput title="Luz 9" value={dataSample.luz9} onChange={(e)=> handleChange(e)} id="luz9"/>
+         <ProgresiveInput title="Luz 10" value={dataSample.luz10} onChange={(e)=> handleChange(e)} id="luz10"/>
+         <ProgresiveInput title="Luz 11" value={dataSample.luz11} onChange={(e)=> handleChange(e)} id="luz11"/>     
+         <ProgresiveInput title="Luz 12" value={dataSample.luz12} onChange={(e)=> handleChange(e)} id="luz12"/>
             
          </>
         )}
