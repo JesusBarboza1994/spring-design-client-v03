@@ -29,24 +29,24 @@ export default function TotalizedFormat(){
 			<CorrelativeData/>
 			<DataTypeDesign Data={<DataClient setCounter={setCounter} counter={counter} />} text={"DATOS DEL CLIENTE"} counter = {counter.DataClient}/>
 			<DataTypeDesign Data={<VehicleData setCounter={setCounter} counter={counter} />} text={"DATOS DEL VEHICULO"} counter = {counter.VehicleData}/>
-			<DataTypeDesign Data={<SampleMeasurements/>} text={"DATOS DE LA MUESTRA"}/>
+			<DataTypeDesign Data={<SampleMeasurements setCounter={setCounter} counter={counter}/>} text={"DATOS DE LA MUESTRA"} counter = {counter.SampleMeasurements}/>
 			<DataTypeDesign Data={<VehicleDimentions/>} text={"MEDIDAS DEL VEHICULO"}/>
 			<DataTypeDesign Data={<Galery/>} text={"GALERIA"}/>
 			<DataTypeDesign Data={<ClientRequirements/>} text={"REQUERIMIENTOS DEL CLIENTE"}/>
 			<DataTypeDesign Data={<TechnicalStandard/>} text={"NORMAS TECNICAS"}/>
 			<DataTypeDesign Data={<DevelopedDesign/>} text={"DISEÑO DESARROLLADO"}/>
 			<div>
-			<ButtonGuardar type="submit">Guardar datos</ButtonGuardar>
+			{/* <ButtonGuardar type="submit">Guardar datos</ButtonGuardar> */}
 			</div>
             
 			<div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", }}> 
-				<div style={{ display: "flex", alignItems: "center", justifyItems: "center",}}>
+				<div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
 				 <FaAngleLeft style={{ cursor: "pointer", color: "white",}} size={35}/>
-				 <A>Volver</A>
+				 <A>VOLVER</A>
 				</div>
 				
-				<div>
-				 <a>Siguiente</a>
+				<div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
+				 <A>SIGUIENTE</A>
 				 <FaAngleRight style={{ cursor: "pointer", color: "white",}} size={35} />
 				</div>
 			

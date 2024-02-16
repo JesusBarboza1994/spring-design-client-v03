@@ -16,6 +16,9 @@ export const ButtonGuardar = styled.button`
 `
 export const A = styled.a`
  cursor: pointer;
+ font-family: ${fonts.primary};
+ ${typography.text.sm};
+
  
 
 `
