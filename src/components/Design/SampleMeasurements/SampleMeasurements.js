@@ -76,7 +76,8 @@ export function SampleMeasurements({setCounter, counter}) {
 		for (let i in dataSample){
 				if(dataSample[i] !== "") acc += 1
 		}
-		setCounter({...counter, SampleMeasurements: {quantity: Object.keys(dataSample).length, counter: acc}}); console.log(counter)
+		setCounter({...counter, SampleMeasurements: {quantity: Object.keys(dataSample).length, counter: acc}});
+  
 	}, [])
 
   const handleChange = (e) => {

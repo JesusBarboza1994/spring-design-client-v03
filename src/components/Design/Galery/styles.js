@@ -40,7 +40,7 @@ export const MainImage = styled.img`
 `
 
 export const Carusel = styled.div`
-  height: 160px;
+  //height: 160px;
   margin: 20px;
   background-color: ${colors.cell};
   display: flex;
@@ -48,10 +48,13 @@ export const Carusel = styled.div`
   gap: 20px;
   border-radius: 18px;
   padding: 25px;
-  
+  @media(max-width: 1024px){
+    flex-wrap: wrap;
+   }
   
 `;
 export const Demo = styled.img`
+  
   cursor: pointer;
   opacity: 0.7;
   max-height: 130px;
@@ -61,6 +64,7 @@ export const Demo = styled.img`
   &:hover {
     opacity: 1;
   }
+
 `;
 
 // export const Modal = styled.div`

@@ -28,6 +28,16 @@ export const Wrapper = styled.div`
 		gap: 0.25rem;
 	}
 `
+export const DataContainer = styled.div`
+ display: flex;
+ column-gap: 30px;
+ margin-top: 50px;
+ justify-content: center;
+ @media(max-width: 1024px){
+  display:grid;
+ }
+`
+
 export const DimCont = styled.div`
  display: flex;
  align-items: center;
@@ -39,8 +49,8 @@ export const DivSimul = styled.div`
   grid-template-columns: auto, auto, auto;
   justify-content: center;
   row-gap: none;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 25px;
+  padding: 0px 20px 20px 20px;
   min-width: auto;
   max-width: 500px;
   height: 220px;
@@ -48,23 +58,34 @@ export const DivSimul = styled.div`
   border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
+  @media(max-width: 1024px){
+		display:grid;
+		
+		
 `
 export const DimEjes= styled.div`
- display: flex;
-  padding: 20px;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  margin-bottom: 20px;
   min-width: auto;
   max-width: 1000px;
-  height: 150px;
   justify-content: center;
   align-items: center;
   background-color: ${colors.secondary.light};
   border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
+  @media(max-width: 1024px){
+		display:flex;
+    flex-wrap: wrap;
+    width: 310px;
 }
 >label{
+  
   color: ${colors.font.text};
-  width: 60px;
+  gap: 30px;
+  width: 100px;
   font-family: ${fonts.primary};
   ${typography.text.sm};
   
@@ -96,30 +117,4 @@ export const Lado = styled.p`
   font-weight: bold;
   font-style: italic;
    
-`
-export const SpanDot = styled.span`
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  :hover {background-color: #717171; }
-
-`
-export const Next = styled.a`
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -80px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  :hover {background-color: white;}
 `

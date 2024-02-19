@@ -4,30 +4,30 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { PiUpload } from "react-icons/pi";
 import { Modal, Modal_element } from "./Modal";
 
-const Galery = () => {
+const Galery = ({setCounter, counter}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const images = ["/Images/39.jpg", "/Images/40.jpg", "/Images/41.jpg", "/Images/42.jpg", "/Images/43.jpg", "/Images/44.jpg"];
 
   
-  const [isModalOpen, setModalOpen] = useState(false);
+  // const [isModalOpen, setModalOpen] = useState(false);
 
-  const openModal = () => {
-    setModalOpen(true);
-  };
+  // const openModal = () => {
+  //   setModalOpen(true);
+  // };
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   setModalOpen(false);
+  // };
 
 
   return(
     <Wrapper>
     <div>
-     <Button onClick={openModal}><PiUpload size={35}/></Button>
-     <Modal_element isOpen={isModalOpen} onClose={closeModal}>
+     <Button onClick={0}><PiUpload size={35}/></Button>
+     {/* <Modal_element isOpen={isModalOpen} onClose={closeModal}>
         <h2>Contenido del Modal</h2>
         <p>Este es un modal simple en React.</p>
-      </Modal_element>
+      </Modal_element> */}
       
       
     </div>

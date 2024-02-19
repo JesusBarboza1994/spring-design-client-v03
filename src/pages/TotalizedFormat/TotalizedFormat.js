@@ -30,8 +30,8 @@ export default function TotalizedFormat(){
 			<DataTypeDesign Data={<DataClient setCounter={setCounter} counter={counter} />} text={"DATOS DEL CLIENTE"} counter = {counter.DataClient}/>
 			<DataTypeDesign Data={<VehicleData setCounter={setCounter} counter={counter} />} text={"DATOS DEL VEHICULO"} counter = {counter.VehicleData}/>
 			<DataTypeDesign Data={<SampleMeasurements setCounter={setCounter} counter={counter}/>} text={"DATOS DE LA MUESTRA"} counter = {counter.SampleMeasurements}/>
-			<DataTypeDesign Data={<VehicleDimentions/>} text={"MEDIDAS DEL VEHICULO"}/>
-			<DataTypeDesign Data={<Galery/>} text={"GALERIA"}/>
+			<DataTypeDesign Data={<VehicleDimentions setCounter={setCounter} counter={counter}/>} text={"MEDIDAS DEL VEHICULO"} counter = {counter.VehicleDimentions}/>
+			<DataTypeDesign Data={<Galery setCounter={setCounter} counter={counter}/>} text={"GALERIA"}/>
 			<DataTypeDesign Data={<ClientRequirements/>} text={"REQUERIMIENTOS DEL CLIENTE"}/>
 			<DataTypeDesign Data={<TechnicalStandard/>} text={"NORMAS TECNICAS"}/>
 			<DataTypeDesign Data={<DevelopedDesign/>} text={"DISEÑO DESARROLLADO"}/>

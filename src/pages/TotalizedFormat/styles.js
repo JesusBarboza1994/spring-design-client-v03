@@ -19,6 +19,4 @@ export const A = styled.a`
  font-family: ${fonts.primary};
  ${typography.text.sm};
 
- 
-
 `
