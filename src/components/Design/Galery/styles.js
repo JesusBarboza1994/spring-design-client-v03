@@ -52,7 +52,7 @@ export const Carusel = styled.div`
     flex-wrap: wrap;
    }
   
-`;
+`
 export const Demo = styled.img`
   
   cursor: pointer;
@@ -65,29 +65,4 @@ export const Demo = styled.img`
     opacity: 1;
   }
 
-`;
-
-// export const Modal = styled.div`
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: white;
-//   padding: 20px;
-//   border-radius: 8px;
-//   max-width: 400px;
-//   width: 100%;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-// `;
-
-// export const Overlay = styled.div`
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `;
+`
