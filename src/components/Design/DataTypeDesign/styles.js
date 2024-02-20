@@ -21,5 +21,6 @@ export const TitleContainer = styled.div`
 	>p{
 	color: ${colors.font.text};
 	font-weight: 800;
+	cursor: pointer;
 	}
 `
