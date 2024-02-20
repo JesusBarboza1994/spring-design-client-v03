@@ -7,8 +7,8 @@ export const Wrapper = styled.div`
   
 `
 
-export const Button = styled.button`
-  background-color: "none";
+export const UploadButton = styled.input`
+  background-color: ${colors.primary.medium};
   border-radius: 30px;
   border: none;
   cursor: pointer;
@@ -40,7 +40,7 @@ export const MainImage = styled.img`
 `
 
 export const Carusel = styled.div`
-  height: 160px;
+  //height: 160px;
   margin: 20px;
   background-color: ${colors.cell};
   display: flex;
@@ -48,10 +48,13 @@ export const Carusel = styled.div`
   gap: 20px;
   border-radius: 18px;
   padding: 25px;
+  @media(max-width: 1024px){
+    flex-wrap: wrap;
+   }
   
-  
-`;
+`
 export const Demo = styled.img`
+  
   cursor: pointer;
   opacity: 0.7;
   max-height: 130px;
@@ -61,29 +64,5 @@ export const Demo = styled.img`
   &:hover {
     opacity: 1;
   }
-`;
 
-// export const Modal = styled.div`
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: white;
-//   padding: 20px;
-//   border-radius: 8px;
-//   max-width: 400px;
-//   width: 100%;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-// `;
-
-// export const Overlay = styled.div`
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `;
+`
