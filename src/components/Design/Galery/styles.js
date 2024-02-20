@@ -6,7 +6,32 @@ export const Wrapper = styled.div`
   gap: 20px;
   
 `
-
+export const ImgContainer = styled.div`
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  width:120px;
+  height:120px;
+  background:${colors.secondary.light};
+  border-radius:8px;
+  justify-content:center;
+  
+  position: relative;
+`
+export const IconContainer = styled.div`
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: ${colors.secondary.light};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  right: 8px;
+  top: 6px;
+  
+  ;
+`
 export const UploadButton = styled.input`
   background-color: ${colors.primary.medium};
   border-radius: 30px;
@@ -44,7 +69,9 @@ export const Carusel = styled.div`
   margin: 20px;
   background-color: ${colors.cell};
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   border-radius: 18px;
   padding: 25px;
@@ -54,11 +81,10 @@ export const Carusel = styled.div`
   
 `
 export const Demo = styled.img`
-  
-  cursor: pointer;
-  opacity: 0.7;
-  max-height: 130px;
   border-radius: 10px; 
+  object-fit: fill;
+  max-height:120px;
+  opacity: 0.7;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   &.active,
   &:hover {

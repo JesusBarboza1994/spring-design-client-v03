@@ -1,4 +1,3 @@
-import { grey } from "@mui/material/colors";
 import { useAuth } from "../context/auth-context";
 
 export const basicColors = {
@@ -7,7 +6,7 @@ export const basicColors = {
   black: "#000000",
   white: "#FFFFFF",
   
-  grey:{
+  gray:{
     dark: "#363636", //
     medium: "#B1A7A6",
     light: "#D9D9D9", //
@@ -53,9 +52,9 @@ export const colors = {
     light:basicColors.red.light,
   }, 
   secondary:{
-    dark:basicColors.grey.dark,
-    medium:basicColors.grey.medium,
-    light:basicColors.grey.light,
+    dark:basicColors.gray.dark,
+    medium:basicColors.gray.medium,
+    light:basicColors.gray.light,
   },
   tertiary:{
     dark: basicColors.pink.dark,
@@ -67,8 +66,8 @@ export const colors = {
   },
   button: {
     text: basicColors.white,
-    secondary: basicColors.grey.dark,
-    secondary2: basicColors.grey.medium,
+    secondary: basicColors.gray.dark,
+    secondary2: basicColors.gray.medium,
     tertiary: basicColors.pink.medium,
   },
   cell: basicColors.white,
