@@ -7,8 +7,8 @@ export const Wrapper = styled.div`
   
 `
 
-export const Button = styled.button`
-  background-color: "none";
+export const UploadButton = styled.input`
+  background-color: ${colors.primary.medium};
   border-radius: 30px;
   border: none;
   cursor: pointer;

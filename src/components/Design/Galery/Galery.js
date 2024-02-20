@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, MySlides, ArrowButton, CaptionContainer, Row, Column, Wrapper, Demo, Imagen, Carusel, MainImage, Button } from "./styles";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-import { PiUpload } from "react-icons/pi";
+import ImageUploader from "./ImageUploader";
 
 const Galery = ({setCounter, counter}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -10,10 +10,8 @@ const Galery = ({setCounter, counter}) => {
   
   return(
     <Wrapper>
-    <div>
-     <Button><PiUpload size={35}/></Button>
-     
-    </div>
+        
+     <ImageUploader/>
 
     <div style={{ margin: "auto", maxWidth: 1400, display: "flex", alignItems: "center", flexDirection: "column", justifyContent: "center"}}>
       
@@ -38,7 +36,7 @@ const Galery = ({setCounter, counter}) => {
           />
          ))}
         
-      </Carusel>
+       </Carusel>
 
         <FaAngleRight style={{ cursor: "pointer", color: "black",}} size={40} onClick={() => setCurrentImageIndex(currentImageIndex === (images.length - 1) ? 0 : (currentImageIndex + 1))}/>
       </div>
