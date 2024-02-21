@@ -18,9 +18,8 @@ export function ClientRequirements(){
         <TextArea title="Observaciones:"/>
         <TextArea title="Motivo de solicitud"/>
         <TestTable/>
-        <TextArea title="Prueba de freno brusco (40 km/h)"/>
         <TextArea title="Firma del cliente"/>
-             
+        <TextArea title="Prueba de freno brusco (40 km/h)"/>   
                         
       </Div>
     </Wrapper>
