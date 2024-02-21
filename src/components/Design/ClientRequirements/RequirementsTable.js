@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ReqTable, TableTitle, Td, Select, Cell } from "./styles";
 
 export default function RequirementsTable({setCounter, counter}){
@@ -9,7 +9,7 @@ export default function RequirementsTable({setCounter, counter}){
 		req4: "",
     })
 
-    const handleChange = (e) =>{
+     const handleChange = (e) =>{
 		setDataReq({...dataReq,	[e.target.id]: e.target.value })
 		let acc = 0
 		for (let i in dataReq){
@@ -82,7 +82,7 @@ export default function RequirementsTable({setCounter, counter}){
                             <Cell type="number" value={dataReq.req4} onChange={(e)=>handleChange(e)} id="req4"></Cell>
                         </Td>
                     </tr>
-               console.log(counter)
+               
 
                 </tbody>
             </ReqTable>
