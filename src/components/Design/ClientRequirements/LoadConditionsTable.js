@@ -1,4 +1,4 @@
-import { ReqTable, TableTitle, Td, Cell, Td1, Cell1 } from "./styles";
+import { ReqTable, TableTitle, Td, Cell, Td1, Cell1, Tr } from "./styles";
 
 export default function LoadConditionsTable(){
   return(
@@ -14,13 +14,13 @@ export default function LoadConditionsTable(){
        </thead>
 
        <tbody>
-          <tr>
+          <Tr>
             <Td1>Peso por persona (kg):</Td1>
             <Td>
              <Cell type="number"></Cell>
             </Td>
-          </tr>
-          <tr>
+          </Tr>
+          <Tr>
             <Td1>Distribucion de pasajeros en filas:</Td1>
             <Td>
               <tr>
@@ -43,19 +43,19 @@ export default function LoadConditionsTable(){
               </tr>
 
             </Td>
-          </tr>
-          <tr>
+          </Tr>
+          <Tr>
             <Td1>Carga en el maletero (kg):</Td1>
             <Td>
             <Cell type="number"></Cell>
             </Td>
-          </tr>
-          <tr>
+          </Tr>
+          <Tr>
             <Td1>Carga en la parrilla (kg):</Td1>
             <Td>
             <Cell type="number"></Cell>
             </Td>
-          </tr>
+          </Tr>
 
         </tbody>
       </ReqTable>

@@ -20,6 +20,11 @@ export const Div = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   column-gap: 70px;
+  @media(max-width: 1024px){
+		display:flex;
+		flex-direction:column;
+		gap: 1rem;
+	}
 `
 
 export const Input = styled.input`
@@ -30,6 +35,10 @@ export const Input = styled.input`
   border: 1px solid #000;
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
+  @media(max-width: 1024px){
+		width: 300px;
+		
+	}
 `
 export const Label = styled.label`
   display: flex;
@@ -37,7 +46,6 @@ export const Label = styled.label`
   height: 25px;
   padding: 0px 10px 0px 10px;
   flex-shrink: 0;
-
   border-radius: 8px 8px 0px 0px;
   border-top: 1px solid #000;
   border-right: 1px solid #000;
@@ -74,7 +82,14 @@ export const Td = styled.td`
 export const Td1 = styled.td`
   text-align: left;
   //border: 1px solid #000;
+   
+`
+export const Tr = styled.tr`
+@media(max-width: 1024px){
+  display:flex;
+  flex-direction:column;
   
+}
 `
 export const Select = styled.select`
   width: 100%;
@@ -94,17 +109,18 @@ export const Title = styled.td`
 `
 export const Cell = styled.input`
   width: 100%;
+  min-width: 60px;
   border-radius: 6px;
   text-align: center;
   border: 1px solid #000;
-
+  
 `
 export const Cell1 = styled.input`
   width: 40px;
   border-radius: 6px;
   text-align: center;
   border: 1px solid #000;
-
+ 
 `
 export const Comment= styled.td`
   width: 150px;
