@@ -34,7 +34,7 @@ export default function TotalizedFormat(){
 			<DataTypeDesign Data={<Galery setCounter={setCounter} counter={counter}/>} text={"GALERIA"} counter = {counter.Galery}/>
 			<DataTypeDesign Data={<ClientRequirements setCounter={setCounter} counter={counter}/>} text={"REQUERIMIENTOS DEL CLIENTE"} counter = {counter.ClientRequirements}/>
 			<DataTypeDesign Data={<TechnicalStandard/>} text={"NORMAS TECNICAS"}/>
-			<DataTypeDesign Data={<DevelopedDesign/>} text={"DISEÑO DESARROLLADO"}/>
+			<DataTypeDesign Data={<DevelopedDesign setCounter={setCounter} counter={counter}/>} text={"DISEÑO DESARROLLADO"} counter = {counter.DevelopedDesign}/>
 			<div>
 			{/* <ButtonGuardar type="submit">Guardar datos</ButtonGuardar> */}
 			</div>

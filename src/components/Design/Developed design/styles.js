@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
 export const DivPrecio = styled.div`
 	display: grid;
 	gap: 10px;
-    position: absolute;
+    //position: absolute;
 	right: 0px;	
 	bottom: 0px;
 `
@@ -53,4 +53,12 @@ export const InputPlano = styled.input`
   border-radius: 8px 8px 8px 8px;
   border: 1px solid #000;
   gap: 10px;
+`
+export const Container = styled.div`
+  gap: 100px;
+  @media(max-width: 1024px){
+	display:grid;
+	
+}
+  
 `

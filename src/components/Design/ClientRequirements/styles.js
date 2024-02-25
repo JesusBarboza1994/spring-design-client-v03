@@ -35,6 +35,7 @@ export const Input = styled.input`
   border: 1px solid #000;
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
   @media(max-width: 1024px){
 		width: 300px;
 		

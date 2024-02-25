@@ -39,13 +39,14 @@ export const Input2 = styled.input`
 
 export const Label = styled.label`
   display: flex;
-  width: 132px;
-  justify-content: center;
+  width: 80px;
+  justify-content: left;
   align-items: flex-end;
-  gap: 25px;
+  gap: 20px;
 `
 export const Div = styled.div`
  display: flex;
  gap: 25px;
- justify-content: center;
+ justify-content: left;
+ 
 `
