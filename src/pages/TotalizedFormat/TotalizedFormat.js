@@ -32,7 +32,7 @@ export default function TotalizedFormat(){
 			<DataTypeDesign Data={<SampleMeasurements setCounter={setCounter} counter={counter}/>} text={"DATOS DE LA MUESTRA"} counter = {counter.SampleMeasurements}/>
 			<DataTypeDesign Data={<VehicleDimentions setCounter={setCounter} counter={counter}/>} text={"MEDIDAS DEL VEHICULO"} counter = {counter.VehicleDimentions}/>
 			<DataTypeDesign Data={<Galery setCounter={setCounter} counter={counter}/>} text={"GALERIA"} counter = {counter.Galery}/>
-			<DataTypeDesign Data={<ClientRequirements/>} text={"REQUERIMIENTOS DEL CLIENTE"}/>
+			<DataTypeDesign Data={<ClientRequirements setCounter={setCounter} counter={counter}/>} text={"REQUERIMIENTOS DEL CLIENTE"} counter = {counter.ClientRequirements}/>
 			<DataTypeDesign Data={<TechnicalStandard/>} text={"NORMAS TECNICAS"}/>
 			<DataTypeDesign Data={<DevelopedDesign/>} text={"DISEÑO DESARROLLADO"}/>
 			<div>
