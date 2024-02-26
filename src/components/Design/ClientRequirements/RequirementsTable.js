@@ -10,16 +10,16 @@ export default function RequirementsTable({
 
 	useEffect(() => {
 		let acc = 0
-      if(clientRequirements.otherRequirements !== "") acc += 1
-      if(clientRequirements.observations !== "") acc += 1
-      if(clientRequirements.reason !== "") acc += 1
-      if(clientRequirements.requirements.stiffnessIndication !== "" 
-        && clientRequirements.requirements.heightIndication !== ""
-        && clientRequirements.requirements.stiffnessVariation !== ""
-        && clientRequirements.requirements.heightVariation !== "") acc += 1
+    if(clientRequirements.otherRequirements !== "") acc += 1
+    if(clientRequirements.observations !== "") acc += 1
+    if(clientRequirements.reason !== "") acc += 1
+    if(clientRequirements.requirements.stiffnessIndication !== "" 
+      && clientRequirements.requirements.heightIndication !== ""
+      && clientRequirements.requirements.stiffnessVariation !== ""
+      && clientRequirements.requirements.heightVariation !== "") acc += 1
 
-      setCounter({...counter, ClientRequirements: {quantity: 4, counter: acc}})
-      localStorage.setItem("counter", JSON.stringify({...counter, ClientRequirements: {quantity: 4, counter: acc}}))
+    setCounter({...counter, ClientRequirements: {quantity: 4, counter: acc}})
+    localStorage.setItem("counter", JSON.stringify({...counter, ClientRequirements: {quantity: 4, counter: acc}}))
 	
 		
 	}, [clientRequirements])
