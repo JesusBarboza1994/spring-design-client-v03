@@ -57,11 +57,10 @@ export function ClientRequirements({setCounter, counter}){
           comment: ""
         }
       ],
-      image:null
+      signature:null
     })
 
     const handleChange = (e) =>{
-      console.log(clientRequirements)
       setClientRequirements({...clientRequirements,	[e.target.id]: e.target.value })
       let acc = 0
       if(clientRequirements.otherRequirements !== "") acc += 1
@@ -83,8 +82,8 @@ export function ClientRequirements({setCounter, counter}){
   
       // Maneja el evento load del FileReader
       reader.onload = () => {
-        setClientRequirements({...clientRequirements, image: reader.result});
-        localStorage.setItem('ClientRequirements', JSON.stringify({...clientRequirements, image: reader.result}));
+        setClientRequirements({...clientRequirements, signature: reader.result});
+        localStorage.setItem('ClientRequirements', JSON.stringify({...clientRequirements, signature: reader.result}));
       };
   
       // Lee el contenido del archivo como una URL de datos
@@ -101,14 +100,12 @@ export function ClientRequirements({setCounter, counter}){
         <TextArea title="Motivo de solicitud" value = {clientRequirements.reason} onChange={(e)=> handleChange(e)} id={"reason"}/>
         <TestTable clientRequirements={clientRequirements} setClientRequirements={setClientRequirements}/>
         <TextArea title="Prueba de freno brusco (40 km/h)" value={clientRequirements.test40} onChange={(e)=> handleChange(e)} id={"test40"}/>
-        {/* Se debe cambiuar el input para un botón mas adecuado a carga la imagen de la firma. */}
-        { clientRequirements.image ? 
           <div>
-            <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, image: null})} style={{cursor: 'pointer'}}/>
-            <img src={clientRequirements.image} alt="Imagen seleccionada" style={{ maxWidth: '100%' }} />
+            <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, signature: null})} style={{cursor: 'pointer'}}/>
+            <img src={clientRequirements.signature} alt="Imagen seleccionada" style={{ maxWidth: '100%' }} />
           </div>
            : 
-          <input type="file" onChange={handleImageChange}  capture="user" accept="image/*"/>
+          <input type="file" onChange={handleImageChange} capture="user" accept="image/*"/>
         }
                         
       </Div>
