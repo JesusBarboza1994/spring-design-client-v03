@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Input from "../../Input"
+import { colors } from "../../../styles/colors";
 import { Wrapper, Div, ButtonSubir, SignatureContainer, Label } from "./styles"
 import TextArea from "./TextArea"
 import RequirementsTable from "./RequirementsTable"
@@ -106,8 +107,29 @@ export function ClientRequirements({setCounter, counter}){
                 {clientRequirements.signature ? (
               <div style={{display: 'flex', gap: 10, alignItems: 'center', position: 'relative'}}>
                 <img src={clientRequirements.signature} alt="Imagen seleccionada"/>
-                <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, signature: null})} style={{cursor: 'pointer', color: 'black', position: 'absolute', zIndex: 1, top: 3, right: 3}}/>
+                
+                <div style={{
+                   display: 'flex',
+                   justifyContent: 'center',
+                   alignItems: 'center',
+                   position: 'absolute',
+                   width: 30,
+                   height: 30,
+                   borderRadius: '50%',
+                   background: colors.secondary.light,
+                   top: 2,
+                   right: 5}}>
+                  <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, signature: null})}
+                  style={{cursor: 'pointer',
+                   color: colors.secondary.dark,
+                   position: 'absolute',
+                   zIndex: 1,
+                  }}/>
+                </div>
+                
+
               </div>  
+
               ) : (
                 <ButtonSubir htmlFor="signature">
                   <input style={{ display: 'none'}} id="signature" type="file" onChange={handleImageChange} capture="user" accept="image/*"/>
