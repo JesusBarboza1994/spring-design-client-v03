@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Input from "../../Input"
-import { Wrapper, Div } from "./styles"
+import { Wrapper, Div, ButtonSubir, SignatureContainer, Label } from "./styles"
 import TextArea from "./TextArea"
 import RequirementsTable from "./RequirementsTable"
 import TestTable from "./TestTable"
@@ -99,16 +99,26 @@ export function ClientRequirements({setCounter, counter}){
         <TextArea title="Observaciones:" value={clientRequirements.observations} onChange={(e)=> handleChange(e)} id={"observations"}/>
         <TextArea title="Motivo de solicitud" value = {clientRequirements.reason} onChange={(e)=> handleChange(e)} id={"reason"}/>
         <TestTable clientRequirements={clientRequirements} setClientRequirements={setClientRequirements}/>
-        <TextArea title="Prueba de freno brusco (40 km/h)" value={clientRequirements.test40} onChange={(e)=> handleChange(e)} id={"test40"}/>
+        <div style={{display: "grid", gap: 10}}>
           <div>
-            <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, signature: null})} style={{cursor: 'pointer'}}/>
-            <img src={clientRequirements.signature} alt="Imagen seleccionada" style={{ maxWidth: '100%' }} />
+            <Label>Firma del cliente</Label>
+            <SignatureContainer><img src={clientRequirements.signature} alt="Imagen seleccionada" /></SignatureContainer>
           </div>
-           : 
-          <input type="file" onChange={handleImageChange} capture="user" accept="image/*"/>
-        }
-                        
+          <div style={{display: 'flex', gap: 10, alignItems: 'center',}}>
+            <ButtonSubir htmlFor="signature">
+              <input style={{ display: 'none'}} id="signature" type="file" onChange={handleImageChange} capture="user" accept="image/*"/>
+              Subir firma  | <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, signature: null})} style={{cursor: 'pointer', color: 'black',}}/>
+            </ButtonSubir>
+            
+          </div>
+        </div>
+          
+          
+           
+        
+        <TextArea title="Prueba de freno brusco (40 km/h)" value={clientRequirements.test40} onChange={(e)=> handleChange(e)} id={"test40"}/>
+                                
       </Div>
     </Wrapper>
-    )
+  )
 }
