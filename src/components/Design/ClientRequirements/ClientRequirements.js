@@ -11,54 +11,54 @@ export function ClientRequirements({setCounter, counter}){
     const [clientRequirements, setClientRequirements] = useState(JSON.parse(localStorage.getItem("ClientRequirements")) ||{
       requirements:{
         stiffnessVariation: "",
-        heightVariation:"",
-        stiffnessIndication:"",
-        heightIndication:""
+        heightVariation: "",
+        stiffnessIndication: "",
+        heightIndication: ""
       },
       otherRequirements: "",
       reason: "",
-      test40:"",
-      loadConditions:{
+      test40: "",
+      loadConditions: {
         personWeight: 80,
         roofWeight: 0,
         trunkWeight: 0,
         peoplebyRow: [2, 3, 0, 0, 0]
       },
       observations: "",
-      bumpTest:[
+      bumpTest: [
         {
           del: 0,
           pos: 0,
           vel: 0,
-          comment: ""
+          comment: "",
         },
         {
           del: 0,
           pos: 0,
           vel: 0,
-          comment: ""
+          comment: "",
         },
         {
           del: 0,
           pos: 0,
           vel: 0,
-          comment: ""
+          comment: "",
         },
         {
           del: 0,
           pos: 0,
           vel: 0,
-          comment: ""
+          comment: "",
         },
         {
           del: 0,
           pos: 0,
           vel: 0,
-          comment: ""
+          comment: "",
         }
       ],
-      signature:null
-    })
+      signature: null,
+    });
 
     const handleChange = (e) =>{
       setClientRequirements({...clientRequirements,	[e.target.id]: e.target.value })
@@ -102,19 +102,25 @@ export function ClientRequirements({setCounter, counter}){
         <div style={{display: "grid", gap: 10}}>
           <div>
             <Label>Firma del cliente</Label>
-            <SignatureContainer><img src={clientRequirements.signature} alt="Imagen seleccionada" /></SignatureContainer>
+            <SignatureContainer>
+                {clientRequirements.signature ? (
+              <div style={{display: 'flex', gap: 10, alignItems: 'center', position: 'relative'}}>
+                <img src={clientRequirements.signature} alt="Imagen seleccionada"/>
+                <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, signature: null})} style={{cursor: 'pointer', color: 'black', position: 'absolute', zIndex: 1, top: 3, right: 3}}/>
+              </div>  
+              ) : (
+                <ButtonSubir htmlFor="signature">
+                  <input style={{ display: 'none'}} id="signature" type="file" onChange={handleImageChange} capture="user" accept="image/*"/>
+                  Subir firma 
+                </ButtonSubir>
+              )} 
+            </SignatureContainer>
           </div>
-          <div style={{display: 'flex', gap: 10, alignItems: 'center',}}>
-            <ButtonSubir htmlFor="signature">
-              <input style={{ display: 'none'}} id="signature" type="file" onChange={handleImageChange} capture="user" accept="image/*"/>
-              Subir firma  | <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, signature: null})} style={{cursor: 'pointer', color: 'black',}}/>
-            </ButtonSubir>
-            
-          </div>
+          
+                    
+                
         </div>
-          
-          
-           
+                
         
         <TextArea title="Prueba de freno brusco (40 km/h)" value={clientRequirements.test40} onChange={(e)=> handleChange(e)} id={"test40"}/>
                                 

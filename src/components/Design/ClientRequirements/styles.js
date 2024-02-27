@@ -119,12 +119,13 @@ export const Comment= styled.td`
 `
 export const ButtonSubir = styled.label`
   cursor: pointer;
-  background-color: ${colors.cell};
+  //background-color: ${colors.cell};
+  border: 1px solid black;
   color: ${colors.font.text};
   height: 35px;
-  width: 140px;
+  width: 110px;
   border-radius: 30px;
-  border: none;
+  
   display: flex;
   justify-content: center;
   align-items: center;
