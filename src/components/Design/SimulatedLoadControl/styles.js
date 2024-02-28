@@ -9,7 +9,8 @@ export const Table2 = styled.table`
   font-family: ${fonts.primary};
   border-collapse: collapse;
   color: ${colors.secondary.light};
-  
+  box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
+  //border: 1px solid ${colors.secondary.medium};
 `
 export const Td = styled.td`
   height: 37px;
