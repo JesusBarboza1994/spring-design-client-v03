@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
 	grid-template-columns: 1fr 1fr;
 	column-gap: 80px;
     
-
     @media(max-width: 1024px){
 		display:flex;
 		flex-direction:column;

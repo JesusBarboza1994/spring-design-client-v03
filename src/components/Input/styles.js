@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 		height: 30px;
 		border-radius: 8px;
 		color: ${colors.font.text};
+		padding-left: 10px;
 	}
 	@media(max-width: 640px){
 		flex-direction:column;

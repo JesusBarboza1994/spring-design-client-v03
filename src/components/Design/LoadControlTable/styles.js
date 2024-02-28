@@ -12,7 +12,7 @@ export const Table2 = styled.table`
   //border: 2px solid ${colors.secondary.light};
   border-collapse: collapse;
   color: ${colors.font.text};
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
 
 `
 export const Td1 = styled.td`

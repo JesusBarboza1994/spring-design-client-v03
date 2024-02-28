@@ -21,12 +21,12 @@ export const Wrapper = styled.div`
 	}
 `
 export const Input = styled.input`
-  width: 60px;
+  width: 40px;
   border-radius: 8px 8px 8px 8px;
   border: 1px solid #000;
   background: #FFF;
    
-&:checked {
+ &:checked {
   accent-color: ${(props) => (props.applies ? '#1976d2' : 'gris')}; 
 `
 export const Input2 = styled.input`
@@ -34,18 +34,18 @@ export const Input2 = styled.input`
   border-radius: 8px 8px 8px 8px;
   border: 1px solid #000;
   background: #FFF;
-  //box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
+  padding-left: 10px;
 `
 
 export const Label = styled.label`
   display: flex;
-  width: 132px;
-  justify-content: center;
+  width: 70px;
+  justify-content: left;
   align-items: flex-end;
-  gap: 25px;
+  gap: 20px;
 `
 export const Div = styled.div`
  display: flex;
  gap: 25px;
- justify-content: center;
+ justify-content: left;
 `

@@ -1,4 +1,4 @@
-import { ReqTable, TableTitle, Td, Cell, Td1, Cell1 } from "./styles";
+import { ReqTable, TableTitle, Tr, Td, Cell, Td1, Cell1 } from "./styles";
 
 export default function LoadConditionsTable({
   clientRequirements,
@@ -22,13 +22,13 @@ export default function LoadConditionsTable({
         </thead>
 
         <tbody>
-          <tr>
+          <Tr>
             <Td1>Peso por persona (kg):</Td1>
             <Td>
               <Cell type="number" value={clientRequirements.loadConditions.personWeight} onChange={(e) => setClientRequirements({ ...clientRequirements, loadConditions: { ...clientRequirements.loadConditions, personWeight: e.target.value } })}></Cell>
             </Td>
-          </tr>
-          <tr>
+          </Tr>
+          <Tr>
             <Td1>Distribucion de pasajeros en filas:</Td1>
             <Td>
               <tr>
@@ -58,19 +58,19 @@ export default function LoadConditionsTable({
                 </Td>
               </tr>
             </Td>
-          </tr>
-          <tr>
+          </Tr>
+          <Tr>
             <Td1>Carga en el maletero (kg):</Td1>
             <Td>
               <Cell type="number" value={clientRequirements.loadConditions.trunkWeight} onChange={(e) => setClientRequirements({ ...clientRequirements, loadConditions: { ...clientRequirements.loadConditions, trunkWeight: e.target.value } })}></Cell>
             </Td>
-          </tr>
-          <tr>
+          </Tr>
+          <Tr>
             <Td1>Carga en la parrilla (kg):</Td1>
             <Td>
               <Cell type="number" value={clientRequirements.loadConditions.roofWeight} onChange={(e) => setClientRequirements({ ...clientRequirements, loadConditions: { ...clientRequirements.loadConditions, roofWeight: e.target.value } })}></Cell>
             </Td>
-          </tr>
+          </Tr>
         </tbody>
       </ReqTable>
     </div>

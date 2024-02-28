@@ -1,10 +1,11 @@
-import { useState } from "react";
-import Input from "../../Input";
-import { Wrapper, Div } from "./styles";
-import TextArea from "./TextArea";
-import RequirementsTable from "./RequirementsTable";
-import TestTable from "./TestTable";
-import LoadConditionsTable from "./LoadConditionsTable";
+import { useState } from "react"
+import Input from "../../Input"
+import { colors } from "../../../styles/colors";
+import { Wrapper, Div, ButtonSubir, SignatureContainer, Label } from "./styles"
+import TextArea from "./TextArea"
+import RequirementsTable from "./RequirementsTable"
+import TestTable from "./TestTable"
+import LoadConditionsTable from "./LoadConditionsTable"
 import { FaRegTrashAlt } from "react-icons/fa";
 
 export function ClientRequirements({ setCounter, counter }) {
@@ -14,7 +15,7 @@ export function ClientRequirements({ setCounter, counter }) {
         stiffnessVariation: "",
         heightVariation: "",
         stiffnessIndication: "",
-        heightIndication: "",
+        heightIndication: ""
       },
       otherRequirements: "",
       reason: "",
@@ -56,11 +57,10 @@ export function ClientRequirements({ setCounter, counter }) {
           pos: 0,
           vel: 0,
           comment: "",
-        },
+        }
       ],
       signature: null,
-    }
-  );
+    });
 
   const handleChange = (e) => {
     setClientRequirements({
@@ -112,77 +112,63 @@ export function ClientRequirements({ setCounter, counter }) {
       );
     };
 
-    // Lee el contenido del archivo como una URL de datos
-    reader.readAsDataURL(file);
-  };
-
-  return (
-    <Wrapper>
-      <Div>
-        <RequirementsTable
-          clientRequirements={clientRequirements}
-          setClientRequirements={setClientRequirements}
-          counter={counter}
-          setCounter={setCounter}
-        />
-        <LoadConditionsTable
-          clientRequirements={clientRequirements}
-          setClientRequirements={setClientRequirements}
-        />
-        <TextArea
-          title="Otros requerimientos:"
-          value={clientRequirements.otherRequirements}
-          onChange={(e) => handleChange(e)}
-          id={"otherRequirements"}
-        />
-        <TextArea
-          title="Observaciones:"
-          value={clientRequirements.observations}
-          onChange={(e) => handleChange(e)}
-          id={"observations"}
-        />
-        <TextArea
-          title="Motivo de solicitud"
-          value={clientRequirements.reason}
-          onChange={(e) => handleChange(e)}
-          id={"reason"}
-        />
-        <TestTable
-          clientRequirements={clientRequirements}
-          setClientRequirements={setClientRequirements}
-        />
-        <TextArea
-          title="Prueba de freno brusco (40 km/h)"
-          value={clientRequirements.test40}
-          onChange={(e) => handleChange(e)}
-          id={"test40"}
-        />
-        {clientRequirements.signature ? (
+    return(
+		<Wrapper>
+		 <Div>
+        <RequirementsTable clientRequirements={clientRequirements} setClientRequirements={setClientRequirements} counter={counter} setCounter={setCounter}/>
+        <LoadConditionsTable clientRequirements={clientRequirements} setClientRequirements={setClientRequirements}/>
+        <TextArea title="Otros requerimientos:" value={clientRequirements.otherRequirements} onChange={(e)=> handleChange(e)} id={"otherRequirements"}/>
+        <TextArea title="Observaciones:" value={clientRequirements.observations} onChange={(e)=> handleChange(e)} id={"observations"}/>
+        <TextArea title="Motivo de solicitud" value = {clientRequirements.reason} onChange={(e)=> handleChange(e)} id={"reason"}/>
+        <TestTable clientRequirements={clientRequirements} setClientRequirements={setClientRequirements}/>
+        <div style={{display: "grid", gap: 10}}>
           <div>
-            <FaRegTrashAlt
-              onClick={() =>
-                setClientRequirements({
-                  ...clientRequirements,
-                  signature: null,
-                })
-              }
-              style={{ cursor: "pointer" }}
-            />
-            <img
-              src={clientRequirements.signature}
-              alt="Imagen seleccionada"
-              style={{ maxWidth: "100%" }}
-            />
+            <Label>Firma del cliente</Label>
+            <SignatureContainer>
+                {clientRequirements.signature ? (
+              <div style={{display: 'flex', gap: 10, alignItems: 'center', position: 'relative'}}>
+                <img src={clientRequirements.signature} alt="Imagen seleccionada"/>
+                
+                <div style={{
+                   display: 'flex',
+                   justifyContent: 'center',
+                   alignItems: 'center',
+                   position: 'absolute',
+                   width: 30,
+                   height: 30,
+                   borderRadius: '50%',
+                   background: colors.secondary.light,
+                   top: 2,
+                   right: 5}}>
+                  <FaRegTrashAlt onClick={() => setClientRequirements({...clientRequirements, signature: null})}
+                  style={{cursor: 'pointer',
+                   color: colors.secondary.dark,
+                   position: 'absolute',
+                   zIndex: 1,
+                  }}/>
+                </div>
+                
+
+              </div>  
+
+              ) : (
+                <ButtonSubir htmlFor="signature">
+                  <input style={{ display: 'none'}} id="signature" type="file" onChange={handleImageChange} capture="user" accept="image/*"/>
+                  Subir firma 
+                </ButtonSubir>
+              )} 
+            </SignatureContainer>
           </div>
-        ) : (
-          <input
-            type="file"
-            onChange={handleImageChange}
-            capture="user"
-            accept="image/*"
-          />
-        )}
+          
+                    
+                
+        </div>
+                
+        
+        <TextArea title="Prueba de freno brusco (40 km/h)" value={clientRequirements.test40} onChange={(e)=> handleChange(e)} id={"test40"}/>
+                                
       </Div>
     </Wrapper>
-  );
+  )
 }
+

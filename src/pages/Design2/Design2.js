@@ -80,12 +80,10 @@ export default function Design2() {
             </div>
 
             <div>
-            <DataTypeDesign Data={<LongTable/>} text={"TABLA DE LONGITUDES"}/>
-            <DataTypeDesign Data={<ProcessTable/>} text={"TABLA DE CALCULO"}/>
-            <DataTypeDesign Data={<TotalLoadControl/>} text={"CONTROL DE CARGAS"}/>
-            
-             
-            <DataTypeDesign Data={<Spring3d/>} text={"SIMULACION"}/>
+                <DataTypeDesign Data={<LongTable/>} text={"TABLA DE LONGITUDES"}/>
+                <DataTypeDesign Data={<ProcessTable/>} text={"TABLA DE CALCULO"}/>
+                <DataTypeDesign Data={<TotalLoadControl/>} text={"CONTROL DE CARGAS"}/>
+                <DataTypeDesign Data={<Spring3d/>} text={"SIMULACION"}/>
             </div>
         </Wrapper>
  </div>

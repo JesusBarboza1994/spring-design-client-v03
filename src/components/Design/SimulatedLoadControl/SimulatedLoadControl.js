@@ -30,6 +30,7 @@ export default function SimulatedLoadControl(props) {
     return(
 
         <div>
+            <p style={{color: colors.font.text, fontWeight: "bold"}}>Cargas simuladas</p>
             <Table2>
                 <thead>
                     <tr>

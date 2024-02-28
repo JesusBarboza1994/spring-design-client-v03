@@ -4,17 +4,24 @@ import { useState } from "react"
 import { Wrapper, Label, Input, Div, Input2 } from "./styles"
 
 export function TechnicalStandard(){
-    const [checks, setChecks] = useState({
-		applies: false,
-        noApplies: false,
-        detail:"",
+    const [check1, setCheck1] = useState({
+		applies1: false,
+        noApplies1: false,
+        detail1:"",
+    })
+    const [check2, setCheck2] = useState({
+		applies2: false,
+        noApplies2: false,
+        detail2:"",
     })
     const handleAppliesChange = (e) => {
-        setChecks({ ...checks, applies: e.target.value, noApplies: false });
+        setCheck1({ ...check1, applies1: e.target.value, noApplies1: false });
+        setCheck2({ ...check2, applies2: e.target.value, noApplies2: false });
     };
 
     const handleNoAppliesChange = (e) => {
-        setChecks({ ...checks, noApplies: e.target.value, applies: false });
+        setCheck1({ ...check1, noApplies1: e.target.value, applies1: false });
+        setCheck2({ ...check2, noApplies2: e.target.value, applies2: false });
     };
     return(
         <Wrapper>
@@ -24,55 +31,55 @@ export function TechnicalStandard(){
             </div>
             <div>
                 <Div>
-                    <label>Aplica</label> 
+                    <Label>Aplica</Label> 
                     <Input type="radio"
-                        value={checks.applies}
-                        name="requisitos" 
+                        value={check1.applies1}
+                        name="requisitos1" 
                         onChange={handleAppliesChange}
-                        id="applies"
-                        applies={checks.applies}/> 
+                        id="applies1"
+                        applies={check1.applies1}/> 
                 </Div>
                 <Div>
-                    <label>Aplica</label> 
+                    <Label>Aplica</Label> 
                     <Input type="radio"
-                        value={checks.applies}
-                        name="requisitos" 
+                        value={check2.applies2}
+                        name="requisitos2" 
                         onChange={handleAppliesChange}
-                        id="applies"
-                        applies={checks.applies}/>  
+                        id="applies2"
+                        applies={check2.applies2}/>  
                 </Div>
             </div>
             <div>
                 <Div>
                     <label>No aplica</label> 
                     <Input type="radio"
-                        value={checks.noApplies}
-                        name="requisitos" 
+                        value={check1.noApplies1}
+                        name="requisitos1" 
                         onChange={handleNoAppliesChange}
-                        id="noApplies"
-                        applies={checks.applies}/>  
+                        id="noApplies1"
+                        applies={check1.applies1}/>  
                 </Div>
                 <Div>
                     <label>No aplica</label> 
                     <Input type="radio"
-                        value={checks.noApplies}
-                        name="requisitos" 
+                        value={check2.noApplies2}
+                        name="requisitos2" 
                         onChange={handleNoAppliesChange}
-                        id="noApplies"
-                        applies={checks.applies}/>  
+                        id="noApplies2"
+                        applies={check2.applies2}/>  
                 </Div>
             </div>
             <div>
                 <Div>
                     <label>Detalle</label> 
-                    <Input2 value={checks.detail} 
-                        onChange={(e) => setChecks({ ...checks, detail: e.target.value })}
+                    <Input2 value={check1.detail1} 
+                        onChange={(e) => setCheck1({ ...check1, detail1: e.target.value })}
                     />
                 </Div>
                 <Div>
                     <label>Detalle</label> 
-                    <Input2 value={checks.detail} 
-                        onChange={(e) => setChecks({ ...checks, detail: e.target.value })}
+                    <Input2 value={check2.detail2} 
+                        onChange={(e) => setCheck2({ ...check2, detail2: e.target.value })}
                     />
                 </Div>
             </div>
