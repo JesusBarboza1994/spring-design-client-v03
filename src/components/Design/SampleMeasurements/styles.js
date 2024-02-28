@@ -18,7 +18,9 @@ export const Wrapper = styled.div`
 		display:flex;
 		flex-direction:column;
 		gap: 0.5rem;
+		
 	}
+
 `
 export const Label = styled.label`
     color: ${colors.font.text};

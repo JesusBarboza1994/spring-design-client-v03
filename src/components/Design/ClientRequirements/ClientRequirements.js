@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Input from "../../Input"
+//import Input from "../../Input"
 import { colors } from "../../../styles/colors";
 import { Wrapper, Div, ButtonSubir, SignatureContainer, Label } from "./styles"
 import TextArea from "./TextArea"
@@ -111,6 +111,8 @@ export function ClientRequirements({ setCounter, counter }) {
         JSON.stringify({ ...clientRequirements, signature: reader.result })
       );
     };
+    reader.readAsDataURL(file);
+  };
 
     return(
 		<Wrapper>

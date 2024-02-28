@@ -4,6 +4,9 @@ import { colors } from "../../../styles/colors";
 
 export const Container = styled.div`
  margin: 12px 80px;
+ @media(max-width: 375px){
+	margin: 12px 20px;
+}
 
 `
 export const Content = styled.div`

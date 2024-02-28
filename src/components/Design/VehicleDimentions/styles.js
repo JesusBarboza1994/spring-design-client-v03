@@ -35,6 +35,7 @@ export const DataContainer = styled.div`
  justify-content: center;
  @media(max-width: 1024px){
   display:grid;
+  
  }
 `
 
@@ -48,19 +49,20 @@ export const DivSimul = styled.div`
   display: grid;
   grid-template-columns: auto, auto, auto;
   justify-content: center;
-  row-gap: none;
+  row-gap: 10px;
   margin-bottom: 25px;
   padding: 0px 20px 20px 20px;
-  min-width: auto;
-  max-width: 500px;
-  height: 220px;
+  //min-width: auto;
+  max-width: 100%;
+  height: auto;
   background-color: ${colors.secondary.light};
   border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
   @media(max-width: 1024px){
 		display:grid;
-		
+	}	
+  
 		
 `
 export const DimEjes= styled.div`
@@ -76,10 +78,10 @@ export const DimEjes= styled.div`
   border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
-  @media(max-width: 1024px){
+  @media(max-width: 375px){
 		display:flex;
     flex-wrap: wrap;
-    width: 310px;
+    width: 280px;
 }
 >label{
   
