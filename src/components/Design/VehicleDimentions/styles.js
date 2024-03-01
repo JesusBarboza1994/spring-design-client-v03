@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     
   }
   input{
-   width: 70px;
+   width: 60px;
    height: 25px;
    border-radius: 5px;
    color: "black";
@@ -67,8 +67,8 @@ export const DivSimul = styled.div`
 `
 export const DimEjes= styled.div`
   display: flex;
-  gap: 30px;
-  padding: 30px;
+  gap: 10px 50px;
+  padding: 10px;
   margin-bottom: 20px;
   min-width: auto;
   max-width: 1000px;
@@ -87,7 +87,6 @@ export const DimEjes= styled.div`
   
   color: ${colors.font.text};
   gap: 30px;
-  width: 100px;
   font-family: ${fonts.primary};
   ${typography.text.sm};
   
@@ -97,7 +96,7 @@ input{
  height: 25px;
  border-radius: 5px;
  color: "black";
- margin-bottom: 0.5rem;
+ //margin-bottom: 0.5rem;
 
 }
 `

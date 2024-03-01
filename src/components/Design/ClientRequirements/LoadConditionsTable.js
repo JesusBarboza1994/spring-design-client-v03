@@ -1,4 +1,4 @@
-import { ReqTable, TableTitle, Tr, Td, Cell, Td1, Cell1 } from "./styles";
+import { ReqTable, TableTitle, Tr, Td, Cell, Td1, Cell1, Cell2 } from "./styles";
 
 export default function LoadConditionsTable({
   clientRequirements,
@@ -31,32 +31,36 @@ export default function LoadConditionsTable({
           <Tr>
             <Td1>Distribucion de pasajeros en filas:</Td1>
             <Td>
-              <tr>
+              <Tr>
                 <Td1>Fila:</Td1>
-                <Td>1</Td>
-                <Td>2</Td>
-                <Td>3</Td>
-                <Td>4</Td>
-                <Td>5</Td>
-              </tr>
-              <tr>
+                <div>
+                <Td><Cell1>1</Cell1></Td>
+                <Td><Cell1>2</Cell1></Td>
+                <Td><Cell1>3</Cell1></Td>
+                <Td><Cell1>4</Cell1></Td>
+                <Td><Cell1>5</Cell1></Td>
+                </div>
+              </Tr>
+              <Tr>
                 <Td1>Personas:</Td1>
+                <div>
                 <Td>
-                  <Cell1 type="number" value={clientRequirements.loadConditions.peoplebyRow[0]} ></Cell1>
+                  <Cell2 type="number" value={clientRequirements.loadConditions.peoplebyRow[0]} ></Cell2>
                 </Td>
                 <Td>
-                  <Cell1 type="number" value={clientRequirements.loadConditions.peoplebyRow[1]} onChange={(e) => handleChange(e, 1)}></Cell1>
+                  <Cell2 type="number" value={clientRequirements.loadConditions.peoplebyRow[1]} onChange={(e) => handleChange(e, 1)}></Cell2>
                 </Td>
                 <Td>
-                  <Cell1 type="number" value={clientRequirements.loadConditions.peoplebyRow[2]} onChange={(e) => handleChange(e, 2)}></Cell1>
+                  <Cell2 type="number" value={clientRequirements.loadConditions.peoplebyRow[2]} onChange={(e) => handleChange(e, 2)}></Cell2>
                 </Td>
                 <Td>
-                  <Cell1 type="number" value={clientRequirements.loadConditions.peoplebyRow[3]} onChange={(e) => handleChange(e, 3)}></Cell1>
+                  <Cell2 type="number" value={clientRequirements.loadConditions.peoplebyRow[3]} onChange={(e) => handleChange(e, 3)}></Cell2>
                 </Td>
                 <Td>
-                  <Cell1 type="number" value={clientRequirements.loadConditions.peoplebyRow[4]} onChange={(e) => handleChange(e, 4)}></Cell1>
+                  <Cell2 type="number" value={clientRequirements.loadConditions.peoplebyRow[4]} onChange={(e) => handleChange(e, 4)}></Cell2>
                 </Td>
-              </tr>
+                </div>
+              </Tr>
             </Td>
           </Tr>
           <Tr>
