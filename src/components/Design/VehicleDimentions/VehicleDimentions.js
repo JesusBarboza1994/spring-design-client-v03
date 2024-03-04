@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import { typography } from "../../../styles/typography";
 import { fonts } from "../../../styles/typography";
 import { colors } from "../../../styles/colors";
-import { Wrapper, Label, DataContainer, Lado, DivSimul, DimCont, DimEjes } from "./styles"
+import { Wrapper, Label, DataContainer, Lado, DivSimul, DimCont, DimEjes, CarImage } from "./styles"
 import { Switch } from "@mui/material";
 
 import { DimentionsInput } from "./DimentionsInput";
@@ -160,10 +160,10 @@ export function VehicleDimentions({setCounter, counter}){
 		  
 			<div style={{ gap: 30,}}>
 				<Lado>{vehiclePositionData[vehiclePosition].text}</Lado>
-				<div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: 30,}}>
-					<img src={vehiclePositionData[vehiclePosition].img} alt="imagen-vehiculo" style={{ maxWidth: "100%", height: "auto" }}/>
-					<FaAngleRight style={{ cursor: "pointer", color: "black",}} size={40} onClick={() => setVehiclePosition(vehiclePosition === 0 ? 1 : 0)}/>
-				</div>
+				<CarImage>
+					<img src={vehiclePositionData[vehiclePosition].img} alt="imagen-vehiculo" style={{ maxWidth: "100%", height: "auto"}}/>
+					<FaAngleRight style={{ cursor: "pointer", color: "black", marginBottom: 50,}} size={40} onClick={() => setVehiclePosition(vehiclePosition === 0 ? 1 : 0)}/>
+				</CarImage>
 			</div>
 
 			<DataContainer> 

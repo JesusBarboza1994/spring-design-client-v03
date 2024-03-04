@@ -14,7 +14,13 @@ export const Wrapper = styled.div`
 		gap: 6px;
 		width: 90%;
 	}
-	@media(max-width: 1024px){
+	@media(max-width: 1380px){
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 40px;
+		
+	}
+	@media(max-width: 1150px){
 		display:flex;
 		flex-direction:column;
 		gap: 0.5rem;

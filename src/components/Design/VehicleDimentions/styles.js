@@ -22,21 +22,24 @@ export const Wrapper = styled.div`
 
   }
 	
-	@media(max-width: 1024px){
+	@media(max-width: 1180px){
 		display:flex;
 		flex-direction:column;
 		gap: 0.25rem;
 	}
+  
 `
+
 export const DataContainer = styled.div`
  display: flex;
  column-gap: 30px;
  margin-top: 50px;
  justify-content: center;
- @media(max-width: 1024px){
-  display:grid;
-  
- }
+ 
+ @media(max-width: 800px){
+  display: grid;
+  gap: 0.25rem;
+}
 `
 
 export const DimCont = styled.div`
@@ -59,7 +62,7 @@ export const DivSimul = styled.div`
   border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
-  @media(max-width: 1024px){
+  @media(max-width: 670px){
 		display:grid;
 	}	
   
@@ -78,7 +81,7 @@ export const DimEjes= styled.div`
   border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
-  @media(max-width: 375px){
+  @media(max-width: 670px){
 		display:flex;
     flex-wrap: wrap;
     width: 280px;
@@ -117,5 +120,16 @@ export const Lado = styled.p`
   ${typography.text.md};
   font-weight: bold;
   font-style: italic;
+   
+`
+export const CarImage = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ column-gap: 10px;
+  @media(max-width: 510px){
+    
+    gap: 0px; 
+  }
    
 `
