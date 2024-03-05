@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     
   }
   input{
-   width: 70px;
+   width: 60px;
    height: 25px;
    border-radius: 5px;
    color: "black";
@@ -22,20 +22,24 @@ export const Wrapper = styled.div`
 
   }
 	
-	@media(max-width: 1024px){
+	@media(max-width: 1180px){
 		display:flex;
 		flex-direction:column;
 		gap: 0.25rem;
 	}
+  
 `
+
 export const DataContainer = styled.div`
  display: flex;
  column-gap: 30px;
  margin-top: 50px;
  justify-content: center;
- @media(max-width: 1024px){
-  display:grid;
- }
+ 
+ @media(max-width: 800px){
+  display: grid;
+  gap: 0.25rem;
+}
 `
 
 export const DimCont = styled.div`
@@ -48,25 +52,26 @@ export const DivSimul = styled.div`
   display: grid;
   grid-template-columns: auto, auto, auto;
   justify-content: center;
-  row-gap: none;
+  row-gap: 10px;
   margin-bottom: 25px;
   padding: 0px 20px 20px 20px;
-  min-width: auto;
-  max-width: 500px;
-  height: 220px;
+  //min-width: auto;
+  max-width: 100%;
+  height: auto;
   background-color: ${colors.secondary.light};
   border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
-  @media(max-width: 1024px){
+  @media(max-width: 670px){
 		display:grid;
-		
+	}	
+  
 		
 `
 export const DimEjes= styled.div`
   display: flex;
-  gap: 30px;
-  padding: 30px;
+  gap: 10px 50px;
+  padding: 10px;
   margin-bottom: 20px;
   min-width: auto;
   max-width: 1000px;
@@ -76,16 +81,15 @@ export const DimEjes= styled.div`
   border: 1px solid ${colors.secondary.medium};
   border-radius: 16px;   
   box-shadow:5px 4px 2px 0px rgba(0, 0, 0, 0.25); 
-  @media(max-width: 1024px){
+  @media(max-width: 670px){
 		display:flex;
     flex-wrap: wrap;
-    width: 310px;
+    width: 280px;
 }
 >label{
   
   color: ${colors.font.text};
   gap: 30px;
-  width: 100px;
   font-family: ${fonts.primary};
   ${typography.text.sm};
   
@@ -95,7 +99,7 @@ input{
  height: 25px;
  border-radius: 5px;
  color: "black";
- margin-bottom: 0.5rem;
+ //margin-bottom: 0.5rem;
 
 }
 `
@@ -116,5 +120,16 @@ export const Lado = styled.p`
   ${typography.text.md};
   font-weight: bold;
   font-style: italic;
+   
+`
+export const CarImage = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+  @media(max-width: 510px){
+    
+    gap: 0px; 
+  }
    
 `

@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   padding-top: 10px;
   margin-bottom: 10px;
 	
-	@media(max-width: 1024px){
+	@media(max-width: 1420px){
 		display:flex;
 		flex-direction:column;
 		gap: 0.5rem;
@@ -20,6 +20,11 @@ export const Div = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   column-gap: 70px;
+  @media(max-width: 1420px){
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+  }
 `
 
 export const Input = styled.input`
@@ -31,8 +36,12 @@ export const Input = styled.input`
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   padding: 10px;
-  @media(max-width: 1024px){
-		width: 300px;
+  @media(max-width: 800px){
+		width: 460px;
+    height: auto;
+  }
+  @media(max-width: 680px){
+    width: 300px;
   }
 `
 export const Label = styled.label`
@@ -48,6 +57,10 @@ export const Label = styled.label`
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   color: ${colors.font.text};
+  @media(max-width: 680px){
+		//width: 680px;
+    
+  }
 `
 export const ReqTable = styled.table`
   padding: 10px;
@@ -57,6 +70,7 @@ export const ReqTable = styled.table`
   background: ${colors.cell};
   color: ${colors.font.text};
   
+  
 `
 export const TableTitle = styled.th`
   width: 100%;
@@ -65,15 +79,16 @@ export const TableTitle = styled.th`
   ${typography.text.md}
   color: ${colors.font.text};
   text-align: left;
+  
 ` 
 export const Tr = styled.tr`
-  @media(max-width: 1024px){
+  @media(max-width: 800px){
   display: grid;
   }
 
 `
 export const Td = styled.td`
-  width: 50%;
+  
   text-align: center;
   //border: 1px solid #000;
   
@@ -93,6 +108,13 @@ export const Select = styled.select`
   padding: 5px;
   border: 1px solid #000;
   border-radius: 6px;
+  @media(max-width: 560px){
+    width: auto;
+  }
+  @media(max-width: 400px){
+    width: 120px;
+    
+  }
   
 `
 export const Title = styled.td`
@@ -104,14 +126,22 @@ export const Cell = styled.input`
   border-radius: 6px;
   text-align: center;
   border: 1px solid #000;
+  @media(max-width: 400px){
+    width: 120px;
+ }
 
 `
-export const Cell1 = styled.input`
+export const Cell1 = styled.div`
+  width: 40px;
+  border-radius: 6px;
+  text-align: center;
+  
+`
+export const Cell2 = styled.input`
   width: 40px;
   border-radius: 6px;
   text-align: center;
   border: 1px solid #000;
-
 `
 export const Comment= styled.td`
   width: 150px;
@@ -141,7 +171,12 @@ export const SignatureContainer = styled.div`
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   padding: 5px;
-  @media(max-width: 1024px){
+  @media(max-width: 800px){
+		width: 460px;
+    height: auto;
+  }
+  @media(max-width: 680px){
 		width: 300px;
+    height: auto;
   }
 `
