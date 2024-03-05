@@ -126,7 +126,7 @@ export const CarImage = styled.div`
  display: flex;
  justify-content: center;
  align-items: center;
- column-gap: 10px;
+ gap: 10px;
   @media(max-width: 510px){
     
     gap: 0px; 

@@ -161,8 +161,8 @@ export function VehicleDimentions({setCounter, counter}){
 			<div style={{ gap: 30,}}>
 				<Lado>{vehiclePositionData[vehiclePosition].text}</Lado>
 				<CarImage>
-					<img src={vehiclePositionData[vehiclePosition].img} alt="imagen-vehiculo" style={{ maxWidth: "100%", height: "auto"}}/>
-					<FaAngleRight style={{ cursor: "pointer", color: "black", marginBottom: 50,}} size={40} onClick={() => setVehiclePosition(vehiclePosition === 0 ? 1 : 0)}/>
+					<img src={vehiclePositionData[vehiclePosition].img} alt="imagen-vehiculo" style={{ maxWidth: "100%", height: "auto", minWidth: 275}}/>
+					<FaAngleRight style={{ cursor: "pointer", color: "black", marginBottom: 50, }} size={40} onClick={() => setVehiclePosition(vehiclePosition === 0 ? 1 : 0)}/>
 				</CarImage>
 			</div>
 

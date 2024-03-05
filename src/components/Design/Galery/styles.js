@@ -62,6 +62,13 @@ export const MainImage = styled.img`
  justify-content: center;
  border-radius: 18px;
  height: 400px;
+ @media(max-width: 1024px){
+  height: auto;
+ }
+ @media(mix-width: 400px){
+  height: auto;
+  marginright: 20px;
+ }
 `
 
 export const Carusel = styled.div`
@@ -77,7 +84,10 @@ export const Carusel = styled.div`
   padding: 25px;
   @media(max-width: 1024px){
     flex-wrap: wrap;
-   }
+  }
+  @media(min-width: 375px){
+    padding-right: 5px;
+  }
   
 `
 export const Demo = styled.img`

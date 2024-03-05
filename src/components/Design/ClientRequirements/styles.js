@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   padding-top: 10px;
   margin-bottom: 10px;
 	
-	@media(max-width: 1024px){
+	@media(max-width: 1420px){
 		display:flex;
 		flex-direction:column;
 		gap: 0.5rem;
@@ -20,7 +20,7 @@ export const Div = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   column-gap: 70px;
-  @media(max-width: 375px){
+  @media(max-width: 1420px){
     display: grid;
     grid-template-columns: auto;
     gap: 20px;
@@ -36,10 +36,12 @@ export const Input = styled.input`
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   padding: 10px;
-  @media(max-width: 400px){
-		width: 280px;
+  @media(max-width: 800px){
+		width: 460px;
     height: auto;
-    
+  }
+  @media(max-width: 680px){
+    width: 300px;
   }
 `
 export const Label = styled.label`
@@ -55,8 +57,8 @@ export const Label = styled.label`
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   color: ${colors.font.text};
-  @media(max-width: 400px){
-		width: 220px;
+  @media(max-width: 680px){
+		//width: 680px;
     
   }
 `
@@ -80,13 +82,13 @@ export const TableTitle = styled.th`
   
 ` 
 export const Tr = styled.tr`
-  @media(max-width: 1024px){
+  @media(max-width: 800px){
   display: grid;
   }
 
 `
 export const Td = styled.td`
-  width: auto;
+  
   text-align: center;
   //border: 1px solid #000;
   
@@ -106,8 +108,12 @@ export const Select = styled.select`
   padding: 5px;
   border: 1px solid #000;
   border-radius: 6px;
-  @media(max-width: 400px){
+  @media(max-width: 560px){
     width: auto;
+  }
+  @media(max-width: 400px){
+    width: 120px;
+    
   }
   
 `
@@ -120,6 +126,10 @@ export const Cell = styled.input`
   border-radius: 6px;
   text-align: center;
   border: 1px solid #000;
+  @media(max-width: 400px){
+    width: 120px;
+ }
+
 `
 export const Cell1 = styled.div`
   width: 40px;
@@ -161,7 +171,12 @@ export const SignatureContainer = styled.div`
   background: #FFF;
   box-shadow: 5px 4px 2px 0px rgba(0, 0, 0, 0.25);
   padding: 5px;
-  @media(max-width: 1024px){
+  @media(max-width: 800px){
+		width: 460px;
+    height: auto;
+  }
+  @media(max-width: 680px){
 		width: 300px;
+    height: auto;
   }
 `
