@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { colors } from "../../../styles/colors";
 import Input from "../../Input"
 import ProgresiveInput from "./ProgresiveInput"
 import { Wrapper, Select, Label, Div } from "./styles"
@@ -176,7 +177,8 @@ export function SampleMeasurements({setCounter, counter}) {
       </div>
 
       <div>
-        <Label>Resorte progresivo NO<Switch onChange={handleToggleCheckbox} size="big" />SI</Label>
+        <Label>Resorte progresivo </Label>
+        <div style={{color: colors.font.text }}>NO<Switch onChange={handleToggleCheckbox} size="big"/>SI</div>
         {dataSample.isChecked && (
          <>
           <ProgresiveInput title="Luz 1" value={dataSample.luz1} onChange={(e) => handleChange(e)} id="luz1" />
