@@ -31,7 +31,7 @@ export default function LoadConditionsTable({
           <Tr>
             <Td1>Distribucion de pasajeros en filas:</Td1>
             <Td>
-              <Tr>
+              {/* <Tr>
                 <Td1>Fila:</Td1>
                 <div>
                 <Td><Cell1>1</Cell1></Td>
@@ -40,10 +40,10 @@ export default function LoadConditionsTable({
                 <Td><Cell1>4</Cell1></Td>
                 <Td><Cell1>5</Cell1></Td>
                 </div>
-              </Tr>
-              <Tr>
-                <Td1>Personas:</Td1>
-                <div>
+              </Tr> */}
+              
+                {/* <Td1>Personas por fila:</Td1> */}
+               <div> 
                 <Td>
                   <Cell2 type="number" value={clientRequirements.loadConditions.peoplebyRow[0]} ></Cell2>
                 </Td>
@@ -59,10 +59,11 @@ export default function LoadConditionsTable({
                 <Td>
                   <Cell2 type="number" value={clientRequirements.loadConditions.peoplebyRow[4]} onChange={(e) => handleChange(e, 4)}></Cell2>
                 </Td>
-                </div>
-              </Tr>
+                
+              </div>
             </Td>
           </Tr>
+          
           <Tr>
             <Td1>Carga en el maletero (kg):</Td1>
             <Td>
