@@ -27,8 +27,7 @@ export default function TestTable({
             <Title>Delantero</Title>
             <Title>Posterior</Title>
             <Title>Vel.(kph)</Title>
-            <Comment>Comentario</Comment>
-          </tr>
+         </tr>
           {
             
           clientRequirements.bumpTest.map((item, index) => {
