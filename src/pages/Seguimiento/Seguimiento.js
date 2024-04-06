@@ -6,6 +6,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { useState } from "react";
 import { HeaderElement } from "../../components/SpringType/HeaderElement";
 import { ScreenStyle } from "../../components/Home/styles";
+import { CoilsDimentions } from "../../components/Seguimiento/CoilsDimentions/CoilsDimentions";
 
 export default function Seguimiento(){
 	const [counter, setCounter] = useState( localStorage.getItem("counter") ? JSON.parse(localStorage.getItem("counter")) : {
@@ -19,11 +20,11 @@ export default function Seguimiento(){
 	})
 	return(
         <ScreenStyle>
-            {/* <HeaderElement/> */}
+            <HeaderElement/> 
             <Container>
 
                 <CorrelativeData/>
-                {/* <DataTypeDesign Data={<DataClient setCounter={setCounter} counter={counter} />} text={"DIMENSIONES DE RESORTES"} counter = {counter.DataClient}/> */}
+                <DataTypeDesign Data={<CoilsDimentions setCounter={setCounter} counter={counter} />} text={"DIMENSIONES DE RESORTES"} counter = {counter.CoilsDimentions}/> 
 
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", }}> 
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
