@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	
-	}> div{
+
+    display: grid;
+    grid-template-colums: 1fr 1fr;
+    > div{
 		display: flex;
 		flex-direction: column;
 		gap: 6px;
@@ -14,4 +14,7 @@ export const Wrapper = styled.div`
 		display:flex;
 		flex-direction:column;
 		gap: 0.5rem;
+	}
+
 `
+

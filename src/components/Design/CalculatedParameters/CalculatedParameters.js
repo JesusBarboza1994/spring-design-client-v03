@@ -4,7 +4,9 @@ import { useAuth } from "../../../context/auth-context";
 import {DivSimul, Paragraph, DivCalculo, Div, Label} from "./styles";
 
 export function CalculatedParameters({diam,diamext1,diamint1,diamint2,vred1,vred2,numvts,longitud,luz1,luz2}){
- 
+  
+  const {filas, setFilas, calculated_data, setCalculated_data} = useAuth();
+
   useEffect(() => {
 
     let dext = Number(diamext1)
@@ -20,8 +22,6 @@ export function CalculatedParameters({diam,diamext1,diamint1,diamint2,vred1,vred
 
   }, [diam, diamext1, diamint1, diamint2, vred1, vred2, numvts])
 
-
-  const {filas, setFilas, calculated_data, setCalculated_data} = useAuth();
 
   useEffect(() => {
     const nvtas1 = 0.875;    //primera linea contando desde abajo por arriba (empieza con luz menor)
