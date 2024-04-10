@@ -1,48 +1,222 @@
 import { useEffect, useState } from "react"
-import { Wrapper } from "./styles"
+import { colors } from "../../../styles/colors";
+import { Wrapper, Table, Td, Td1, Td_datos } from "./styles"
 
-export function CoilsDimentions({setCounter, counter}){
-	const [dataCoilsDimentions, setDataCoilsDimentions] = useState(localStorage.getItem("CoilsDimentions") ? JSON.parse(localStorage.getItem("CoilsDimentions")) : {
-		name:"",
-		document: "",
-		develop: "",
-		phone: "",
-		email: "",
-		version:""
-	})
-
-	useEffect(()=>{
-		let acc = 0
-		for (let i in dataCoilsDimentions){
-				if(dataCoilsDimentions[i] !== "") acc += 1
-		}
-		setCounter({...counter, CoilsDimentions: {quantity: Object.keys(dataCoilsDimentions).length, counter: acc}})
-	}, [])
-
-	const handleChange = (e) =>{
-		setDataCoilsDimentions({...dataCoilsDimentions,	[e.target.id]: e.target.value })
-		let acc = 0
-		for (let i in dataCoilsDimentions){
-			if(i === e.target.id){
-				if (e.target.value !== "") acc += 1
-			}else{
-				if(dataCoilsDimentions[i] !== "") acc += 1
-			}
-		}
-		setCounter({...counter, CoilsDimentions: {quantity: Object.keys(dataCoilsDimentions).length, counter: acc}})
-		localStorage.setItem("CoilsDimentions", JSON.stringify({...dataCoilsDimentions, [e.target.id]: e.target.value }))
-		localStorage.setItem("counter", JSON.stringify({...counter, CoilsDimentions: {quantity: Object.keys(dataCoilsDimentions).length, counter: acc}}))
-	}
+export function CoilsDimentions(){
+ 
 	return(
-		<Wrapper>
-			<div>
-				<input title="Nombre" value={dataCoilsDimentions.name} onChange={(e)=> handleChange(e)} id="name"/>
-				
-			</div>
-			<div>
-				<input title="Teléfono" value={dataCoilsDimentions.phone} onChange={(e)=> handleChange(e)} id="phone"/>
-				
-			</div>
-		</Wrapper>
+		<div>
+			<p style={{color: colors.font.text, fontWeight: "bold", marginBottom:10 }}>ORIGINAL</p>
+			<Wrapper>
+				<Table>
+					<tr>
+						<Td> Alambre </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Diam.exterior 1 </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Diam.exterior 2 </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Sentido de vueltas </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Rigidez teorica </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Esfuerzo de bloqueo </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+				</Table>
+
+				<Table>
+				    <tr>
+						<Td> Longitud </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Diam.interior 1 </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Diam.interior 2 </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Nro de vueltas </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> LDA </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Peso </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>					
+				</Table>
+
+				<Table>
+ 					<tr> <Td1>Extremo 1</Td1></tr>
+					 <tr>
+						<Td1> TASE </Td1>
+						<Td_datos> Inclinado </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Sobrepuesto </Td1>
+						<Td_datos> Descentrado </Td_datos>
+					</tr>	
+				    <tr>
+						<Td1> Luz 1 </Td1>
+						<Td_datos> 00 </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Vta red/ampl 1 </Td1>
+						<Td_datos> -- </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Excentricidad 1</Td1>
+						<Td_datos> -- </Td_datos>
+					</tr>		
+               </Table>
+
+			   <Table>
+ 					<tr> <Td1>Extremo 2</Td1></tr>
+					 <tr>
+						<Td1> TASE </Td1>
+						<Td_datos> Inclinado </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Sobrepuesto </Td1>
+						<Td_datos> Descentrado </Td_datos>
+					</tr>	
+				    <tr>
+						<Td1> Luz 2 </Td1>
+						<Td_datos> 00 </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Vta red/ampl 2 </Td1>
+						<Td_datos> -- </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Excentricidad 2</Td1>
+						<Td_datos> -- </Td_datos>
+					</tr>		
+               </Table>
+			</Wrapper>
+
+			<p style={{color: colors.font.text, fontWeight: "bold", marginBottom:10 }}>MODIFICADO</p>
+			<Wrapper>
+				<Table>
+					<tr>
+						<Td> Alambre </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Diam.exterior 1 </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Diam.exterior 2 </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Sentido de vueltas </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Rigidez teorica </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Esfuerzo de bloqueo </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+				</Table>
+
+				<Table>
+				    <tr>
+						<Td> Longitud </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Diam.interior 1 </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Diam.interior 2 </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Nro de vueltas </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> LDA </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>
+					<tr>
+						<Td> Peso </Td>
+						<Td_datos> 111 </Td_datos>
+					</tr>					
+				</Table>
+
+				<Table>
+ 					<tr> <Td1>Extremo 1</Td1></tr>
+					 <tr>
+						<Td1> TASE </Td1>
+						<Td_datos> Inclinado </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Sobrepuesto </Td1>
+						<Td_datos> Descentrado </Td_datos>
+					</tr>	
+				    <tr>
+						<Td1> Luz 1 </Td1>
+						<Td_datos> 00 </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Vta red/ampl 1 </Td1>
+						<Td_datos> -- </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Excentricidad 1</Td1>
+						<Td_datos> -- </Td_datos>
+					</tr>		
+               </Table>
+
+			   <Table>
+ 					<tr> <Td1>Extremo 2</Td1></tr>
+					 <tr>
+						<Td1> TASE </Td1>
+						<Td_datos> Inclinado </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Sobrepuesto </Td1>
+						<Td_datos> Descentrado </Td_datos>
+					</tr>	
+				    <tr>
+						<Td1> Luz 2 </Td1>
+						<Td_datos> 00 </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Vta red/ampl 2 </Td1>
+						<Td_datos> -- </Td_datos>
+					</tr>
+					<tr>
+						<Td1> Excentricidad 2</Td1>
+						<Td_datos> -- </Td_datos>
+					</tr>		
+               </Table>
+
+			</Wrapper>
+	    </div>
+		
 	)
 }

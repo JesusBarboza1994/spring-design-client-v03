@@ -20,7 +20,7 @@ export default function Seguimiento(){
 	})
 	return(
         <ScreenStyle>
-            <HeaderElement/> 
+            {/* <HeaderElement/>  */}
             <Container>
 
                 <CorrelativeData/>
