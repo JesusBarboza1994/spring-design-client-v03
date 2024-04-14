@@ -1,13 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Design from "./pages/Design/Design";
-import Design2 from "./pages/Design2/Design2";
+import DesignPrueba from "./pages/DesignPrueba/DesignPrueba";
+import OriginalSample from "./pages/OriginalSample/OriginalSample";
 // import SpringType from "./pages/SpringType";
 import DesignInputData from "./pages/DesignInputData/DesignInputData";
-import TotalizedFormat from "./pages/TotalizedFormat/TotalizedFormat";
+import Medidas from "./pages/Medidas/Medidas";
 import Cotizador from "./pages/Cotizador/Cotizador";
 import Seguimiento from "./pages/Seguimiento/Seguimiento";
+import TotalDesign from "./pages/TotalDesign/TotalDesign";
 
 function App() {
     return(
@@ -16,11 +17,16 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           {/* <Route path="/spring-type" element={<SpringType/>}/> */}
           <Route path="/design_inputdata" element={<DesignInputData/>}/>
-          <Route path="/prueba" element={<TotalizedFormat/>}/>
-          <Route path="/seguimiento" element={<Seguimiento/>}/>
-          <Route path="/design" element={<Design/>}/>
-          <Route path="/design2" element={<Design2/>}/>
+          <Route path="/design" element={<TotalDesign/>}/>
+
           <Route path="/cotizador" element={<Cotizador/>}/>
+
+          <Route path="/medidas" element={<Medidas/>}/>
+          <Route path="/seguimiento" element={<Seguimiento/>}/>
+          <Route path="/designPrueba" element={<DesignPrueba/>}/>
+          <Route path="/originalSample" element={<OriginalSample/>}/>
+          
+          
         </Routes> 
         
       )

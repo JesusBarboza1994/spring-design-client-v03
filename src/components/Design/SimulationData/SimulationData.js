@@ -8,7 +8,7 @@ import apiFetch from "../../../services/api-fetch";
 
 export function SimulationData(){
      
-  const {dimensions, simulation_data, setSimulation_data, setStateButtonCalculateProcessTable, setSpringPoints3D, setSpringPointsSimulation} = useAuth();
+  const {originalDimensions, simulation_data, setSimulation_data, setStateButtonCalculateProcessTable, setSpringPoints3D, setSpringPointsSimulation} = useAuth();
 
   const iniciarFuncion = () => {
     setStateButtonCalculateProcessTable(true);
@@ -29,25 +29,25 @@ export function SimulationData(){
 
     let endpoint = 'create-spring/';
     let requestBody = {
-      "wire":Number(dimensions.d),
-      "diam_ext1":Number(dimensions.Dext),
-      "diam_ext2":Number(dimensions.Dext2),
-      "diam_int1":Number(dimensions.Dint1),
-      "diam_int2":Number(dimensions.Dint2),
-      "length":Number(dimensions.L0),
-      "coils":Number(dimensions.N),
+      "wire":Number(originalDimensions.d),
+      "diam_ext1":Number(originalDimensions.Dext),
+      "diam_ext2":Number(originalDimensions.Dext2),
+      "diam_int1":Number(originalDimensions.Dint1),
+      "diam_int2":Number(originalDimensions.Dint2),
+      "length":Number(originalDimensions.L0),
+      "coils":Number(originalDimensions.N),
       "coil_direction":"Derecha",
-      "end1":dimensions.Ext1,
-      "luz1":Number(dimensions.Luz1),
-      "coils_red_1":Number(dimensions.Vtas1),
+      "end1":originalDimensions.Ext1,
+      "luz1":Number(originalDimensions.Luz1),
+      "coils_red_1":Number(originalDimensions.Vtas1),
       "coils_amp_1":0,
       "detail1_end1":"-",
       "detail2_end1":"-",
       "detail3_end1":"-",
       "eccentricity1":0,
-      "end2":dimensions.Ext2,
-      "luz2":Number(dimensions.Luz2),
-      "coils_red_2":Number(dimensions.Vtas2),
+      "end2":originalDimensions.Ext2,
+      "luz2":Number(originalDimensions.Luz2),
+      "coils_red_2":Number(originalDimensions.Vtas2),
       "coils_amp_2":0,
       "detail1_end2":"-",
       "detail2_end2":"-",
@@ -75,25 +75,25 @@ export function SimulationData(){
 
     let endpoint = 'simulate-spring/';
     let requestBody = {
-      "wire":Number(dimensions.d),
-      "diam_ext1":Number(dimensions.Dext),
-      "diam_ext2":Number(dimensions.Dext2),
-      "diam_int1":Number(dimensions.Dint1),
-      "diam_int2":Number(dimensions.Dint2),
-      "length":Number(dimensions.L0),
-      "coils":Number(dimensions.N),
+      "wire":Number(originalDimensions.d),
+      "diam_ext1":Number(originalDimensions.Dext),
+      "diam_ext2":Number(originalDimensions.Dext2),
+      "diam_int1":Number(originalDimensions.Dint1),
+      "diam_int2":Number(originalDimensions.Dint2),
+      "length":Number(originalDimensions.L0),
+      "coils":Number(originalDimensions.N),
       "coil_direction":"Derecha",
-      "end1":dimensions.Ext1,
-      "luz1":Number(dimensions.Luz1),
-      "coils_red_1":Number(dimensions.Vtas1),
+      "end1":originalDimensions.Ext1,
+      "luz1":Number(originalDimensions.Luz1),
+      "coils_red_1":Number(originalDimensions.Vtas1),
       "coils_amp_1":0,
       "detail1_end1":"-",
       "detail2_end1":"-",
       "detail3_end1":"-",
       "eccentricity1":0,
-      "end2":dimensions.Ext2,
-      "luz2":Number(dimensions.Luz2),
-      "coils_red_2":Number(dimensions.Vtas2),
+      "end2":originalDimensions.Ext2,
+      "luz2":Number(originalDimensions.Luz2),
+      "coils_red_2":Number(originalDimensions.Vtas2),
       "coils_amp_2":0,
       "detail1_end2":"-",
       "detail2_end2":"-",

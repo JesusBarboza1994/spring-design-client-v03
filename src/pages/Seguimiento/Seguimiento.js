@@ -5,8 +5,9 @@ import { ButtonGuardar, A } from "./styles";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { useState } from "react";
 import { HeaderElement } from "../../components/SpringType/HeaderElement";
-import { ScreenStyle } from "../../components/Home/styles";
-import { CoilsDimentions } from "../../components/Seguimiento/CoilsDimentions/CoilsDimentions";
+import { ScreenStyle, Wrapper } from "../../components/Home/styles";
+import { CoilsDimensions } from "../../components/Seguimiento/Seguimiento/CoilsDimensions";
+import { useAuth } from "../../context/auth-context";
 
 export default function Seguimiento(){
 	const [counter, setCounter] = useState( localStorage.getItem("counter") ? JSON.parse(localStorage.getItem("counter")) : {
@@ -18,27 +19,31 @@ export default function Seguimiento(){
 		TechnicalStandard: {quantity: 0, counter: 0},
 		DevelopedDesign: {quantity: 0, counter: 0}
 	})
+    const [originalDimensions] = useAuth();
+
 	return(
         <ScreenStyle>
-            {/* <HeaderElement/>  */}
-            <Container>
+            {/* <Wrapper> */}
+                {/* <HeaderElement/>   */}
+                <Container>
 
-                <CorrelativeData/>
-                <DataTypeDesign Data={<CoilsDimentions setCounter={setCounter} counter={counter} />} text={"DIMENSIONES DE RESORTES"} counter = {counter.CoilsDimentions}/> 
+                    <CorrelativeData/>
+                    <DataTypeDesign Data={<CoilsDimensions setCounter={setCounter} counter={counter} />} text={"DIMENSIONES DE RESORTES"} counter = {counter.CoilsDimensions}/> 
 
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", }}> 
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
-                        <FaAngleLeft style={{ cursor: "pointer", color: "white",}} size={35}/>
-                        <A>VOLVER</A>
-                    </div>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", }}> 
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
+                            <FaAngleLeft style={{ cursor: "pointer", color: "white",}} size={35}/>
+                            <A>VOLVER</A>
+                        </div>
+                        
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
+                            <A>SIGUIENTE</A>
+                            <FaAngleRight style={{ cursor: "pointer", color: "white",}} size={35} />
+                        </div>
                     
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
-                        <A>SIGUIENTE</A>
-                        <FaAngleRight style={{ cursor: "pointer", color: "white",}} size={35} />
                     </div>
-                
-                </div>
-            </Container>
+                </Container>
+            {/* </Wrapper> */}
         </ScreenStyle>
 	);
 }

@@ -19,7 +19,7 @@ import SpringStressSimulation from "../../components/Design/SpringStressSimulati
 
 import { DataTypeDesign } from "../../components/Design/DataTypeDesign/DataTypeDesign";
 import { Wrapper, Columna1 } from "./styles";
-import { Spring3d } from "../Design/styles";
+import { Spring3d } from "../DesignPrueba/styles";
 
 const TotalLoadControl = () =>{
     return(
@@ -29,8 +29,8 @@ const TotalLoadControl = () =>{
         </div>
     )
 }
-export default function Design2() {
-    const {dimensions,controlCargas, setKControlCargas, setBControlCargas, } = useAuth();
+export default function OriginalSample() {
+    const {originalDimensions, setOriginalDimensions, controlCargas, setKControlCargas, setBControlCargas, } = useAuth();
     const [puntosCCGrafica, setPuntosCCGrafica] = useState([
         { x: 0, y: 0},
         { x: 0, y: 0}
@@ -63,16 +63,16 @@ export default function Design2() {
                 <PrincipalData/>
                 <SimulationData/>
                 <CalculatedParameters
-                    diam={dimensions.d} 
-                    diamext1={dimensions.Dext}
-                    diamint1={dimensions.Dint1}
-                    diamint2={dimensions.Dint2}
-                    vred1={dimensions.Vtas1}
-                    vred2={dimensions.Vtas2}
-                    numvts={dimensions.N}
-                    longitud={dimensions.L0}
-                    luz1={dimensions.Luz1}
-                    luz2={dimensions.Luz2}/>
+                    diam={originalDimensions.d} 
+                    diamext1={originalDimensions.Dext}
+                    diamint1={originalDimensions.Dint1}
+                    diamint2={originalDimensions.Dint2}
+                    vred1={originalDimensions.Vtas1}
+                    vred2={originalDimensions.Vtas2}
+                    numvts={originalDimensions.N}
+                    longitud={originalDimensions.L0}
+                    luz1={originalDimensions.Luz1}
+                    luz2={originalDimensions.Luz2}/>
                 
                 <WeightTolerance/>
                 <TextArea/>

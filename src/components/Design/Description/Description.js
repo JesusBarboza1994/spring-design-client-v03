@@ -3,11 +3,11 @@ import { useAuth } from "../../../context/auth-context";
 
 export function Description(){  //codifica el resorte acorde a los datos presentados en la hoja de diseño
 
-  const {dimensions, simulation_data,tablaToler,coef, descrip, setDescrip,grado} = useAuth();
+  const {originalDimensions, simulation_data,tablaToler,coef, descrip, setDescrip,grado} = useAuth();
         
   //Se convierte el numero de vueltas (v.totales: "n") a fracción en texto.
-  var residuo = dimensions.N*8 % 8;
-  var entero = (dimensions.N*8-residuo)/8; 
+  var residuo = originalDimensions.N*8 % 8;
+  var entero = (originalDimensions.N*8-residuo)/8; 
   var fraccion; 
 
   switch (residuo){
@@ -29,8 +29,8 @@ export function Description(){  //codifica el resorte acorde a los datos present
   
      
   //Se convierte el numero de vueltas amp/red del extremo 1 ("n1") a fracción en texto.
-  var residuo1 = dimensions.Vtas1*8 % 8;
-  var entero1 = (dimensions.Vtas1*8-residuo1)/8; 
+  var residuo1 = originalDimensions.Vtas1*8 % 8;
+  var entero1 = (originalDimensions.Vtas1*8-residuo1)/8; 
   var fraccion1; 
   switch (residuo1){
     case 0: fraccion1 = ""; break;
@@ -58,8 +58,8 @@ export function Description(){  //codifica el resorte acorde a los datos present
   }
    
   //Se convierte el numero de vueltas amp/red del extremo 2 ("n2") a fracción en texto.
-  var residuo2 = dimensions.Vtas2*8 % 8;
-  var entero2 = (dimensions.Vtas2*8-residuo2)/8; 
+  var residuo2 = originalDimensions.Vtas2*8 % 8;
+  var entero2 = (originalDimensions.Vtas2*8-residuo2)/8; 
   var fraccion2; 
   switch (residuo2){
     case 1: fraccion2 = "1/8"; break;
@@ -91,25 +91,25 @@ export function Description(){  //codifica el resorte acorde a los datos present
   var mensaje4="" ////especifica dentro de los demás mensajes si es o no progresivo
    
    
-  if(dimensions.Dext2 != ""){
-    mensaje = "Res Susp. " + simulation_data.material + " " + dimensions.d  + " x " + dimensions.Dext + " - " + dimensions.Dext2 + " x " + dimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")"+ " x " + n + "\n";
+  if(originalDimensions.Dext2 != ""){
+    mensaje = "Res Susp. " + simulation_data.material + " " + originalDimensions.d  + " x " + originalDimensions.Dext + " - " + originalDimensions.Dext2 + " x " + originalDimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")"+ " x " + n + "\n";
   }else{
-    if(dimensions.Dint1 != "" && dimensions.Dint1!=" " && dimensions.Dint1 != "-" && dimensions.Dint2 != "" && dimensions.Dint2!=" " && dimensions.Dint2 != "-"){
-      mensaje = "Res Susp. " + mensaje4 + simulation_data.material + " "  + dimensions.d  + " x " + dimensions.Dext + " " + "(+/-" + tablaToler.valor + ")" + " / " + dimensions.Dint1 + " - " + dimensions.Dint2 + " x " + dimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")" + " x " + n + "\n";
+    if(originalDimensions.Dint1 != "" && originalDimensions.Dint1!=" " && originalDimensions.Dint1 != "-" && originalDimensions.Dint2 != "" && originalDimensions.Dint2!=" " && originalDimensions.Dint2 != "-"){
+      mensaje = "Res Susp. " + mensaje4 + simulation_data.material + " "  + originalDimensions.d  + " x " + originalDimensions.Dext + " " + "(+/-" + tablaToler.valor + ")" + " / " + originalDimensions.Dint1 + " - " + originalDimensions.Dint2 + " x " + originalDimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")" + " x " + n + "\n";
       }
-    if((dimensions.Dint1 != "" && dimensions.Dint1!=" " && dimensions.Dint1 != "-") && (dimensions.Dint2 == "" || dimensions.Dint2==" " || dimensions.Dint2 == "-")){
-      mensaje = "Res Susp. " + mensaje4 + simulation_data.material + " "  + dimensions.d  + " x " + dimensions.Dext + + " " + "(+/-" + tablaToler.valor + ")" + " / " + dimensions.Dint1 + " x " + dimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")" +" x " + n + "\n";  
+    if((originalDimensions.Dint1 != "" && originalDimensions.Dint1!=" " && originalDimensions.Dint1 != "-") && (originalDimensions.Dint2 == "" || originalDimensions.Dint2==" " || originalDimensions.Dint2 == "-")){
+      mensaje = "Res Susp. " + mensaje4 + simulation_data.material + " "  + originalDimensions.d  + " x " + originalDimensions.Dext + + " " + "(+/-" + tablaToler.valor + ")" + " / " + originalDimensions.Dint1 + " x " + originalDimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")" +" x " + n + "\n";  
       }
-    if((dimensions.Dint2 != "" && dimensions.Dint2!=" " && dimensions.Dint2 != "-") && (dimensions.Dint1 == "" || dimensions.Dint1==" " || dimensions.Dint1 == "-")){
-      mensaje = "Res Susp. " + mensaje4 + simulation_data.material + " "  + dimensions.d  + " x " + dimensions.Dext + + " " + "(+/-" + tablaToler.valor + ")" + " / " + dimensions.Dint2 + " x " + dimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")" +" x " + n +"\n";  
+    if((originalDimensions.Dint2 != "" && originalDimensions.Dint2!=" " && originalDimensions.Dint2 != "-") && (originalDimensions.Dint1 == "" || originalDimensions.Dint1==" " || originalDimensions.Dint1 == "-")){
+      mensaje = "Res Susp. " + mensaje4 + simulation_data.material + " "  + originalDimensions.d  + " x " + originalDimensions.Dext + + " " + "(+/-" + tablaToler.valor + ")" + " / " + originalDimensions.Dint2 + " x " + originalDimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")" +" x " + n +"\n";  
       }
-    if((dimensions.Dint2 == "" || dimensions.Dint2==" " || dimensions.Dint2 == "-") && (dimensions.Dint1 == "" || dimensions.Dint1==" " || dimensions.Dint1 == "-")){
-      mensaje = "Res Susp. " + mensaje4 + simulation_data.material + " "  + dimensions.d  + " x " + dimensions.Dext + + " " + "(+/-" + tablaToler.valor + ")" + " x " + dimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")" + " x " + n  +"\n";  
+    if((originalDimensions.Dint2 == "" || originalDimensions.Dint2==" " || originalDimensions.Dint2 == "-") && (originalDimensions.Dint1 == "" || originalDimensions.Dint1==" " || originalDimensions.Dint1 == "-")){
+      mensaje = "Res Susp. " + mensaje4 + simulation_data.material + " "  + originalDimensions.d  + " x " + originalDimensions.Dext + + " " + "(+/-" + tablaToler.valor + ")" + " x " + originalDimensions.L0 + " " + "(+/-" + coef.toler_L0 + ")" + " x " + n  +"\n";  
       }
   }  
   useEffect(() => {
 
-  if(dimensions.d >0 && dimensions.Dext >0 && dimensions.N >0 && dimensions.L0 >0)
+  if(originalDimensions.d >0 && originalDimensions.Dext >0 && originalDimensions.N >0 && originalDimensions.L0 >0)
     
   setDescrip({...descrip, descrip: mensaje })
           

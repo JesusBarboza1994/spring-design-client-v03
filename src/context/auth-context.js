@@ -4,7 +4,7 @@ const AuthContext = createContext();
 
 function AuthProvider({children}){
 
-  const [dimensions, setDimensions] = useState({
+  const [originalDimensions, setOriginalDimensions] = useState({
     d:"",        //alambre
     Dext:"",     //diam ext1
     Dext2:"",
@@ -106,8 +106,8 @@ function AuthProvider({children}){
     <AuthContext.Provider value={{
       filas,
       setFilas,
-      dimensions,
-      setDimensions,
+      originalDimensions,
+      setOriginalDimensions,
       simulation_data,
       setSimulation_data,
       calculated_data,

@@ -29,20 +29,20 @@ export default function PrincipalData(){
   useEffect(() => {
     let extremo1 = type1
     let extremo2 = type2
-    setDimensions({...dimensions,
+    setOriginalDimensions({...originalDimensions,
       Ext1: extremo1, Ext2: extremo2
     })
 
   }, [type1, type2])
 
-  const {dimensions, setDimensions} = useAuth();
+  const {originalDimensions, setOriginalDimensions} = useAuth();
 
   function handleInput(e){
-    setDimensions({...dimensions, [e.target.id]:e.target.value})
+    setOriginalDimensions({...originalDimensions, [e.target.id]:e.target.value})
   }
   function handleSubmit(e){
     e.preventDefault();
-    console.log(dimensions)
+    console.log(originalDimensions)
   }
 
  return(
@@ -52,19 +52,19 @@ export default function PrincipalData(){
             <Pform>Datos principales</Pform>
               <Div>
                 <Label>d</Label>
-                <Input  value={dimensions.d} type="number" id={"d"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.d} type="number" id={"d"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>Dext</Label>
-                <Input  value={dimensions.Dext} type="number" id={"Dext"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.Dext} type="number" id={"Dext"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>N</Label>
-                <Input  value={dimensions.N} type="number" id={"N"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.N} type="number" id={"N"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>L0</Label>
-                <Input  value={dimensions.L0} type="number" id={"L0"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.L0} type="number" id={"L0"} onChange={(e) => handleInput(e)}/>
               </Div>
               
           </div>
@@ -73,15 +73,15 @@ export default function PrincipalData(){
             <Pform>Extremo 1</Pform>
               <Div>
                 <Label>Luz1</Label>
-                <Input  value={dimensions.Luz1} type="number" id={"Luz1"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.Luz1} type="number" id={"Luz1"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>Dint1</Label>
-                <Input  value={dimensions.Dint1} type="number" id={"Dint1"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.Dint1} type="number" id={"Dint1"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>Vtas1</Label>
-                <Input  value={dimensions.Vtas1} type="number" id={"Vtas1"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.Vtas1} type="number" id={"Vtas1"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>Ext1</Label>
@@ -98,15 +98,15 @@ export default function PrincipalData(){
             <Pform>Extremo 2</Pform>
               <Div>
                 <Label>Luz2</Label>
-                <Input  value={dimensions.Luz2} type="number" id={"Luz2"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.Luz2} type="number" id={"Luz2"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>Dint2</Label>
-                <Input  value={dimensions.Dint2} type="number" id={"Dint2"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.Dint2} type="number" id={"Dint2"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>Vtas2</Label>
-                <Input  value={dimensions.Vtas2} type="number" id={"Vtas2"} onChange={(e) => handleInput(e)}/>
+                <Input  value={originalDimensions.Vtas2} type="number" id={"Vtas2"} onChange={(e) => handleInput(e)}/>
               </Div>
               <Div>
                 <Label>Ext2</Label>

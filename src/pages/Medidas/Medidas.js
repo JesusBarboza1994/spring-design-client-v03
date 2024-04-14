@@ -13,7 +13,7 @@ import { ButtonGuardar, A } from "./styles";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { useState } from "react";
 
-export default function TotalizedFormat(){
+export default function Medidas(){
 	const [counter, setCounter] = useState( localStorage.getItem("counter") ? JSON.parse(localStorage.getItem("counter")) : {
 		DataClient: {quantity: 0, counter: 0},
 		VehicleData: {quantity: 0, counter: 0},
