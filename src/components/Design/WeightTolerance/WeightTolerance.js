@@ -9,7 +9,7 @@ import { DivSimul, DivCalculo, Div, Paragraph, InputLDA, Label, Select } from ".
 export function WeightTolerance(){
  
 
-  const {filas, setFilas, dimensions, setDimensions, calculated_data, setCalculated_data, tablaToler, setTablaToler, coef, setCoef, grado, setGrado} = useAuth();
+  const {filas, setFilas, originalDimensions, setOriginalDimensions, calculated_data, setCalculated_data, tablaToler, setTablaToler, coef, setCoef, grado, setGrado} = useAuth();
 
   const [production_data, setProduction_data] = useState({
       LDA:"",      
@@ -35,11 +35,11 @@ export function WeightTolerance(){
 
 
   useEffect(() => {
-    setProduction_data({...production_data, LDA : Math.round((dimensions.Dext-dimensions.d)*dimensions.N*3.14),  Dmedio: (dimensions.Dext - dimensions.d)})
-  }, [dimensions.d, dimensions.Dext, dimensions.N])
+    setProduction_data({...production_data, LDA : Math.round((originalDimensions.Dext-originalDimensions.d)*originalDimensions.N*3.14),  Dmedio: (originalDimensions.Dext - originalDimensions.d)})
+  }, [originalDimensions.d, originalDimensions.Dext, originalDimensions.N])
     
   useEffect(() => {
-    setProduction_data({...production_data, Peso : Number(Math.pow(dimensions.d/12.7,2)*(production_data.LDA+production_data.LDA_adic)/1000).toFixed(2)}) 
+    setProduction_data({...production_data, Peso : Number(Math.pow(originalDimensions.d/12.7,2)*(production_data.LDA+production_data.LDA_adic)/1000).toFixed(2)}) 
   }, [production_data.LDA, production_data.LDA_adic])
 
   
@@ -67,13 +67,13 @@ export function WeightTolerance(){
 
 
   function TablaToler(){
-    const dmedio = (dimensions.Dext - dimensions.d)
+    const dmedio = (originalDimensions.Dext - originalDimensions.d)
     if(dmedio === "" || dmedio <= 0) return -1;
     const linea = tolerDiam.findIndex((_rango, indice, arreglo)=>{
         return Number(dmedio)>=arreglo[indice][0] && Number(dmedio)<=arreglo[indice+1][0]
       });
       
-    let C = ((dimensions.Dext-dimensions.d)/dimensions.d).toFixed(2)
+    let C = ((originalDimensions.Dext-originalDimensions.d)/originalDimensions.d).toFixed(2)
     let tolerBuscada=0;
     switch(grado){
     case "1":
@@ -124,9 +124,9 @@ export function WeightTolerance(){
     Q_Long=1.6
     }
     
-    let af = 65.92*Math.pow(Number(dimensions.d),3.3)/Math.pow(calculated_data.Dmedio,1.6)*(-0.84*Math.pow(0.1*calculated_data.C,3)+3.781*Math.pow(0.1*calculated_data.C,2)-4.244*(0.1*calculated_data.C)+2.274);
+    let af = 65.92*Math.pow(Number(originalDimensions.d),3.3)/Math.pow(calculated_data.Dmedio,1.6)*(-0.84*Math.pow(0.1*calculated_data.C,3)+3.781*Math.pow(0.1*calculated_data.C,2)-4.244*(0.1*calculated_data.C)+2.274);
     
-    let kf = -1/(3*Math.pow((Number(dimensions.N)-1.75),2))+8/(5*(Number(dimensions.N)-1.75))+0.803;
+    let kf = -1/(3*Math.pow((Number(originalDimensions.N)-1.75),2))+8/(5*(Number(originalDimensions.N)-1.75))+0.803;
     
     let toler=(kf*af*Q_Long/filas.Keq3).toFixed(1);
 
@@ -178,14 +178,14 @@ export function WeightTolerance(){
       </Div>
 
       <Div>
-        <Label style={{marginRight: 0,}}>Dext={dimensions.Dext}±</Label>
+        <Label style={{marginRight: 0,}}>Dext={originalDimensions.Dext}±</Label>
         <DivCalculo style={{marginLeft: 0,}}>
           {(!isNaN(tablaToler.valor) && (tablaToler.valor > 0)) === true ? (tablaToler.valor) : ""}
         </DivCalculo>
       </Div>
       
       <Div>
-        <Label style={{marginRight: 0,}}>L0={dimensions.L0}±</Label>
+        <Label style={{marginRight: 0,}}>L0={originalDimensions.L0}±</Label>
         <DivCalculo style={{marginLeft: 0,}} id={"toler_L0"}>{!isNaN(coef.toler_L0) === true ? (coef.toler_L0) : ""}</DivCalculo>
       </Div>
       </div>

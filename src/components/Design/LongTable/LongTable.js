@@ -7,7 +7,7 @@ import { colors } from "../../../styles/colors";
 
 export default function LongTable() {
 
-    const {dimensions, processTableStage1, processTableStage2, kControlCargas, bControlCargas, l4, filas, calculated_data} = useAuth();
+    const {originalDimensions, processTableStage1, processTableStage2, kControlCargas, bControlCargas, l4, filas, calculated_data} = useAuth();
     
     const nombreFilas = ["L instalada","L carga","L máxima","L4","L bloqueo"]
 
@@ -22,15 +22,15 @@ export default function LongTable() {
     const [fuerzas, setFuerzas] = useState([469.7,795.5,1001.0])
 
     let Lmedio = 0
-    if (((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TCSE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TCSE"))) {
-        Lmedio = Number(dimensions.L0)-Number(dimensions.d)
-        inputLongTable[4]=(Number(dimensions.N)+1)*Number(dimensions.d) //Lbloqueo
-    } else if (((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TCE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TCE"))) {
-        Lmedio = Number(dimensions.L0)
-        inputLongTable[4]=(Number(dimensions.N)+1)*Number(dimensions.d)-Number(dimensions.d) //Lbloqueo
+    if (((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TCSE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TCSE"))) {
+        Lmedio = Number(originalDimensions.L0)-Number(originalDimensions.d)
+        inputLongTable[4]=(Number(originalDimensions.N)+1)*Number(originalDimensions.d) //Lbloqueo
+    } else if (((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TCE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TCE"))) {
+        Lmedio = Number(originalDimensions.L0)
+        inputLongTable[4]=(Number(originalDimensions.N)+1)*Number(originalDimensions.d)-Number(originalDimensions.d) //Lbloqueo
     } else {
-        Lmedio = Number(dimensions.L0)-Number(dimensions.d)/2 
-        inputLongTable[4]=(Number(dimensions.N)+1)*Number(dimensions.d)-0.5*Number(dimensions.d) //Lbloqueo
+        Lmedio = Number(originalDimensions.L0)-Number(originalDimensions.d)/2 
+        inputLongTable[4]=(Number(originalDimensions.N)+1)*Number(originalDimensions.d)-0.5*Number(originalDimensions.d) //Lbloqueo
     }
 
     function handleTab(e){
@@ -56,11 +56,11 @@ export default function LongTable() {
     }  
     
     useEffect(() => {
-        let s1=dimensions.L0-inputLongTable[0];
-        let s2=dimensions.L0-inputLongTable[1];
-        let s3=dimensions.L0-inputLongTable[2];
-        let s4=dimensions.L0-inputLongTable[3];
-        let sc=dimensions.L0-inputLongTable[4];
+        let s1=originalDimensions.L0-inputLongTable[0];
+        let s2=originalDimensions.L0-inputLongTable[1];
+        let s3=originalDimensions.L0-inputLongTable[2];
+        let s4=originalDimensions.L0-inputLongTable[3];
+        let sc=originalDimensions.L0-inputLongTable[4];
     
         let F1=0; let F2=0; let F3=0; let F4=0; let FC=0;
         let Tau1=0; let Tau2=0; let Tau3=0; let Tau4=0; let TauC=0;
@@ -87,17 +87,17 @@ export default function LongTable() {
 
         FC = (processTableStage2[processTableStage2.length-1].Keq*sc+processTableStage2[processTableStage2.length-1].b)/9.81
     
-        Tau1=(8*calculated_data.Dmedio*F1*9.81)/(3.14*Math.pow(dimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
-        Tau2=(8*calculated_data.Dmedio*F2*9.81)/(3.14*Math.pow(dimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
-        Tau3=(8*calculated_data.Dmedio*F3*9.81)/(3.14*Math.pow(dimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
-        Tau4=(8*calculated_data.Dmedio*F4*9.81)/(3.14*Math.pow(dimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
-        TauC=(8*calculated_data.Dmedio*FC*9.81)/(3.14*Math.pow(dimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
+        Tau1=(8*calculated_data.Dmedio*F1*9.81)/(3.14*Math.pow(originalDimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
+        Tau2=(8*calculated_data.Dmedio*F2*9.81)/(3.14*Math.pow(originalDimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
+        Tau3=(8*calculated_data.Dmedio*F3*9.81)/(3.14*Math.pow(originalDimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
+        Tau4=(8*calculated_data.Dmedio*F4*9.81)/(3.14*Math.pow(originalDimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
+        TauC=(8*calculated_data.Dmedio*FC*9.81)/(3.14*Math.pow(originalDimensions.d,3))*((4*calculated_data.C-1)/(4*calculated_data.C-4)+0.615/calculated_data.C)
     
-        Compr1=Number((s1/(dimensions.L0-inputLongTable[4])).toFixed(2))*100;
-        Compr2=Number((s2/(dimensions.L0-inputLongTable[4])).toFixed(2))*100;
-        Compr3=Number((s3/(dimensions.L0-inputLongTable[4])).toFixed(2))*100;
-        Compr4=Number((s4/(dimensions.L0-inputLongTable[4])).toFixed(2))*100;
-        ComprC=Number((sc/(dimensions.L0-inputLongTable[4])).toFixed(2))*100;
+        Compr1=Number((s1/(originalDimensions.L0-inputLongTable[4])).toFixed(2))*100;
+        Compr2=Number((s2/(originalDimensions.L0-inputLongTable[4])).toFixed(2))*100;
+        Compr3=Number((s3/(originalDimensions.L0-inputLongTable[4])).toFixed(2))*100;
+        Compr4=Number((s4/(originalDimensions.L0-inputLongTable[4])).toFixed(2))*100;
+        ComprC=Number((sc/(originalDimensions.L0-inputLongTable[4])).toFixed(2))*100;
         
         let carreraTotalNuevo = [s1,s2,s3,s4,sc]
         setCarreraTotal(carreraTotalNuevo)

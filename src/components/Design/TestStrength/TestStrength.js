@@ -6,7 +6,7 @@ import { DivSimul1, Div1, Label1, Paragraph1, DivCalculo, Input8 } from "./style
 
 export default function TestStrength() {
 
-  const {dimensions, kControlCargas, bControlCargas} = useAuth();
+  const {originalDimensions, kControlCargas, bControlCargas} = useAuth();
   
   const [inputFuerza, setInputFuerza] = useState(0);
   const [long, setLong] = useState(0);
@@ -17,7 +17,7 @@ export default function TestStrength() {
     setInputFuerza(Number(e.target.value))
 
     let defNuevo = (Number(e.target.value)-bControlCargas)/kControlCargas
-    let longNuevo = (Number(dimensions.L0)-defNuevo).toFixed(1)
+    let longNuevo = (Number(originalDimensions.L0)-defNuevo).toFixed(1)
 
     setLong(longNuevo)
     setDef(defNuevo)

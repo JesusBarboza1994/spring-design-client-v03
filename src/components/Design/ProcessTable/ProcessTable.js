@@ -6,7 +6,7 @@ import { colors } from "../../../styles/colors";
 
 export default function ProcessTable(props) {
 
-    const {dimensions, setDimensions, processTableStage1, setProcessTableStage1, processTableStage2, setProcessTableStage2, stateButtonCalculateProcessTable, setStateButtonCalculateProcessTable} = useAuth();
+    const {originalDimensions, setOriginalDimensions, processTableStage1, setProcessTableStage1, processTableStage2, setProcessTableStage2, stateButtonCalculateProcessTable, setStateButtonCalculateProcessTable} = useAuth();
 
     const [processTableStage1Inv, setProcessTableStage1Inv] = useState([])
     const [processTableStage2Inv, setProcessTableStage2Inv] = useState([])
@@ -21,25 +21,25 @@ export default function ProcessTable(props) {
 
     function calcularprocessTableStage1(){
         
-        let long1 = (Number(dimensions.Luz2)+Number(dimensions.d))*0.875
-        let long2 = (Number(dimensions.Luz1)+Number(dimensions.d))*0.875
-        let luz1 = long1/0.875 - Number(dimensions.d)
-        let luz2 = long2/0.875 - Number(dimensions.d)
+        let long1 = (Number(originalDimensions.Luz2)+Number(originalDimensions.d))*0.875
+        let long2 = (Number(originalDimensions.Luz1)+Number(originalDimensions.d))*0.875
+        let luz1 = long1/0.875 - Number(originalDimensions.d)
+        let luz2 = long2/0.875 - Number(originalDimensions.d)
         let vtas1 = 0.875
         let vtas2 = 0.875
         
-        let longLineaMedia = Number(dimensions.L0)
-        if (((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TCSE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TCSE"))) {
-            longLineaMedia = Number(dimensions.L0) - Number(dimensions.d)
-        } else if (((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TCE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TCE"))) {
-            longLineaMedia = Number(dimensions.L0) 
+        let longLineaMedia = Number(originalDimensions.L0)
+        if (((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TCSE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TCSE"))) {
+            longLineaMedia = Number(originalDimensions.L0) - Number(originalDimensions.d)
+        } else if (((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TCE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TCE"))) {
+            longLineaMedia = Number(originalDimensions.L0) 
         } else {
-            longLineaMedia = Number(dimensions.L0) - Number(dimensions.d)/2
+            longLineaMedia = Number(originalDimensions.L0) - Number(originalDimensions.d)/2
         }
 
-        let vtas3 = Number(dimensions.N)-2*0.875
-        let long3 = longLineaMedia-long1-long2-Number(dimensions.d)
-        let luz3 = (long3/vtas3)-Number(dimensions.d)
+        let vtas3 = Number(originalDimensions.N)-2*0.875
+        let long3 = longLineaMedia-long1-long2-Number(originalDimensions.d)
+        let luz3 = (long3/vtas3)-Number(originalDimensions.d)
 
         let luces = [luz1, luz2, luz3]
         let longitudes = [long1, long2, long3]
@@ -118,8 +118,8 @@ export default function ProcessTable(props) {
 
     function calcularprocessTableStage2() {
 
-        let d = Number(dimensions.d)
-        let Dext = Number(dimensions.Dext)
+        let d = Number(originalDimensions.d)
+        let Dext = Number(originalDimensions.Dext)
         let Dm = Dext-d
         let N = 0
         
@@ -214,7 +214,7 @@ export default function ProcessTable(props) {
 
         const arreglo = e.target.id.split(',')
         let luz = ""
-        let d = Number(dimensions.d)
+        let d = Number(originalDimensions.d)
         let sumaVtasParcial = 0;
         let sumaLongsParcial = 0;
         let processTableStage1Aux = JSON.parse(JSON.stringify(processTableStage1))
@@ -249,14 +249,14 @@ export default function ProcessTable(props) {
 
         })
 
-        let vtasTotal = dimensions.N
-        let longTotal = dimensions.L0
+        let vtasTotal = originalDimensions.N
+        let longTotal = originalDimensions.L0
         let vtaPuntoFinal = vtasTotal - sumaVtasParcial
         let longPuntoFinal = 0 
 
-        if (((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TCSE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TCSE"))) {
+        if (((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TCSE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TCSE"))) {
             longPuntoFinal = longTotal - sumaLongsParcial - d
-        } else if (((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TCE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TCE"))) {
+        } else if (((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TCE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TCE"))) {
             longPuntoFinal = longTotal - sumaLongsParcial 
         } else {
             longPuntoFinal = longTotal - sumaLongsParcial - d/2
@@ -272,7 +272,7 @@ export default function ProcessTable(props) {
     }
     // comentario
     function calcularUltimoPunto(){
-        let d = dimensions.d
+        let d = originalDimensions.d
         let sumaVtasParcial = 0
         let sumaLongsParcial = 0
         let processTableStage1Aux = JSON.parse(JSON.stringify(processTableStage1))
@@ -284,14 +284,14 @@ export default function ProcessTable(props) {
             }
         })
 
-        let vtasTotal = dimensions.N
-        let longTotal = dimensions.L0
+        let vtasTotal = originalDimensions.N
+        let longTotal = originalDimensions.L0
         let vtaPuntoFinal = vtasTotal - sumaVtasParcial
         let longPuntoFinal = 0 
 
-        if (((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TCSE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TCSE"))) {
+        if (((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TCSE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TCSE"))) {
             longPuntoFinal = longTotal - sumaLongsParcial - d
-        } else if (((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TCE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TCE"))) {
+        } else if (((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TCE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TCE"))) {
             longPuntoFinal = longTotal - sumaLongsParcial 
         } else {
             longPuntoFinal = longTotal - sumaLongsParcial - d/2
@@ -321,7 +321,7 @@ export default function ProcessTable(props) {
         calcularprocessTableStage1()
         calcularUltimoPunto()
         
-    }, [dimensions])
+    }, [originalDimensions])
 
     useEffect(() => {
 

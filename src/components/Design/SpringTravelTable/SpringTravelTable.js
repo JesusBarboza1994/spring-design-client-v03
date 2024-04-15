@@ -7,7 +7,7 @@ import { Td1, Th3 } from "./styles";
 
 export default function SpringTravelTable() {
 
-    const {dimensions, processTableStage1, setProcessTableStage1, processTableStage2, setProcessTableStage2, kControlCargas, bControlCargas, l4} = useAuth();
+    const {originalDimensions, processTableStage1, setProcessTableStage1, processTableStage2, setProcessTableStage2, kControlCargas, bControlCargas, l4} = useAuth();
     
     const [carreras, setCarreras] = useState([
         { id: 1, Carrera: "" },
@@ -22,15 +22,15 @@ export default function SpringTravelTable() {
     carreras[0].Carrera = ((fuerzas[0]-bControlCargas)/kControlCargas)
     carreras[1].Carrera = ((fuerzas[1]-bControlCargas)/kControlCargas)
     carreras[2].Carrera = ((fuerzas[2]-bControlCargas)/kControlCargas)
-    carreras[3].Carrera = dimensions.L0 - l4
+    carreras[3].Carrera = originalDimensions.L0 - l4
 
 
-    if (((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TCSE") && (dimensions.Ext2 === "TASE")) || ((dimensions.Ext1 === "TASE") && (dimensions.Ext2 === "TCSE"))) {
-        carreras[4].Carrera = dimensions.L0-((Number(dimensions.N) +1)*Number(dimensions.d))
-    } else if (((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TCE") && (dimensions.Ext2 === "TAE")) || ((dimensions.Ext1 === "TAE") && (dimensions.Ext2 === "TCE"))) {
-        carreras[4].Carrera = dimensions.L0-((Number(dimensions.N) +1)*Number(dimensions.d) - Number(dimensions.d))  
+    if (((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TCSE") && (originalDimensions.Ext2 === "TASE")) || ((originalDimensions.Ext1 === "TASE") && (originalDimensions.Ext2 === "TCSE"))) {
+        carreras[4].Carrera = originalDimensions.L0-((Number(originalDimensions.N) +1)*Number(originalDimensions.d))
+    } else if (((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TCE") && (originalDimensions.Ext2 === "TAE")) || ((originalDimensions.Ext1 === "TAE") && (originalDimensions.Ext2 === "TCE"))) {
+        carreras[4].Carrera = originalDimensions.L0-((Number(originalDimensions.N) +1)*Number(originalDimensions.d) - Number(originalDimensions.d))  
     } else {
-        carreras[4].Carrera = dimensions.L0-((Number(dimensions.N) +1)*Number(dimensions.d) - 0.5*Number(dimensions.d))  
+        carreras[4].Carrera = originalDimensions.L0-((Number(originalDimensions.N) +1)*Number(originalDimensions.d) - 0.5*Number(originalDimensions.d))  
     }
 
     return(
