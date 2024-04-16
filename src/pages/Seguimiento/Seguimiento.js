@@ -10,25 +10,25 @@ import { CoilsDimensions } from "../../components/Seguimiento/Seguimiento/CoilsD
 import { useAuth } from "../../context/auth-context";
 
 export default function Seguimiento(){
-	const [counter, setCounter] = useState( localStorage.getItem("counter") ? JSON.parse(localStorage.getItem("counter")) : {
-		DataClient: {quantity: 0, counter: 0},
-		VehicleData: {quantity: 0, counter: 0},
-		SampleMeasurements: {quantity: 0, counter: 0},
-		VehicleDimentions: {quantity: 0, counter: 0},
-		ClientRequirements: {quantity: 0, counter: 0},
-		TechnicalStandard: {quantity: 0, counter: 0},
-		DevelopedDesign: {quantity: 0, counter: 0}
-	})
+	// const [counter, setCounter] = useState( localStorage.getItem("counter") ? JSON.parse(localStorage.getItem("counter")) : {
+	// 	DataClient: {quantity: 0, counter: 0},
+	// 	VehicleData: {quantity: 0, counter: 0},
+	// 	SampleMeasurements: {quantity: 0, counter: 0},
+	// 	VehicleDimentions: {quantity: 0, counter: 0},
+	// 	ClientRequirements: {quantity: 0, counter: 0},
+	// 	TechnicalStandard: {quantity: 0, counter: 0},
+	// 	DevelopedDesign: {quantity: 0, counter: 0}
+	// })
     const [originalDimensions] = useAuth();
 
 	return(
         <ScreenStyle>
-            {/* <Wrapper> */}
-                {/* <HeaderElement/>   */}
+            <Wrapper>
+                <HeaderElement/>
                 <Container>
 
                     <CorrelativeData/>
-                    <DataTypeDesign Data={<CoilsDimensions setCounter={setCounter} counter={counter} />} text={"DIMENSIONES DE RESORTES"} counter = {counter.CoilsDimensions}/> 
+                    <DataTypeDesign Data={<CoilsDimensions/>} text={"DIMENSIONES DE RESORTES"}/> 
 
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", }}> 
                         <div style={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
@@ -43,7 +43,7 @@ export default function Seguimiento(){
                     
                     </div>
                 </Container>
-            {/* </Wrapper> */}
+            </Wrapper>
         </ScreenStyle>
 	);
 }
