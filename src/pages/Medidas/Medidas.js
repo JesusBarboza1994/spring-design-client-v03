@@ -12,6 +12,7 @@ import { DevelopedDesign } from "../../components/Design/Developed design/Develo
 import { ButtonGuardar, A } from "./styles";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { useState } from "react";
+import { DesignHeadElement } from "../../components/Design/DesignHeadElement/DesignHeadElement";
 
 export default function Medidas(){
 	const [counter, setCounter] = useState( localStorage.getItem("counter") ? JSON.parse(localStorage.getItem("counter")) : {
@@ -26,6 +27,8 @@ export default function Medidas(){
 	})
 	return(
 		<Container>
+
+            <DesignHeadElement/>
 			<CorrelativeData/>
 			<DataTypeDesign Data={<DataClient setCounter={setCounter} counter={counter} />} text={"DATOS DEL CLIENTE"} counter = {counter.DataClient}/>
 			<DataTypeDesign Data={<VehicleData setCounter={setCounter} counter={counter} />} text={"DATOS DEL VEHICULO"} counter = {counter.VehicleData}/>
